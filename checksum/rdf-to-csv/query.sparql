@@ -1,0 +1,12 @@
+PREFIX ns1: <http://spdx.org/rdf/terms#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?checksum_value) (?v4 AS ?algorithm_label)
+WHERE {
+  ?v1 a ns1:Checksum .
+  ?v1 ns1:checksumValue ?v2 .
+  ?v3 a ns1:ChecksumAlgorithm .
+  OPTIONAL {
+    ?v3 rdfs:label ?v4 .
+  }
+  ?v1 ns1:algorithm ?v3 .
+}

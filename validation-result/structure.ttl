@@ -1,0 +1,35 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/validation-result/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/validation-result/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Validation result. Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data.\",\"en\":\"Data structure for Validation result. Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Validation result\",\"en\":\"Validation result\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/validation-result/class-1742288707998-704b-3f0e-8e1a\",\"https://czbiextension.com/profile/vocabulary/validation-result/attribute-1742340009452-1291-ce18-82ec\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/validation-result/class-1742288707998-704b-3f0e-8e1a\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/validation-result/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/validation-result\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1742288707998-704b-3f0e-8e1a a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#ValidationResult\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/validation-result/attribute-1742340009452-1291-ce18-82ec\"]";
+    kv:dataPsmTechnicalLabel "\"validation_result\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/validation-result/class-1742288707998-704b-3f0e-8e1a\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/validation-result/class-1742288707998-704b-3f0e-8e1a\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1742340009452-1291-ce18-82ec a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/ValidationResult.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/validation-result/attribute-1742340009452-1291-ce18-82ec\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/validation-result/attribute-1742340009452-1291-ce18-82ec\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "title": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "xsd:string"
+    },
+    "Distribution - data service": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService",
+      "@context": {
+        "access_service": {
+          "@id": "http://www.w3.org/ns/dcat#accessService",
+          "@container": "@set",
+          "@context": "../data-service/context.jsonld"
+        },
+        "conforms_to_specification": {
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@container": "@set",
+          "@context": "../application-profile/context.jsonld"
+        },
+        "documentation": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@container": "@set",
+          "@context": "../documentation/context.jsonld"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@container": "@language"
+        }
+      }
+    }
+  }
+}

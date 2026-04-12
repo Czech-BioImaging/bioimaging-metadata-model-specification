@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "aba531cb-0df0-48be-8090-1bb17eba35dc/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "label",
+                "titles": "label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Label of application profile",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://purl.org/dc/terms/Standard",
+                "virtual": true
+            }
+        ]
+    }
+}

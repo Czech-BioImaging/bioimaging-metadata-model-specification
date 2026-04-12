@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "e3d7908e-72ba-4601-b474-b8cd5851cc7b/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "label",
+                "titles": "label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Media type label.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://purl.org/dc/terms/MediaType",
+                "virtual": true
+            }
+        ]
+    }
+}

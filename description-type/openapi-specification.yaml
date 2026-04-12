@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/description_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the description type.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "The type of the description.",
+        "description": "The type of the description.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "description_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the description type.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

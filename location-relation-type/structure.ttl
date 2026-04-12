@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/location-relation-type/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/location-relation-type/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Location relation type. Relation of the dataset to the resource.\",\"cs\":\"Datová struktura pro Location relation type. Relation of the dataset to the resource.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Location relation type\",\"cs\":\"Location relation type\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/location-relation-type/class-1747685228117-d1d5-c203-b159\",\"https://czbiextension.com/profile/vocabulary/location-relation-type/attribute-1747685232243-6b5e-61ae-bc5f\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/location-relation-type/class-1747685228117-d1d5-c203-b159\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/location-relation-type/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/location-relation-type\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1747685228117-d1d5-c203-b159 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#LocationRelationType\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/location-relation-type/attribute-1747685232243-6b5e-61ae-bc5f\"]";
+    kv:dataPsmTechnicalLabel "\"relation_type\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/location-relation-type/class-1747685228117-d1d5-c203-b159\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/location-relation-type/class-1747685228117-d1d5-c203-b159\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1747685232243-6b5e-61ae-bc5f a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/LocationRelationType.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/location-relation-type/attribute-1747685232243-6b5e-61ae-bc5f\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/location-relation-type/attribute-1747685232243-6b5e-61ae-bc5f\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

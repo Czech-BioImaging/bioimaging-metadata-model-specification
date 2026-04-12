@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/distribution/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/distribution/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Distribuce. Konkrétní reprezentace datové sady. Datová sada může být dostupná v různých serializacích, které se mohou navzájem lišit různými způsoby, mimo jiné přirozeným jazykem, media-typem či formátem, schematickou organizací, časovým a prostorovým rozlišením, úrovní detailu či profily (které mohou specifikovat některé či všechny tyto rozdíly).\",\"en\":\"Data structure for Distribution. A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Distribuce\",\"en\":\"Distribution\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/distribution/or-1744808504776-6126-dda9-b665\",\"https://czbiextension.com/profile/vocabulary/distribution/classReference-1762023561450-b946-844a-813e\",\"https://czbiextension.com/profile/vocabulary/distribution/classReference-1762023591320-37ba-b5bc-8bac\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/distribution/or-1744808504776-6126-dda9-b665\"]";
+    kv:dataPsmTechnicalLabel "\"distribution\"";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/distribution/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/distribution\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:or-1744808504776-6126-dda9-b665 a dsvs:structure-entity;
+    kv:dataPsmChoices "[\"https://czbiextension.com/profile/vocabulary/distribution/classReference-1762023561450-b946-844a-813e\",\"https://czbiextension.com/profile/vocabulary/distribution/classReference-1762023591320-37ba-b5bc-8bac\"]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "null";
+    kv:dataPsmTechnicalLabel "null";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/distribution/or-1744808504776-6126-dda9-b665\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/distribution/or-1744808504776-6126-dda9-b665\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Or\"]".
+:classReference-1762023561450-b946-844a-813e a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://czbiextension.com/profile/vocabulary/distribution-data-service/class-1762011714325-a238-e785-9c3d\"";
+    kv:dataPsmSpecification "\"https://czbiextension.com/profile/vocabulary/distribution-data-service/\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/distribution/classReference-1762023561450-b946-844a-813e\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/distribution/classReference-1762023561450-b946-844a-813e\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:classReference-1762023591320-37ba-b5bc-8bac a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://czbiextension.com/profile/vocabulary/distribution-downloadable-file/class-1762018020967-1861-7f29-8ecd\"";
+    kv:dataPsmSpecification "\"https://czbiextension.com/profile/vocabulary/distribution-downloadable-file/\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/distribution/classReference-1762023591320-37ba-b5bc-8bac\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/distribution/classReference-1762023591320-37ba-b5bc-8bac\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".

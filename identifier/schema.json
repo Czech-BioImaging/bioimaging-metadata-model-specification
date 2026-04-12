@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/identifier/schema.json",
+  "title": "Identifier",
+  "description": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "value",
+    "scheme"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Identifier"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Identifier"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "value": {
+      "title": "value",
+      "description": "Value of the identifer within the given identifier scheme.",
+      "type": "string"
+    },
+    "scheme": {
+      "$ref": "../identifier-scheme/schema.json"
+    },
+    "authorized": {
+      "title": "authorized",
+      "description": "Specifies whether the identifier is authorized by the subject it represents.",
+      "type": "boolean"
+    }
+  }
+}

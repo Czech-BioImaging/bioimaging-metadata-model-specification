@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/agent/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/agent/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Agent. Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.\",\"en\":\"Data structure for Agent. Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Agent\",\"en\":\"Agent\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/agent/or-1744806345469-98ad-4e4d-8c25\",\"https://czbiextension.com/profile/vocabulary/agent/classReference-1761928916801-0bd9-dce4-82a8\",\"https://czbiextension.com/profile/vocabulary/agent/classReference-1762017429336-d918-a701-b738\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/agent/or-1744806345469-98ad-4e4d-8c25\"]";
+    kv:dataPsmTechnicalLabel "\"agent\"";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/agent/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/agent\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:or-1744806345469-98ad-4e4d-8c25 a dsvs:structure-entity;
+    kv:dataPsmChoices "[\"https://czbiextension.com/profile/vocabulary/agent/classReference-1761928916801-0bd9-dce4-82a8\",\"https://czbiextension.com/profile/vocabulary/agent/classReference-1762017429336-d918-a701-b738\"]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "null";
+    kv:dataPsmTechnicalLabel "null";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/agent/or-1744806345469-98ad-4e4d-8c25\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/agent/or-1744806345469-98ad-4e4d-8c25\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Or\"]".
+:classReference-1761928916801-0bd9-dce4-82a8 a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://czbiextension.com/profile/vocabulary/organization/class-1744871355397-62d0-acf0-af09\"";
+    kv:dataPsmSpecification "\"https://czbiextension.com/profile/vocabulary/organization/\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/agent/classReference-1761928916801-0bd9-dce4-82a8\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/agent/classReference-1761928916801-0bd9-dce4-82a8\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:classReference-1762017429336-d918-a701-b738 a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://czbiextension.com/profile/vocabulary/person/class-1762017242451-3954-d430-aa66\"";
+    kv:dataPsmSpecification "\"https://czbiextension.com/profile/vocabulary/person/\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/agent/classReference-1762017429336-d918-a701-b738\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/agent/classReference-1762017429336-d918-a701-b738\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".

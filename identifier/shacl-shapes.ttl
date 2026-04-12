@@ -1,0 +1,46 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<06821ce2a8c116297c754fbb6ddf57d2identifierShape> a sh:NodeShape;
+    sh:targetClass <http://www.w3.org/ns/adms#Identifier>;
+    sh:class <http://www.w3.org/ns/adms#Identifier>;
+    sh:nodeKind sh:IRI;
+    sh:description "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI."@en;
+    sh:name "Identifier"@en.
+<55e20cf0189948129b2023bf9a7f1a6bvalueShape> a sh:PropertyShape;
+    sh:description "Value of the identifer within the given identifier scheme."@en;
+    sh:name "value"@en;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:path <http://www.w3.org/2004/02/skos/core#notation>.
+
+<55e20cf0189948129b2023bf9a7f1a6bvalueShape> sh:datatype xsd:string.
+<06821ce2a8c116297c754fbb6ddf57d2identifierShape> sh:property <55e20cf0189948129b2023bf9a7f1a6bvalueShape>.
+<f9e1a8accc57b8710666998ebc31e11fschemeShape> a sh:PropertyShape;
+    sh:description "Relation between the identifier and scheme in which it is defined and unique."@en;
+    sh:name "in scheme"@en;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#inScheme>;
+    sh:nodeKind sh:IRI.
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShape> a sh:NodeShape;
+    sh:class <https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>;
+    sh:nodeKind sh:IRI;
+    sh:description "Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier."@en;
+    sh:name "Identifier scheme"@en.
+<1a2ae271781475319a46ee4851b63f9dlabelShape> a sh:PropertyShape;
+    sh:description "Identifier scheme label"@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShape> sh:property <1a2ae271781475319a46ee4851b63f9dlabelShape>.
+<f9e1a8accc57b8710666998ebc31e11fschemeShape> sh:node <c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShape>.
+<06821ce2a8c116297c754fbb6ddf57d2identifierShape> sh:property <f9e1a8accc57b8710666998ebc31e11fschemeShape>.
+<17e075a3c50487a8abd3f6af70643110authorizedShape> a sh:PropertyShape;
+    sh:description "Specifies whether the identifier is authorized by the subject it represents."@en;
+    sh:name "authorized"@en;
+    sh:maxCount 1;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#authorized>;
+    sh:datatype xsd:boolean.
+<06821ce2a8c116297c754fbb6ddf57d2identifierShape> sh:property <17e075a3c50487a8abd3f6af70643110authorizedShape>.

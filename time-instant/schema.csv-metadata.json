@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "8800b71c-8c68-4b1d-a0e0-577866f64d38/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "null_date_time",
+                "titles": "null_date_time",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDateTime",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "null_date",
+                "titles": "null_date",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDate",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://www.w3.org/2006/time#Instant",
+                "virtual": true
+            }
+        ]
+    }
+}

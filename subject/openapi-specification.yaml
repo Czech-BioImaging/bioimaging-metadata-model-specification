@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/subject": {
+      "parameters": [
+        {
+          "name": "title",
+          "in": "path",
+          "description": "Title of the subject.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "definition",
+          "in": "path",
+          "description": "Definition of the subject in the given context.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "classification_code",
+          "in": "path",
+          "description": "The classification code used for notation of the subject term in the subject scheme.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "subject_scheme",
+          "in": "path",
+          "description": "Belonging of the subject to the subject scheme.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Subject, keyword, classification code, or key phrase describing the resource.",
+        "description": "Subject, keyword, classification code, or key phrase describing the resource.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "subject": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "description": "Title of the subject.",
+            "type": "string"
+          },
+          "definition": {
+            "description": "Definition of the subject in the given context.",
+            "type": "string"
+          },
+          "classification_code": {
+            "description": "The classification code used for notation of the subject term in the subject scheme.",
+            "type": "string"
+          },
+          "subject_scheme": {
+            "description": "Belonging of the subject to the subject scheme.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

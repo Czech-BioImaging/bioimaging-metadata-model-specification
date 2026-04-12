@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/format": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of format value.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Format of downloadable file.",
+        "description": "Format of downloadable file.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "format": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of format value.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

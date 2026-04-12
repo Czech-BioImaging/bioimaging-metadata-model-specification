@@ -1,0 +1,273 @@
+@startuml
+set namespaceSeparator none
+class Resource {
+  title: http://www.w3.org/2001/XMLSchema#string
+}
+
+class "Resource type" {
+  label: http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Time reference" {
+  "date information": text
+}
+
+class Identifier {
+  authorized: http://www.w3.org/2001/XMLSchema#boolean
+  value: http://www.w3.org/2001/XMLSchema#string
+}
+
+class "Resource to agent relationship" {
+}
+
+class "Alternate title" {
+  "title​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Time representation" {
+}
+
+class Description {
+  "description text": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Description type" {
+  "label​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Datová sada" {
+  "publication year": http://www.w3.org/2001/XMLSchema#gYear
+  version: http://www.w3.org/2001/XMLSchema#string
+  "title​​": http://www.w3.org/2001/XMLSchema#string
+}
+
+class "Identifier scheme" {
+  "label​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Alternate title type" {
+  "label​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Location {
+  "bounding box": http://www.w3.org/2000/01/rdf-schema#Literal
+  name: text
+}
+
+class "Location relation type" {
+  "label​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Related resource" {
+  "resource URL": http://www.w3.org/2001/XMLSchema#anyURI
+}
+
+class "Resource relation type" {
+  "label​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Date type" {
+  "label​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Time interval" {
+}
+
+class "Time instant" {
+  "date time": http://www.w3.org/2001/XMLSchema#dateTime
+  date: http://www.w3.org/2001/XMLSchema#date
+}
+
+class "Terms of use" {
+  description: text
+}
+
+class "Access rights" {
+  "label​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Distribution - downloadable file" {
+  "byte size": http://www.w3.org/2001/XMLSchema#integer
+}
+
+class Format {
+  "label​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Language system" {
+  "label​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Katalogizační záznam" {
+  "date updated": http://www.w3.org/2001/XMLSchema#date
+  "date created": http://www.w3.org/2001/XMLSchema#date
+}
+
+class "License Document" {
+  "label​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Checksum {
+  "checksum value": http://www.w3.org/2001/XMLSchema#hexBinary
+}
+
+class "Checksum algorithm" {
+  "label​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Agent {
+  "name​": http://www.w3.org/2001/XMLSchema#string
+}
+
+class "Data Service" {
+  "label​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Geometry {
+  "geography markup language literal": http://www.opengis.net/ont/geosparql#gmlLiteral
+  "well known text literal": http://www.opengis.net/ont/geosparql#wktLiteral
+  "label​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Subject {
+  definition: text
+  "title​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+  "classification code": http://www.w3.org/2001/XMLSchema#string
+}
+
+class "Subject scheme" {
+  "label​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Distribution - data service" {
+  "description​": text
+}
+
+class Documentation {
+  "label​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Application profile" {
+  "label​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Media Type" {
+  "label​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class File {
+  "label​​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Katalog {
+  "label​​​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Provenance Statement" {
+  "label​​​​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Person {
+  "family name": http://www.w3.org/2001/XMLSchema#string
+  "given name": http://www.w3.org/2001/XMLSchema#string
+}
+
+class Organization {
+  "alternate name": text
+}
+
+class "Contact details" {
+  "data box": http://www.w3.org/2001/XMLSchema#string
+  email: http://www.w3.org/2001/XMLSchema#string
+  phone: http://www.w3.org/2001/XMLSchema#string
+}
+
+class Address {
+  "post code": http://www.w3.org/2001/XMLSchema#string
+  "administrative unit level 2": http://www.w3.org/2001/XMLSchema#string
+  "administrative unit level 1": http://www.w3.org/2001/XMLSchema#string
+  "post name": http://www.w3.org/2001/XMLSchema#string
+  "address area": http://www.w3.org/2001/XMLSchema#string
+  "locator name": http://www.w3.org/2001/XMLSchema#string
+  "locator designator": http://www.w3.org/2001/XMLSchema#string
+  thoroughfare: http://www.w3.org/2001/XMLSchema#string
+  "post office box": http://www.w3.org/2001/XMLSchema#string
+  "full address": http://www.w3.org/2001/XMLSchema#string
+  "label​​​​​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Funding reference" {
+  "funding program": http://www.w3.org/2001/XMLSchema#anyURI
+  "award title": http://www.w3.org/2001/XMLSchema#string
+  "local identifier": http://www.w3.org/2001/XMLSchema#string
+}
+
+class "Resource agent role type" {
+  "label​​​​​​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class "Validation result" {
+  "label​​​​​​​​​​​​​​​​​​​​​​​": http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+}
+
+class Distribuce {
+  "title​​​​": http://www.w3.org/2001/XMLSchema#string
+}
+
+Resource -- "0..1" "Resource type" :  "has resource type"
+Resource -- "Time reference" :  "has time reference"
+Resource -- Identifier :  "has identifier"
+Resource -- "Resource to agent relationship" :  "qualified relation"
+Resource -- "Alternate title" :  "has alternate title"
+"Time reference" -- "1..1" "Time representation" :  "has temporal representation"
+"Time reference" -- "1..1" "Date type" :  "has date type"
+Identifier -- "1..1" "Identifier scheme" :  "in scheme"
+"Resource to agent relationship" -- "1..1" "Resource agent role type" :  "sehraná role"
+"Resource to agent relationship" -- "1..1" Agent :  "has related agent"
+"Alternate title" -- "0..1" "Alternate title type" :  "has alternate title type"
+Description -- "0..1" "Description type" :  "has description type"
+"Datová sada" -- Description :  "has description"
+"Datová sada" -- "Language system" :  "has other language"
+"Datová sada" -- "1..*" "Katalogizační záznam" :  "is described by"
+"Datová sada" -- "1..*" Identifier :  "has identifier​"
+"Datová sada" -- Location :  "has location"
+"Datová sada" -- "Provenance Statement" :  "has provenance"
+"Datová sada" -- "1..*" "Time reference" :  "has time reference​"
+"Datová sada" -- "1..*" Subject :  "has subject"
+"Datová sada" -- "Validation result" :  "has validation result"
+"Datová sada" -- Distribuce :  "has distribution"
+"Datová sada" -- "Funding reference" :  "has funding reference"
+"Datová sada" -- "1..1" "Terms of use" :  "has terms of use"
+"Datová sada" -- "Related resource" :  "has related resource"
+Location -- "1..1" "Location relation type" :  "has location relation type"
+Location -- "0..1" Geometry :  "has geometry"
+Location -- "Related resource" :  "has related object"
+"Related resource" -- "0..1" "Resource relation type" :  "has resource relation type"
+"Time interval" -- "1..1" "Time instant" :  "has end"
+"Time interval" -- "1..1" "Time instant" :  "has beginning"
+"Terms of use" -- "1..1" "Access rights" :  "access rights"
+"Terms of use" -- "1..1" "License Document" :  "has license"
+"Terms of use" -- Agent :  "kontaktní bod"
+"Distribution - downloadable file" -- "1..1" Format :  "has format"
+"Distribution - downloadable file" -- "0..1" Checksum :  "has checksum"
+"Distribution - downloadable file" -- "Application profile" :  "conforms to schema"
+"Distribution - downloadable file" -- "0..1" "Media Type" :  "typ média"
+"Distribution - downloadable file" -- "1..*" File :  "přístupová adresa"
+"Distribution - downloadable file" -- File :  "URL souboru ke stažení"
+"Katalogizační záznam" -- "Language system" :  language
+"Katalogizační záznam" -- "1..*" "Resource to agent relationship" :  3os0h3mliaqmnd1wdyf
+"Katalogizační záznam" -- "Datová sada" :  describes
+"Katalogizační záznam" -- "1..1" Katalog :  "has original repository"
+"Katalogizační záznam" -- "1..*" "Application profile" :  "conforms to standard"
+Checksum -- "1..1" "Checksum algorithm" :  "uses algorithm"
+Agent -- Identifier :  "has identifier​​"
+Agent -- "Contact details" :  "má kontaktní bod"
+"Data Service" -- "1..*" "Related resource" :  "přístupový bod služby"
+Subject -- "0..1" "Subject scheme" :  "in subject scheme"
+"Distribution - data service" -- Documentation :  "has documentation"
+"Distribution - data service" -- "Application profile" :  "conforms to specification"
+"Distribution - data service" -- "Data Service" :  "služba pro přístup k datům"
+Person -- Organization :  "has affiliation"
+"Contact details" -- Address :  "has address"
+"Funding reference" -- "1..*" Agent :  "has funder"
+@enduml

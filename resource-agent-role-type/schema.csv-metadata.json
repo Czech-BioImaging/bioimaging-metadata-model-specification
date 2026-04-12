@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "72f64e30-8536-4ebd-9040-6bd479601c6c/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "label",
+                "titles": "label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Resource agent role type label.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept",
+                "virtual": true
+            }
+        ]
+    }
+}

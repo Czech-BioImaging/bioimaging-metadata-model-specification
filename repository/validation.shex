@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<f126dd148096a9fce29a20b0bbcbf2a6repositoryShExShape> IRI{
+	a [<http://www.w3.org/ns/dcat#Catalog>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Human readable name of the repository."
+}

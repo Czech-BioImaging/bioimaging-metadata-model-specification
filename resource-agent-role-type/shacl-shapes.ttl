@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<d52d5c523e19458dd7b00b9c9488d450resource_agent_role_typeShape> a sh:NodeShape;
+    sh:targetClass <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:nodeKind sh:IRI;
+    sh:description "Role of the agent in the relationship to the resource. "@en;
+    sh:name "Resource agent role type"@en.
+<e60ebb211f5314b1145cc3ecd03ced2alabelShape> a sh:PropertyShape;
+    sh:description "Resource agent role type label."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<d52d5c523e19458dd7b00b9c9488d450resource_agent_role_typeShape> sh:property <e60ebb211f5314b1145cc3ecd03ced2alabelShape>.

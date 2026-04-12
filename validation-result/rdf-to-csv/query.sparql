@@ -1,0 +1,9 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?label)
+WHERE {
+  ?v1 a ns1:ValidationResult .
+  OPTIONAL {
+    ?v1 rdfs:label ?v2 .
+  }
+}

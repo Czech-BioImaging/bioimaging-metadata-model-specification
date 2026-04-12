@@ -1,0 +1,23 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?title) (?v3 AS ?definition) (?v4 AS ?classification_code) (?v6 AS ?subject_scheme_label)
+WHERE {
+  ?v1 a ns1:Subject .
+  ?v1 dc:title ?v2 .
+  OPTIONAL {
+    ?v1 skos:definition ?v3 .
+  }
+  OPTIONAL {
+    ?v1 ns1:subjectClassificationCode ?v4 .
+  }
+  OPTIONAL {
+    ?v5 a ns2:SubjectScheme .
+    OPTIONAL {
+      ?v5 rdfs:label ?v6 .
+    }
+    ?v1 ns2:inSubjectScheme ?v5 .
+  }
+}

@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<1533ae3e38876c0a9c80d1789e26e450license_documentShExShape> NonLiteral{
+	a [<http://purl.org/dc/terms/LicenseDocument>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of the license document."
+}

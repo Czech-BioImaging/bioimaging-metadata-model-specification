@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/checksum/schema.json",
+  "title": "Checksum",
+  "description": "A value that allows the contents of a file to be authenticated.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "checksum_value",
+    "algorithm"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Checksum"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Checksum"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "checksum_value": {
+      "title": "checksum value",
+      "description": "A lower case hexadecimal encoded digest value produced using a specific algorithm. ",
+      "type": "string"
+    },
+    "algorithm": {
+      "$ref": "../checksum-algorithm/schema.json"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/checksum-algorithm/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/checksum-algorithm/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Checksum algorithm. Algorithm used for Checksums.\",\"cs\":\"Datová struktura pro Checksum algorithm. Algorithm used for Checksums.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Checksum algorithm\",\"cs\":\"Checksum algorithm\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/class-1750748737636-4a30-db6d-87b9\",\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/attribute-1762086480397-b347-ff5a-ab30\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/class-1750748737636-4a30-db6d-87b9\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/checksum-algorithm\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1750748737636-4a30-db6d-87b9 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#ChecksumAlgorithm\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/attribute-1762086480397-b347-ff5a-ab30\"]";
+    kv:dataPsmTechnicalLabel "\"checksum_algorithm\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/class-1750748737636-4a30-db6d-87b9\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/checksum-algorithm/class-1750748737636-4a30-db6d-87b9\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1762086480397-b347-ff5a-ab30 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/ChecksumAlgorithm.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/checksum-algorithm/attribute-1762086480397-b347-ff5a-ab30\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/checksum-algorithm/attribute-1762086480397-b347-ff5a-ab30\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

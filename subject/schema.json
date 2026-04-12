@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/subject/schema.json",
+  "title": "Subject",
+  "description": "Subject, keyword, classification code, or key phrase describing the resource.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "title"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Subject"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Subject"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "title": {
+      "title": "title",
+      "description": "Title of the subject.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Řetězec anotovaný jazykem",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "definition": {
+      "title": "definition",
+      "description": "Definition of the subject in the given context.",
+      "type": "array",
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "additionalProperties": {
+          "title": "Hodnota v jiném jazyce",
+          "type": "string"
+        },
+        "properties": {
+          "cs": {
+            "title": "Hodnota v českém jazyce",
+            "type": "string"
+          },
+          "en": {
+            "title": "Hodnota v anglickém jazyce",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "classification_code": {
+      "title": "classification code",
+      "description": "The classification code used for notation of the subject term in the subject scheme.",
+      "type": "string"
+    },
+    "subject_scheme": {
+      "$ref": "../subject-scheme/schema.json"
+    }
+  }
+}

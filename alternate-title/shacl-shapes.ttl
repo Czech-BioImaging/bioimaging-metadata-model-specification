@@ -1,0 +1,35 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<c764aa2c64cde037c135d613c70f899falternate_titleShape> a sh:NodeShape;
+    sh:targetClass <https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle>;
+    sh:class <https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle>;
+    sh:nodeKind sh:IRI;
+    sh:description "Alternate title of the resource."@en;
+    sh:name "Alternate title"@en.
+<fa2c865d3ac311eebbbd5d3310c50e8atitleShape> a sh:PropertyShape;
+    sh:description "A human-readable name for the subject."@en;
+    sh:name "title"@en;
+    sh:minCount 1;
+    sh:path <http://purl.org/dc/terms/title>;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<c764aa2c64cde037c135d613c70f899falternate_titleShape> sh:property <fa2c865d3ac311eebbbd5d3310c50e8atitleShape>.
+<ffe8016e857fc32e53f3359f7cce717calternate_title_typeShape> a sh:PropertyShape;
+    sh:description "Type of the alternate name relation."@en;
+    sh:name "has alternate title type"@en;
+    sh:maxCount 1;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
+    sh:nodeKind sh:IRI.
+<59ad282bc687546efd0e62562db57773alternate_title_typeShape> a sh:NodeShape;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:nodeKind sh:IRI;
+    sh:description "Type of alternate title."@en;
+    sh:name "Alternate title type"@en.
+<a3625e937fd322a362278a869fe5ca7flabelShape> a sh:PropertyShape;
+    sh:description "Alternate title type label."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<59ad282bc687546efd0e62562db57773alternate_title_typeShape> sh:property <a3625e937fd322a362278a869fe5ca7flabelShape>.
+<ffe8016e857fc32e53f3359f7cce717calternate_title_typeShape> sh:node <59ad282bc687546efd0e62562db57773alternate_title_typeShape>.
+<c764aa2c64cde037c135d613c70f899falternate_titleShape> sh:property <ffe8016e857fc32e53f3359f7cce717calternate_title_typeShape>.

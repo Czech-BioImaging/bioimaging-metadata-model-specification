@@ -1,0 +1,17 @@
+PREFIX ns1: <http://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?value) (?v4 AS ?scheme_label) (?v5 AS ?authorized)
+WHERE {
+  ?v1 a ns1:Identifier .
+  ?v1 skos:notation ?v2 .
+  ?v3 a ns2:IdentifierScheme .
+  OPTIONAL {
+    ?v3 rdfs:label ?v4 .
+  }
+  ?v1 ns2:inScheme ?v3 .
+  OPTIONAL {
+    ?v1 ns2:authorized ?v5 .
+  }
+}

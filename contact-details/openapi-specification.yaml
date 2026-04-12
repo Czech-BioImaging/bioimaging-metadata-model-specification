@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/contact_details": {
+      "parameters": [
+        {
+          "name": "data_box",
+          "in": "path",
+          "description": "Code of the data box.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "email",
+          "in": "path",
+          "description": "Email address.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "phone",
+          "in": "path",
+          "description": "Phone number",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "address",
+          "in": "path",
+          "description": "To specify the components of the delivery address for the object",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Details to contact the agent in a relationship to the resource.",
+        "description": "Details to contact the agent in a relationship to the resource.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "contact_details": {
+        "type": "object",
+        "properties": {
+          "data_box": {
+            "description": "Code of the data box.",
+            "type": "string"
+          },
+          "email": {
+            "description": "Email address.",
+            "type": "string"
+          },
+          "phone": {
+            "description": "Phone number",
+            "type": "string"
+          },
+          "address": {
+            "description": "To specify the components of the delivery address for the object",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

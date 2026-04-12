@@ -1,0 +1,70 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<8afb093084c70e315d2402a001d27800fileShExShape> IRI{
+	a [rdfs:Resource] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"File label"
+}
+<9919087f08b35b5022bf87247888ae38application_profileShExShape> IRI{
+	a [<http://purl.org/dc/terms/Standard>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of application profile"
+}
+<8407bca5516787c406e95ca85ff991c4formatShExShape> IRI{
+	a [<http://purl.org/dc/terms/MediaTypeOrExtent>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of format value."
+}
+<5d7ad432c1e57d5e5a78fd634bac88a5media_typeShExShape> IRI{
+	a [<http://purl.org/dc/terms/MediaType>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Media type label."
+}
+<cd4691477337e8f52aa80174c1e84467checksum_algorithmShExShape> IRI{
+	a [<http://spdx.org/rdf/terms#ChecksumAlgorithm>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"A human-readable name for the subject."
+}
+<81b32fce2a23f9e45409ed382507cdc7checksumShExShape> IRI{
+	a [<http://spdx.org/rdf/terms#Checksum>] ;
+	<http://spdx.org/rdf/terms#checksumValue> xsd:hexBinary
+		// rdfs:label	"checksum value"
+		// rdfs:comment	"A lower case hexadecimal encoded digest value produced using a specific algorithm. " ;
+	<http://spdx.org/rdf/terms#algorithm> @<cd4691477337e8f52aa80174c1e84467checksum_algorithmShExShape>
+		// rdfs:label	"uses algorithm"
+		// rdfs:comment	"The algorithm used to produce the subject Checksum."
+}
+<236116198e1082ec9676ce545b7dde3edistribution_downloadable_fileShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#Distribution-DownloadableFile>] ;
+	<http://purl.org/dc/terms/title> xsd:string
+		// rdfs:label	"title"
+		// rdfs:comment	"A name given to the distribution." ;
+	<http://www.w3.org/ns/dcat#accessURL> @<8afb093084c70e315d2402a001d27800fileShExShape> +
+		// rdfs:label	"URL d'accès"
+		// rdfs:comment	"A URL that gives access to a Distribution of the Dataset." ;
+	<http://www.w3.org/ns/dcat#downloadURL> @<8afb093084c70e315d2402a001d27800fileShExShape> *
+		// rdfs:label	"URL de descarga"
+		// rdfs:comment	"Ceci est un lien direct à un fichier téléchargeable en un format donnée. Exple fichier CSV ou RDF. Le format est décrit par les propriétés de distribution dcterms:format et/ou dcat:mediaType." ;
+	<http://purl.org/dc/terms/conformsTo> @<9919087f08b35b5022bf87247888ae38application_profileShExShape> *
+		// rdfs:label	"conforms to schema"
+		// rdfs:comment	"An established schema to which the described Distribution conforms." ;
+	<http://purl.org/dc/terms/format> @<8407bca5516787c406e95ca85ff991c4formatShExShape>
+		// rdfs:label	"has format"
+		// rdfs:comment	"The file format of the distribution." ;
+	<http://www.w3.org/ns/dcat#mediaType> @<5d7ad432c1e57d5e5a78fd634bac88a5media_typeShExShape> ?
+		// rdfs:label	"media type"
+		// rdfs:comment	"Cette propriété doit être utilisée quand c'est définit le type de média de la distribution en IANA, sinon dcterms:format DOIT être utilisé avec différentes valeurs." ;
+	<http://www.w3.org/ns/dcat#byteSize> xsd:integer
+		// rdfs:label	"byte size"
+		// rdfs:comment	"The size of a Distribution in bytes. " ;
+	<http://spdx.org/rdf/terms#checksum> @<81b32fce2a23f9e45409ed382507cdc7checksumShExShape> ?
+		// rdfs:label	"has checksum"
+		// rdfs:comment	"A mechanism that can be used to verify that the contents of a distribution have not changed."
+}

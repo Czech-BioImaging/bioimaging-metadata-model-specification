@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<414415ef9b8f44bd787f0c4a49a868fcrelation_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of location relation type."
+}

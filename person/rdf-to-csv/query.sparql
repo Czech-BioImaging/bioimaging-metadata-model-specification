@@ -1,0 +1,154 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX ns1: <http://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX ns3: <http://www.w3.org/ns/locn#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+SELECT (?v3 AS ?identifier_value) (?v5 AS ?identifier_scheme_label) (?v6 AS ?identifier_authorized) (?v7 AS ?name) (?v8 AS ?given_name) (?v9 AS ?family_name) (?v11 AS ?contact_point_data_box) (?v12 AS ?contact_point_email) (?v13 AS ?contact_point_phone) (?v15 AS ?contact_point_address_label) (?v16 AS ?contact_point_address_full_address) (?v17 AS ?contact_point_address_po_box) (?v18 AS ?contact_point_address_thoroughfare) (?v19 AS ?contact_point_address_locator_designator) (?v20 AS ?contact_point_address_locator_name) (?v21 AS ?contact_point_address_address_area) (?v22 AS ?contact_point_address_post_name) (?v23 AS ?contact_point_address_administrative_unit_level_1) (?v24 AS ?contact_point_address_administrative_unit_level_2) (?v25 AS ?contact_point_address_post_code) (?v28 AS ?affiliation_identifier_value) (?v30 AS ?affiliation_identifier_scheme_label) (?v31 AS ?affiliation_identifier_authorized) (?v32 AS ?affiliation_name) (?v33 AS ?affiliation_alternate_name) (?v35 AS ?affiliation_contact_point_data_box) (?v36 AS ?affiliation_contact_point_email) (?v37 AS ?affiliation_contact_point_phone) (?v39 AS ?affiliation_contact_point_address_label) (?v40 AS ?affiliation_contact_point_address_full_address) (?v41 AS ?affiliation_contact_point_address_po_box) (?v42 AS ?affiliation_contact_point_address_thoroughfare) (?v43 AS ?affiliation_contact_point_address_locator_designator) (?v44 AS ?affiliation_contact_point_address_locator_name) (?v45 AS ?affiliation_contact_point_address_address_area) (?v46 AS ?affiliation_contact_point_address_post_name) (?v47 AS ?affiliation_contact_point_address_administrative_unit_level_1) (?v48 AS ?affiliation_contact_point_address_administrative_unit_level_2) (?v49 AS ?affiliation_contact_point_address_post_code)
+WHERE {
+  ?v1 a prov:Person .
+  OPTIONAL {
+    ?v2 a ns1:Identifier .
+    ?v2 skos:notation ?v3 .
+    ?v4 a ns2:IdentifierScheme .
+    OPTIONAL {
+      ?v4 rdfs:label ?v5 .
+    }
+    ?v2 ns2:inScheme ?v4 .
+    OPTIONAL {
+      ?v2 ns2:authorized ?v6 .
+    }
+    ?v1 ns2:hasIdentifier ?v2 .
+  }
+  ?v1 foaf:name ?v7 .
+  OPTIONAL {
+    ?v1 vcard:given-name ?v8 .
+  }
+  OPTIONAL {
+    ?v1 vcard:family-name ?v9 .
+  }
+  OPTIONAL {
+    ?v10 a ns2:ContactDetails .
+    OPTIONAL {
+      ?v10 ns2:dataBox ?v11 .
+    }
+    OPTIONAL {
+      ?v10 ns2:email ?v12 .
+    }
+    OPTIONAL {
+      ?v10 ns2:phone ?v13 .
+    }
+    OPTIONAL {
+      ?v14 a ns3:Address .
+      OPTIONAL {
+        ?v14 rdfs:label ?v15 .
+      }
+      OPTIONAL {
+        ?v14 ns3:fullAddress ?v16 .
+      }
+      OPTIONAL {
+        ?v14 ns3:poBox ?v17 .
+      }
+      OPTIONAL {
+        ?v14 ns3:thoroughfare ?v18 .
+      }
+      OPTIONAL {
+        ?v14 ns3:locatorDesignator ?v19 .
+      }
+      OPTIONAL {
+        ?v14 ns3:locatorName ?v20 .
+      }
+      OPTIONAL {
+        ?v14 ns3:addressArea ?v21 .
+      }
+      OPTIONAL {
+        ?v14 ns3:postName ?v22 .
+      }
+      OPTIONAL {
+        ?v14 ns3:adminUnitL1 ?v23 .
+      }
+      OPTIONAL {
+        ?v14 ns3:adminUnitL2 ?v24 .
+      }
+      OPTIONAL {
+        ?v14 ns3:postCode ?v25 .
+      }
+      ?v10 vcard:hasAddress ?v14 .
+    }
+    ?v1 dcat:contactPoint ?v10 .
+  }
+  OPTIONAL {
+    ?v26 a foaf:Agent .
+    OPTIONAL {
+      ?v27 a ns1:Identifier .
+      ?v27 skos:notation ?v28 .
+      ?v29 a ns2:IdentifierScheme .
+      OPTIONAL {
+        ?v29 rdfs:label ?v30 .
+      }
+      ?v27 ns2:inScheme ?v29 .
+      OPTIONAL {
+        ?v27 ns2:authorized ?v31 .
+      }
+      ?v26 ns2:hasIdentifier ?v27 .
+    }
+    ?v26 foaf:name ?v32 .
+    OPTIONAL {
+      ?v26 vcard:organization-name ?v33 .
+    }
+    OPTIONAL {
+      ?v34 a ns2:ContactDetails .
+      OPTIONAL {
+        ?v34 ns2:dataBox ?v35 .
+      }
+      OPTIONAL {
+        ?v34 ns2:email ?v36 .
+      }
+      OPTIONAL {
+        ?v34 ns2:phone ?v37 .
+      }
+      OPTIONAL {
+        ?v38 a ns3:Address .
+        OPTIONAL {
+          ?v38 rdfs:label ?v39 .
+        }
+        OPTIONAL {
+          ?v38 ns3:fullAddress ?v40 .
+        }
+        OPTIONAL {
+          ?v38 ns3:poBox ?v41 .
+        }
+        OPTIONAL {
+          ?v38 ns3:thoroughfare ?v42 .
+        }
+        OPTIONAL {
+          ?v38 ns3:locatorDesignator ?v43 .
+        }
+        OPTIONAL {
+          ?v38 ns3:locatorName ?v44 .
+        }
+        OPTIONAL {
+          ?v38 ns3:addressArea ?v45 .
+        }
+        OPTIONAL {
+          ?v38 ns3:postName ?v46 .
+        }
+        OPTIONAL {
+          ?v38 ns3:adminUnitL1 ?v47 .
+        }
+        OPTIONAL {
+          ?v38 ns3:adminUnitL2 ?v48 .
+        }
+        OPTIONAL {
+          ?v38 ns3:postCode ?v49 .
+        }
+        ?v34 vcard:hasAddress ?v38 .
+      }
+      ?v26 dcat:contactPoint ?v34 .
+    }
+    ?v1 ns2:hasAffiliation ?v26 .
+  }
+}

@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "588dcf16-c1a8-45e5-ae2f-94ce7afc336f/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "description_text",
+                "titles": "description_text",
+                "dc:title": {
+                    "@value": "description text",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Text describing the resource.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/datacite#descriptionText",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "description_type_label",
+                "titles": "description_type_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Label of the description type.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "https://model.ccmm.cz/vocabulary/datacite#Description",
+                "virtual": true
+            }
+        ]
+    }
+}

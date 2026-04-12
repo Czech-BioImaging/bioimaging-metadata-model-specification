@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<9919087f08b35b5022bf87247888ae38application_profileShape> a sh:NodeShape;
+    sh:targetClass <http://purl.org/dc/terms/Standard>;
+    sh:class <http://purl.org/dc/terms/Standard>;
+    sh:nodeKind sh:IRI;
+    sh:description "A standard or other specification to which a metadata record conforms."@en;
+    sh:name "Application profile"@en.
+<65742132b1f8c1f2e3d5585ba566b90alabelShape> a sh:PropertyShape;
+    sh:description "Label of application profile"@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<9919087f08b35b5022bf87247888ae38application_profileShape> sh:property <65742132b1f8c1f2e3d5585ba566b90alabelShape>.

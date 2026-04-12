@@ -1,0 +1,87 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ns2: <http://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX ns3: <http://www.w3.org/ns/locn#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dc: <http://purl.org/dc/terms/>
+SELECT (?v4 AS ?relation_identifier_value) (?v6 AS ?relation_identifier_scheme_label) (?v7 AS ?relation_identifier_authorized) (?v8 AS ?relation_name) (?v9 AS ?relation_alternate_name) (?v11 AS ?relation_contact_point_data_box) (?v12 AS ?relation_contact_point_email) (?v13 AS ?relation_contact_point_phone) (?v15 AS ?relation_contact_point_address_label) (?v16 AS ?relation_contact_point_address_full_address) (?v17 AS ?relation_contact_point_address_po_box) (?v18 AS ?relation_contact_point_address_thoroughfare) (?v19 AS ?relation_contact_point_address_locator_designator) (?v20 AS ?relation_contact_point_address_locator_name) (?v21 AS ?relation_contact_point_address_address_area) (?v22 AS ?relation_contact_point_address_post_name) (?v23 AS ?relation_contact_point_address_administrative_unit_level_1) (?v24 AS ?relation_contact_point_address_administrative_unit_level_2) (?v25 AS ?relation_contact_point_address_post_code) (?v27 AS ?role_label)
+WHERE {
+  ?v1 a ns1:ResourceToAgentRelationship .
+  ?v2 a foaf:Agent .
+  OPTIONAL {
+    ?v3 a ns2:Identifier .
+    ?v3 skos:notation ?v4 .
+    ?v5 a ns1:IdentifierScheme .
+    OPTIONAL {
+      ?v5 rdfs:label ?v6 .
+    }
+    ?v3 ns1:inScheme ?v5 .
+    OPTIONAL {
+      ?v3 ns1:authorized ?v7 .
+    }
+    ?v2 ns1:hasIdentifier ?v3 .
+  }
+  ?v2 foaf:name ?v8 .
+  OPTIONAL {
+    ?v2 vcard:organization-name ?v9 .
+  }
+  OPTIONAL {
+    ?v10 a ns1:ContactDetails .
+    OPTIONAL {
+      ?v10 ns1:dataBox ?v11 .
+    }
+    OPTIONAL {
+      ?v10 ns1:email ?v12 .
+    }
+    OPTIONAL {
+      ?v10 ns1:phone ?v13 .
+    }
+    OPTIONAL {
+      ?v14 a ns3:Address .
+      OPTIONAL {
+        ?v14 rdfs:label ?v15 .
+      }
+      OPTIONAL {
+        ?v14 ns3:fullAddress ?v16 .
+      }
+      OPTIONAL {
+        ?v14 ns3:poBox ?v17 .
+      }
+      OPTIONAL {
+        ?v14 ns3:thoroughfare ?v18 .
+      }
+      OPTIONAL {
+        ?v14 ns3:locatorDesignator ?v19 .
+      }
+      OPTIONAL {
+        ?v14 ns3:locatorName ?v20 .
+      }
+      OPTIONAL {
+        ?v14 ns3:addressArea ?v21 .
+      }
+      OPTIONAL {
+        ?v14 ns3:postName ?v22 .
+      }
+      OPTIONAL {
+        ?v14 ns3:adminUnitL1 ?v23 .
+      }
+      OPTIONAL {
+        ?v14 ns3:adminUnitL2 ?v24 .
+      }
+      OPTIONAL {
+        ?v14 ns3:postCode ?v25 .
+      }
+      ?v10 vcard:hasAddress ?v14 .
+    }
+    ?v2 dcat:contactPoint ?v10 .
+  }
+  ?v1 dc:relation ?v2 .
+  ?v26 a skos:Concept .
+  OPTIONAL {
+    ?v26 rdfs:label ?v27 .
+  }
+  ?v1 dcat:hadRole ?v26 .
+}

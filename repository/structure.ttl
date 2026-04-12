@@ -1,0 +1,35 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/repository/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/repository/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Katalog. Řízená kolekce metadat o datových sadách a datových službách\",\"en\":\"Data structure for Repository. A curated collection of metadata about resources.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Katalog\",\"en\":\"Repository\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/repository/class-1742339809761-c64b-cd69-80de\",\"https://czbiextension.com/profile/vocabulary/repository/attribute-1742339813596-b4eb-1f9d-ad64\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/repository/class-1742339809761-c64b-cd69-80de\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/repository/\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/repository\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1742339809761-c64b-cd69-80de a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#Repository\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/repository/attribute-1742339813596-b4eb-1f9d-ad64\"]";
+    kv:dataPsmTechnicalLabel "\"repository\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/repository/class-1742339809761-c64b-cd69-80de\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/repository/class-1742339809761-c64b-cd69-80de\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1742339813596-b4eb-1f9d-ad64 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Repository.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/repository/attribute-1742339813596-b4eb-1f9d-ad64\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/repository/attribute-1742339813596-b4eb-1f9d-ad64\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

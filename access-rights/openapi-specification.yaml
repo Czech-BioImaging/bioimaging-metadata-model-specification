@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/access_rights": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the access rights vocabulary value.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A statement about the access rights to the dataset.",
+        "description": "A statement about the access rights to the dataset.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "access_rights": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the access rights vocabulary value.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

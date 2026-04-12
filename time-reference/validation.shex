@@ -1,0 +1,41 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<3aad54ea119347be503192172e3c5a71ShExShape> IRI{
+	a [<null>] ;
+	<http://www.w3.org/2006/time#inXSDDateTime> xsd:dateTime ;
+	<http://www.w3.org/2006/time#inXSDDate> xsd:date
+}
+<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape> IRI{
+	a [<http://www.w3.org/2006/time#Instant>] ;
+	<null> @<3aad54ea119347be503192172e3c5a71ShExShape>
+}
+<8edcf93959b48f4f379a6046b3c0f593time_intervalShExShape> IRI{
+	a [<http://www.w3.org/2006/time#Interval>] ;
+	<http://www.w3.org/2006/time#hasBeginning> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has beginning"
+		// rdfs:comment	"Time instant representing the beginning of a temporal interval." ;
+	<http://www.w3.org/2006/time#hasEnd> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has end"
+		// rdfs:comment	"Time instant representing the end of a temporal interval."
+}
+<143d320394f7b999b5614d178bf85188date_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Date type label."
+}
+<360183ad708ed2e9fbc102720659969atime_referenceShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#TimeReference>] ;
+	<http://www.w3.org/2006/time#hasTime> @<8edcf93959b48f4f379a6046b3c0f593time_intervalShExShape> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has temporal representation" ;
+	<http://www.w3.org/2006/time#hasTime> @<8edcf93959b48f4f379a6046b3c0f593time_intervalShExShape> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has temporal representation" ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasType> @<143d320394f7b999b5614d178bf85188date_typeShExShape>
+		// rdfs:label	"has date type"
+		// rdfs:comment	"Reference to the codelist of date types." ;
+	<https://model.ccmm.cz/vocabulary/datacite#dateInformation> rdf:langString ?
+		// rdfs:label	"date information"
+		// rdfs:comment	"Additional information to the date in text form."
+}

@@ -1,0 +1,9 @@
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?label)
+WHERE {
+  ?v1 a dc:RightsStatement .
+  OPTIONAL {
+    ?v1 rdfs:label ?v2 .
+  }
+}

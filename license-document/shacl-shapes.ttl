@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<1533ae3e38876c0a9c80d1789e26e450license_documentShape> a sh:NodeShape;
+    sh:targetClass <http://purl.org/dc/terms/LicenseDocument>;
+    sh:class <http://purl.org/dc/terms/LicenseDocument>;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:description "A legal document giving official permission to do something with a resource."@en;
+    sh:name "License Document"@en.
+<fe8a78572915d02a6040ddb43b3cc7b2labelShape> a sh:PropertyShape;
+    sh:description "Label of the license document."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<1533ae3e38876c0a9c80d1789e26e450license_documentShape> sh:property <fe8a78572915d02a6040ddb43b3cc7b2labelShape>.

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/funding-reference/schema.json",
+  "title": "Funding reference",
+  "description": "Information about financial support (funding) for the resource being registered.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "funder"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Funding reference"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Funding reference"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "local_identifier": {
+      "title": "local identifier",
+      "description": "The code assigned by the funder to a sponsored award (grant).",
+      "type": "string"
+    },
+    "award_title": {
+      "title": "award title",
+      "description": " The human readable title or name of the award (grant).",
+      "type": "string"
+    },
+    "funding_program": {
+      "title": "funding program",
+      "description": "Reference to the specific funding program.",
+      "type": "string",
+      "format": "iri"
+    },
+    "funder": {
+      "title": "has funder",
+      "description": "Relation to the agent entity of a funder.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "../organization/schema.json"
+          },
+          {
+            "$ref": "../person/schema.json"
+          }
+        ]
+      }
+    }
+  }
+}

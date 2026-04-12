@@ -1,0 +1,22 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Identifier scheme label"
+}
+<06821ce2a8c116297c754fbb6ddf57d2identifierShExShape> IRI{
+	a [<http://www.w3.org/ns/adms#Identifier>] ;
+	<http://www.w3.org/2004/02/skos/core#notation> xsd:string
+		// rdfs:label	"value"
+		// rdfs:comment	"Value of the identifer within the given identifier scheme." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#inScheme> @<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShExShape>
+		// rdfs:label	"in scheme"
+		// rdfs:comment	"Relation between the identifier and scheme in which it is defined and unique." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#authorized> xsd:boolean ?
+		// rdfs:label	"authorized"
+		// rdfs:comment	"Specifies whether the identifier is authorized by the subject it represents."
+}

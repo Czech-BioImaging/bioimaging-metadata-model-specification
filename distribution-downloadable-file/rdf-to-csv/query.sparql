@@ -1,0 +1,52 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX ns2: <http://spdx.org/rdf/terms#>
+SELECT (?v2 AS ?title) (?v4 AS ?access_url_label) (?v6 AS ?download_url_label) (?v8 AS ?conforms_to_schema_label) (?v10 AS ?format_label) (?v12 AS ?media_type_label) (?v13 AS ?byte_size) (?v15 AS ?checksum_checksum_value) (?v17 AS ?checksum_algorithm_label)
+WHERE {
+  ?v1 a ns1:Distribution-DownloadableFile .
+  ?v1 dc:title ?v2 .
+  ?v3 a rdfs:Resource .
+  OPTIONAL {
+    ?v3 rdfs:label ?v4 .
+  }
+  ?v1 dcat:accessURL ?v3 .
+  OPTIONAL {
+    ?v5 a rdfs:Resource .
+    OPTIONAL {
+      ?v5 rdfs:label ?v6 .
+    }
+    ?v1 dcat:downloadURL ?v5 .
+  }
+  OPTIONAL {
+    ?v7 a dc:Standard .
+    OPTIONAL {
+      ?v7 rdfs:label ?v8 .
+    }
+    ?v1 dc:conformsTo ?v7 .
+  }
+  ?v9 a dc:MediaTypeOrExtent .
+  OPTIONAL {
+    ?v9 rdfs:label ?v10 .
+  }
+  ?v1 dc:format ?v9 .
+  OPTIONAL {
+    ?v11 a dc:MediaType .
+    OPTIONAL {
+      ?v11 rdfs:label ?v12 .
+    }
+    ?v1 dcat:mediaType ?v11 .
+  }
+  ?v1 dcat:byteSize ?v13 .
+  OPTIONAL {
+    ?v14 a ns2:Checksum .
+    ?v14 ns2:checksumValue ?v15 .
+    ?v16 a ns2:ChecksumAlgorithm .
+    OPTIONAL {
+      ?v16 rdfs:label ?v17 .
+    }
+    ?v14 ns2:algorithm ?v16 .
+    ?v1 ns2:checksum ?v14 .
+  }
+}

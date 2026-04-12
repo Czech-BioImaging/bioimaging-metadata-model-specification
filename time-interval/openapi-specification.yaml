@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/time_interval": {
+      "parameters": [
+        {
+          "name": "beginning",
+          "in": "path",
+          "description": "Time instant representing the beginning of a temporal interval.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "end",
+          "in": "path",
+          "description": "Time instant representing the end of a temporal interval.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A temporal entity with an extent or duration",
+        "description": "A temporal entity with an extent or duration",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "time_interval": {
+        "type": "object",
+        "properties": {
+          "beginning": {
+            "description": "Time instant representing the beginning of a temporal interval.",
+            "type": "string"
+          },
+          "end": {
+            "description": "Time instant representing the end of a temporal interval.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

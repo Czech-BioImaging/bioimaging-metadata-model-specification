@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/time_instant": {
+      "parameters": [
+        {
+          "name": null,
+          "in": "path",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A temporal entity with zero extent or duration.",
+        "description": "A temporal entity with zero extent or duration.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "time_instant": {
+        "type": "object",
+        "properties": {
+          "null": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

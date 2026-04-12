@@ -1,0 +1,12 @@
+PREFIX ns0: <http://www.w3.org/ns/dcat#>
+PREFIX ns1: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:Catalog .
+  ?v0 ns1:label ?v1 .
+}
+WHERE {
+  ?v0 a ns0:Catalog .
+  OPTIONAL {
+    ?v0 ns1:label ?v1 .
+  }
+}

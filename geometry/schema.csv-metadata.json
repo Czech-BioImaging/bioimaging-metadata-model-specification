@@ -1,0 +1,64 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "cd5447fd-6952-4a24-8447-1454a9a2eabf/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "label",
+                "titles": "label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Label of geometry object.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "gml",
+                "titles": "gml",
+                "dc:title": {
+                    "@value": "geography markup language literal",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Representation of geometry object as GML Literal.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.opengis.net/ont/geosparql#asGML"
+            },
+            {
+                "@type": "Column",
+                "name": "wkt",
+                "titles": "wkt",
+                "dc:title": {
+                    "@value": "well known text literal",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Representation of geometry object as WKT Literal.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.opengis.net/ont/geosparql#asWKT"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://www.w3.org/ns/locn#Geometry",
+                "virtual": true
+            }
+        ]
+    }
+}

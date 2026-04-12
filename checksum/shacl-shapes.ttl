@@ -1,0 +1,39 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<81b32fce2a23f9e45409ed382507cdc7checksumShape> a sh:NodeShape;
+    sh:targetClass <http://spdx.org/rdf/terms#Checksum>;
+    sh:class <http://spdx.org/rdf/terms#Checksum>;
+    sh:nodeKind sh:IRI;
+    sh:description "A value that allows the contents of a file to be authenticated."@en;
+    sh:name "Checksum"@en.
+<374c34708539a102b7380cfd60db9f78checksum_valueShape> a sh:PropertyShape;
+    sh:description "A lower case hexadecimal encoded digest value produced using a specific algorithm. "@en;
+    sh:name "checksum value"@en;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:path <http://spdx.org/rdf/terms#checksumValue>.
+
+<374c34708539a102b7380cfd60db9f78checksum_valueShape> sh:datatype xsd:hexBinary.
+<81b32fce2a23f9e45409ed382507cdc7checksumShape> sh:property <374c34708539a102b7380cfd60db9f78checksum_valueShape>.
+<7d5571e5a37b61721fda6a650e4d728ealgorithmShape> a sh:PropertyShape;
+    sh:description "The algorithm used to produce the subject Checksum."@en;
+    sh:name "uses algorithm"@en;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:path <http://spdx.org/rdf/terms#algorithm>;
+    sh:nodeKind sh:IRI.
+<cd4691477337e8f52aa80174c1e84467checksum_algorithmShape> a sh:NodeShape;
+    sh:class <http://spdx.org/rdf/terms#ChecksumAlgorithm>;
+    sh:nodeKind sh:IRI;
+    sh:description "Algorithm used for Checksums."@en;
+    sh:name "Checksum algorithm"@en.
+<06b10ea6865aec2d116ac6496780e825labelShape> a sh:PropertyShape;
+    sh:description "A human-readable name for the subject."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<cd4691477337e8f52aa80174c1e84467checksum_algorithmShape> sh:property <06b10ea6865aec2d116ac6496780e825labelShape>.
+<7d5571e5a37b61721fda6a650e4d728ealgorithmShape> sh:node <cd4691477337e8f52aa80174c1e84467checksum_algorithmShape>.
+<81b32fce2a23f9e45409ed382507cdc7checksumShape> sh:property <7d5571e5a37b61721fda6a650e4d728ealgorithmShape>.

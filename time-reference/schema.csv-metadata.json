@@ -1,0 +1,80 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "fd449048-ce75-43e2-a8ba-c300bfc94c6e/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "temporal_representation_beginning_null_date_time",
+                "titles": "temporal_representation_beginning_null_date_time",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDateTime",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "temporal_representation_beginning_null_date",
+                "titles": "temporal_representation_beginning_null_date",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDate",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "temporal_representation_end_null_date_time",
+                "titles": "temporal_representation_end_null_date_time",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDateTime",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "temporal_representation_end_null_date",
+                "titles": "temporal_representation_end_null_date",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDate",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "date_type_label",
+                "titles": "date_type_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Date type label.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "date_information",
+                "titles": "date_information",
+                "dc:title": {
+                    "@value": "date information",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Additional information to the date in text form.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/datacite#dateInformation",
+                "datatype": "string",
+                "lang": "cs"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
+                "virtual": true
+            }
+        ]
+    }
+}

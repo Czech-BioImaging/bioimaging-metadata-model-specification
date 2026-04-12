@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Identifier scheme label"
+}

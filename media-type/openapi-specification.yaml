@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/media_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Media type label.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A file format.",
+        "description": "A file format.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "media_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Media type label.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

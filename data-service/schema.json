@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data-service/schema.json",
+  "title": "Data Service",
+  "description": "Umístění či přístupový bod poskytující operace související s hledáním, přistupem k, či výkonem funkcí na datech či souvisejících zdrojích.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "endpoint_url"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Data Service"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Data Service"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Data service label",
+      "type": "array",
+      "items": {
+        "title": "Řetězec anotovaný jazykem",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "endpoint_url": {
+      "title": "přístupový bod služby",
+      "description": "Kořenové umístění nebo hlavní přístupový bod služby (IRI přístupné přes Web).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../related-resource/schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/subject-scheme/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/subject-scheme/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Subject scheme. Collection of subjects (keywords, concepts, classification codes) curated by a single source.\",\"en\":\"Data structure for Subject scheme. Collection of subjects (keywords, concepts, classification codes) curated by a single source.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Subject scheme\",\"en\":\"Subject scheme\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/subject-scheme/class-1742288726417-ccc4-1d84-8bc2\",\"https://czbiextension.com/profile/vocabulary/subject-scheme/attribute-1742340974751-a7a0-f371-9a50\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/subject-scheme/class-1742288726417-ccc4-1d84-8bc2\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/subject-scheme/\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/subject-scheme\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1742288726417-ccc4-1d84-8bc2 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#SubjectScheme\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/subject-scheme/attribute-1742340974751-a7a0-f371-9a50\"]";
+    kv:dataPsmTechnicalLabel "\"subject_scheme\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/subject-scheme/class-1742288726417-ccc4-1d84-8bc2\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/subject-scheme/class-1742288726417-ccc4-1d84-8bc2\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1742340974751-a7a0-f371-9a50 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/SubjectScheme.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/subject-scheme/attribute-1742340974751-a7a0-f371-9a50\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/subject-scheme/attribute-1742340974751-a7a0-f371-9a50\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Time reference": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
+      "@context": {
+        "temporal_representation": {
+          "@id": "http://www.w3.org/2006/time#hasTime",
+          "@context": "../time-interval/context.jsonld"
+        },
+        "date_type": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
+          "@context": "../date-type/context.jsonld"
+        },
+        "date_information": {
+          "@id": "https://model.ccmm.cz/vocabulary/datacite#dateInformation",
+          "@container": "@language"
+        }
+      }
+    }
+  }
+}

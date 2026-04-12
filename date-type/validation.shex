@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<143d320394f7b999b5614d178bf85188date_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Date type label."
+}

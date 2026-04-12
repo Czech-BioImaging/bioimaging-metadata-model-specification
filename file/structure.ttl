@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/file/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/file/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro File. Downloadable file in given format.\",\"en\":\"Data structure for File. Downloadable file in given format.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"File\",\"en\":\"File\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/file/class-1742235831207-776a-49bb-9ac1\",\"https://czbiextension.com/profile/vocabulary/file/attribute-1742341222538-69a0-8ce3-ac2a\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/file/class-1742235831207-776a-49bb-9ac1\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/file/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/file\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1742235831207-776a-49bb-9ac1 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#File\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/file/attribute-1742341222538-69a0-8ce3-ac2a\"]";
+    kv:dataPsmTechnicalLabel "\"file\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/file/class-1742235831207-776a-49bb-9ac1\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/file/class-1742235831207-776a-49bb-9ac1\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1742341222538-69a0-8ce3-ac2a a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/File.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/file/attribute-1742341222538-69a0-8ce3-ac2a\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/file/attribute-1742341222538-69a0-8ce3-ac2a\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

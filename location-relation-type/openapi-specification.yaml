@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/relation_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of location relation type.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Relation of the dataset to the resource.",
+        "description": "Relation of the dataset to the resource.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "relation_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of location relation type.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

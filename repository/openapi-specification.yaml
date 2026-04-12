@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/repository": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Human readable name of the repository.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A catalogue or repository that hosts the Datasets or Data Services being described.",
+        "description": "A catalogue or repository that hosts the Datasets or Data Services being described.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "repository": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Human readable name of the repository.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

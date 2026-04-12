@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/date-type/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/date-type/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Date type. Type of a date in relation to the resource.\",\"cs\":\"Datová struktura pro Date type. Type of a date in relation to the resource.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Date type\",\"cs\":\"Date type\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/date-type/class-1747684797448-9d6c-a945-a0af\",\"https://czbiextension.com/profile/vocabulary/date-type/attribute-1747684814692-fa05-be26-858d\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/date-type/class-1747684797448-9d6c-a945-a0af\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/date-type/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/date-type\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1747684797448-9d6c-a945-a0af a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#DateType\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/date-type/attribute-1747684814692-fa05-be26-858d\"]";
+    kv:dataPsmTechnicalLabel "\"date_type\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/date-type/class-1747684797448-9d6c-a945-a0af\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/date-type/class-1747684797448-9d6c-a945-a0af\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1747684814692-fa05-be26-858d a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/DateType.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/date-type/attribute-1747684814692-fa05-be26-858d\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/date-type/attribute-1747684814692-fa05-be26-858d\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

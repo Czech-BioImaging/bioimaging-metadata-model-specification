@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/checksum_algorithm": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "A human-readable name for the subject.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Algorithm used for Checksums.",
+        "description": "Algorithm used for Checksums.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "checksum_algorithm": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "A human-readable name for the subject.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

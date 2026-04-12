@@ -1,0 +1,33 @@
+PREFIX ns0: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX ns1: <http://purl.org/dc/terms/>
+PREFIX ns2: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns3: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns4: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:Subject .
+  ?v0 ns1:title ?v1 .
+  ?v0 ns2:definition ?v2 .
+  ?v0 ns0:subjectClassificationCode ?v3 .
+  ?v0 ns3:inSubjectScheme ?v4 .
+  ?v4 a ns3:SubjectScheme .
+  ?v4 ns4:label ?v5 .
+}
+WHERE {
+  ?v0 a ns0:Subject .
+  ?v0 ns1:title ?v1 .
+  OPTIONAL {
+    ?v0 ns2:definition ?v2 .
+  }
+  OPTIONAL {
+    ?v0 ns0:subjectClassificationCode ?v3 .
+  }
+  OPTIONAL {
+    ?v0 ns3:inSubjectScheme ?v4 .
+    OPTIONAL {
+      ?v4 a ns3:SubjectScheme .
+    }
+    OPTIONAL {
+      ?v4 ns4:label ?v5 .
+    }
+  }
+}

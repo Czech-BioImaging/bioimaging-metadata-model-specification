@@ -1,0 +1,24 @@
+PREFIX ns0: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns1: <http://purl.org/dc/terms/>
+PREFIX ns2: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns3: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:AlternateTitle .
+  ?v0 ns1:title ?v1 .
+  ?v0 ns0:hasType ?v2 .
+  ?v2 a ns2:Concept .
+  ?v2 ns3:label ?v3 .
+}
+WHERE {
+  ?v0 a ns0:AlternateTitle .
+  ?v0 ns1:title ?v1 .
+  OPTIONAL {
+    ?v0 ns0:hasType ?v2 .
+    OPTIONAL {
+      ?v2 a ns2:Concept .
+    }
+    OPTIONAL {
+      ?v2 ns3:label ?v3 .
+    }
+  }
+}

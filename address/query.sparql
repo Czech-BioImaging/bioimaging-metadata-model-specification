@@ -1,0 +1,52 @@
+PREFIX ns0: <http://www.w3.org/ns/locn#>
+PREFIX ns1: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:Address .
+  ?v0 ns1:label ?v1 .
+  ?v0 ns0:fullAddress ?v2 .
+  ?v0 ns0:poBox ?v3 .
+  ?v0 ns0:thoroughfare ?v4 .
+  ?v0 ns0:locatorDesignator ?v5 .
+  ?v0 ns0:locatorName ?v6 .
+  ?v0 ns0:addressArea ?v7 .
+  ?v0 ns0:postName ?v8 .
+  ?v0 ns0:adminUnitL1 ?v9 .
+  ?v0 ns0:adminUnitL2 ?v10 .
+  ?v0 ns0:postCode ?v11 .
+}
+WHERE {
+  ?v0 a ns0:Address .
+  OPTIONAL {
+    ?v0 ns1:label ?v1 .
+  }
+  OPTIONAL {
+    ?v0 ns0:fullAddress ?v2 .
+  }
+  OPTIONAL {
+    ?v0 ns0:poBox ?v3 .
+  }
+  OPTIONAL {
+    ?v0 ns0:thoroughfare ?v4 .
+  }
+  OPTIONAL {
+    ?v0 ns0:locatorDesignator ?v5 .
+  }
+  OPTIONAL {
+    ?v0 ns0:locatorName ?v6 .
+  }
+  OPTIONAL {
+    ?v0 ns0:addressArea ?v7 .
+  }
+  OPTIONAL {
+    ?v0 ns0:postName ?v8 .
+  }
+  OPTIONAL {
+    ?v0 ns0:adminUnitL1 ?v9 .
+  }
+  OPTIONAL {
+    ?v0 ns0:adminUnitL2 ?v10 .
+  }
+  OPTIONAL {
+    ?v0 ns0:postCode ?v11 .
+  }
+}

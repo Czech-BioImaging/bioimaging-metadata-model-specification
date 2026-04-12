@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/documentation": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Documentation label",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A textual resource intended for human consumption that contains information about the data service.",
+        "description": "A textual resource intended for human consumption that contains information about the data service.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "documentation": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Documentation label",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

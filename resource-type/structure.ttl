@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/resource-type/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/resource-type/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Resource type. Type of the resource.\",\"cs\":\"Datová struktura pro Resource type. Type of the resource.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Resource type\",\"cs\":\"Resource type\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/resource-type/class-1747685065285-430a-9d52-9477\",\"https://czbiextension.com/profile/vocabulary/resource-type/attribute-1747685069357-0d2c-7db8-ac6c\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/resource-type/class-1747685065285-430a-9d52-9477\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/resource-type/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/resource-type\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1747685065285-430a-9d52-9477 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#ResourceType\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/resource-type/attribute-1747685069357-0d2c-7db8-ac6c\"]";
+    kv:dataPsmTechnicalLabel "\"resource_type\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/resource-type/class-1747685065285-430a-9d52-9477\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/resource-type/class-1747685065285-430a-9d52-9477\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1747685069357-0d2c-7db8-ac6c a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/ResourceType.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/resource-type/attribute-1747685069357-0d2c-7db8-ac6c\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/resource-type/attribute-1747685069357-0d2c-7db8-ac6c\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

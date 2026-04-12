@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<86ea017044548f0c6ce4cc8a8675621baccess_rightsShExShape> IRI{
+	a [<http://purl.org/dc/terms/RightsStatement>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of the access rights vocabulary value."
+}

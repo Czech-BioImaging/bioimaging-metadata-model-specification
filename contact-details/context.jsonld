@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Contact details": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#ContactDetails",
+      "@context": {
+        "data_box": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
+          "@type": "xsd:string"
+        },
+        "email": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
+          "@type": "xsd:string"
+        },
+        "phone": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
+          "@type": "xsd:string"
+        },
+        "address": {
+          "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
+          "@container": "@set",
+          "@context": "../address/context.jsonld"
+        }
+      }
+    }
+  }
+}

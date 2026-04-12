@@ -1,0 +1,11 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<3aad54ea119347be503192172e3c5a71ShExShape> IRI{
+	a [<null>] ;
+	<http://www.w3.org/2006/time#inXSDDateTime> xsd:dateTime ;
+	<http://www.w3.org/2006/time#inXSDDate> xsd:date
+}
+<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape> IRI{
+	a [<http://www.w3.org/2006/time#Instant>] ;
+	<null> @<3aad54ea119347be503192172e3c5a71ShExShape>
+}

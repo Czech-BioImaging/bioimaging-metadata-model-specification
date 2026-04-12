@@ -1,0 +1,16 @@
+PREFIX ns1: <http://www.w3.org/ns/locn#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns2: <http://www.opengis.net/ont/geosparql#>
+SELECT (?v2 AS ?label) (?v3 AS ?gml) (?v4 AS ?wkt)
+WHERE {
+  ?v1 a ns1:Geometry .
+  OPTIONAL {
+    ?v1 rdfs:label ?v2 .
+  }
+  OPTIONAL {
+    ?v1 ns2:asGML ?v3 .
+  }
+  OPTIONAL {
+    ?v1 ns2:asWKT ?v4 .
+  }
+}

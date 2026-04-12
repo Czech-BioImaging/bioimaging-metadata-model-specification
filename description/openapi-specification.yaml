@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/description": {
+      "parameters": [
+        {
+          "name": "description_text",
+          "in": "path",
+          "description": "Text describing the resource.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "description_type",
+          "in": "path",
+          "description": "Relation to the type of the description.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
+        "description": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "description": {
+        "type": "object",
+        "properties": {
+          "description_text": {
+            "description": "Text describing the resource.",
+            "type": "string"
+          },
+          "description_type": {
+            "description": "Relation to the type of the description.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

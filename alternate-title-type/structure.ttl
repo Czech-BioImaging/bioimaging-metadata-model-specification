@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/alternate-title-type/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/alternate-title-type/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Alternate title type. Type of alternate title.\",\"cs\":\"Datová struktura pro Alternate title type. Type of alternate title.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Alternate title type\",\"cs\":\"Alternate title type\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/alternate-title-type/class-1747685369782-00bf-3a68-ae58\",\"https://czbiextension.com/profile/vocabulary/alternate-title-type/attribute-1747685374451-9e56-3fb3-8eb5\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/alternate-title-type/class-1747685369782-00bf-3a68-ae58\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/alternate-title-type/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/alternate-title-type\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1747685369782-00bf-3a68-ae58 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#AlternateTitleType\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/alternate-title-type/attribute-1747685374451-9e56-3fb3-8eb5\"]";
+    kv:dataPsmTechnicalLabel "\"alternate_title_type\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/alternate-title-type/class-1747685369782-00bf-3a68-ae58\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/alternate-title-type/class-1747685369782-00bf-3a68-ae58\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1747685374451-9e56-3fb3-8eb5 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/AlternateTitleType.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/alternate-title-type/attribute-1747685374451-9e56-3fb3-8eb5\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/alternate-title-type/attribute-1747685374451-9e56-3fb3-8eb5\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

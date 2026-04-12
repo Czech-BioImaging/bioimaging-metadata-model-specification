@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<cd4691477337e8f52aa80174c1e84467checksum_algorithmShExShape> IRI{
+	a [<http://spdx.org/rdf/terms#ChecksumAlgorithm>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"A human-readable name for the subject."
+}

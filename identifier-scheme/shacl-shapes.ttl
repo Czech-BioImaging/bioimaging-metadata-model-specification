@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShape> a sh:NodeShape;
+    sh:targetClass <https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>;
+    sh:class <https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>;
+    sh:nodeKind sh:IRI;
+    sh:description "Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier."@en;
+    sh:name "Identifier scheme"@en.
+<1a2ae271781475319a46ee4851b63f9dlabelShape> a sh:PropertyShape;
+    sh:description "Identifier scheme label"@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShape> sh:property <1a2ae271781475319a46ee4851b63f9dlabelShape>.

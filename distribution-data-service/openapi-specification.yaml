@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/distribution_data_service": {
+      "parameters": [
+        {
+          "name": "title",
+          "in": "path",
+          "description": "A name given to the distribution.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "access_service",
+          "in": "path",
+          "description": "A data service that gives access to the distribution of the dataset.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "conforms_to_specification",
+          "in": "path",
+          "description": "An established schema to which the described Distribution conforms.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "documentation",
+          "in": "path",
+          "description": "A page or document about this Distribution.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "description",
+          "in": "path",
+          "description": "A free-text account of the Distribution.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Physical embodiment of the dataset distribution as a particular data service. ",
+        "description": "Physical embodiment of the dataset distribution as a particular data service. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "distribution_data_service": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "description": "A name given to the distribution.",
+            "type": "string"
+          },
+          "access_service": {
+            "description": "A data service that gives access to the distribution of the dataset.",
+            "type": "string"
+          },
+          "conforms_to_specification": {
+            "description": "An established schema to which the described Distribution conforms.",
+            "type": "string"
+          },
+          "documentation": {
+            "description": "A page or document about this Distribution.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A free-text account of the Distribution.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

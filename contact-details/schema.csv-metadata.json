@@ -1,0 +1,218 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "625173c9-9d34-4ae7-a93b-0f65ce4ecd63/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "data_box",
+                "titles": "data_box",
+                "dc:title": {
+                    "@value": "data box",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Code of the data box.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#dataBox"
+            },
+            {
+                "@type": "Column",
+                "name": "email",
+                "titles": "email",
+                "dc:title": {
+                    "@value": "email",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Email address.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#email"
+            },
+            {
+                "@type": "Column",
+                "name": "phone",
+                "titles": "phone",
+                "dc:title": {
+                    "@value": "phone",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Phone number",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#phone"
+            },
+            {
+                "@type": "Column",
+                "name": "address_label",
+                "titles": "address_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Address label",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "address_full_address",
+                "titles": "address_full_address",
+                "dc:title": {
+                    "@value": "full address",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The complete address written as a string.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#fullAddress"
+            },
+            {
+                "@type": "Column",
+                "name": "address_po_box",
+                "titles": "address_po_box",
+                "dc:title": {
+                    "@value": "post office box",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A location designator for a postal delivery point at a post office, usually a number.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#poBox"
+            },
+            {
+                "@type": "Column",
+                "name": "address_thoroughfare",
+                "titles": "address_thoroughfare",
+                "dc:title": {
+                    "@value": "thoroughfare",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a passage or way through from one location to another.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#thoroughfare"
+            },
+            {
+                "@type": "Column",
+                "name": "address_locator_designator",
+                "titles": "address_locator_designator",
+                "dc:title": {
+                    "@value": "locator designator",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#locatorDesignator"
+            },
+            {
+                "@type": "Column",
+                "name": "address_locator_name",
+                "titles": "address_locator_name",
+                "dc:title": {
+                    "@value": "locator name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#locatorName"
+            },
+            {
+                "@type": "Column",
+                "name": "address_address_area",
+                "titles": "address_address_area",
+                "dc:title": {
+                    "@value": "address area",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a geographic area that groups Addresses.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#addressArea"
+            },
+            {
+                "@type": "Column",
+                "name": "address_post_name",
+                "titles": "address_post_name",
+                "dc:title": {
+                    "@value": "post name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#postName"
+            },
+            {
+                "@type": "Column",
+                "name": "address_administrative_unit_level_1",
+                "titles": "address_administrative_unit_level_1",
+                "dc:title": {
+                    "@value": "administrative unit level 1",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of the uppermost level of the address, almost always a country.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL1"
+            },
+            {
+                "@type": "Column",
+                "name": "address_administrative_unit_level_2",
+                "titles": "address_administrative_unit_level_2",
+                "dc:title": {
+                    "@value": "administrative unit level 2",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL2"
+            },
+            {
+                "@type": "Column",
+                "name": "address_post_code",
+                "titles": "address_post_code",
+                "dc:title": {
+                    "@value": "post code",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#postCode"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "https://model.ccmm.cz/vocabulary/ccmm#ContactDetails",
+                "virtual": true
+            }
+        ]
+    }
+}

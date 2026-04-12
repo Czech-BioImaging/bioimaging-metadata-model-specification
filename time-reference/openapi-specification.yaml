@@ -1,0 +1,74 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/time_reference": {
+      "parameters": [
+        {
+          "name": "temporal_representation",
+          "in": "path",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "date_type",
+          "in": "path",
+          "description": "Reference to the codelist of date types.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "date_information",
+          "in": "path",
+          "description": "Additional information to the date in text form.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "An object representing time reference relevant to some event related to the resource has happened.",
+        "description": "An object representing time reference relevant to some event related to the resource has happened.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "time_reference": {
+        "type": "object",
+        "properties": {
+          "temporal_representation": {
+            "type": "string"
+          },
+          "date_type": {
+            "description": "Reference to the codelist of date types.",
+            "type": "string"
+          },
+          "date_information": {
+            "description": "Additional information to the date in text form.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

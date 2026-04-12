@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/funding_reference": {
+      "parameters": [
+        {
+          "name": "local_identifier",
+          "in": "path",
+          "description": "The code assigned by the funder to a sponsored award (grant).",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "award_title",
+          "in": "path",
+          "description": " The human readable title or name of the award (grant).",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "funding_program",
+          "in": "path",
+          "description": "Reference to the specific funding program.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "funder",
+          "in": "path",
+          "description": "Relation to the agent entity of a funder.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Information about financial support (funding) for the resource being registered.",
+        "description": "Information about financial support (funding) for the resource being registered.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "funding_reference": {
+        "type": "object",
+        "properties": {
+          "local_identifier": {
+            "description": "The code assigned by the funder to a sponsored award (grant).",
+            "type": "string"
+          },
+          "award_title": {
+            "description": " The human readable title or name of the award (grant).",
+            "type": "string"
+          },
+          "funding_program": {
+            "description": "Reference to the specific funding program.",
+            "type": "string"
+          },
+          "funder": {
+            "description": "Relation to the agent entity of a funder.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

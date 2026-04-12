@@ -1,0 +1,19 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<cd4691477337e8f52aa80174c1e84467checksum_algorithmShExShape> IRI{
+	a [<http://spdx.org/rdf/terms#ChecksumAlgorithm>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"A human-readable name for the subject."
+}
+<81b32fce2a23f9e45409ed382507cdc7checksumShExShape> IRI{
+	a [<http://spdx.org/rdf/terms#Checksum>] ;
+	<http://spdx.org/rdf/terms#checksumValue> xsd:hexBinary
+		// rdfs:label	"checksum value"
+		// rdfs:comment	"A lower case hexadecimal encoded digest value produced using a specific algorithm. " ;
+	<http://spdx.org/rdf/terms#algorithm> @<cd4691477337e8f52aa80174c1e84467checksum_algorithmShExShape>
+		// rdfs:label	"uses algorithm"
+		// rdfs:comment	"The algorithm used to produce the subject Checksum."
+}

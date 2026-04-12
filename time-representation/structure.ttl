@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/time-representation/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/time-representation/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Time representation. Representation of time reference as a temporal interval or instant on which something relevant to the resource has happened.\",\"cs\":\"Datová struktura pro Time representation. Representation of time reference as a temporal interval or instant on which something relevant to the resource has happened.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Time representation\",\"cs\":\"Time representation\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/time-representation/or-1762083262587-9520-fde3-b6dc\",\"https://czbiextension.com/profile/vocabulary/time-representation/classReference-1762084173609-8a7f-5df7-a937\",\"https://czbiextension.com/profile/vocabulary/time-representation/classReference-1762084179826-c81a-fe45-8553\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/time-representation/or-1762083262587-9520-fde3-b6dc\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/time-representation/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/time-representation\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:or-1762083262587-9520-fde3-b6dc a dsvs:structure-entity;
+    kv:dataPsmChoices "[\"https://czbiextension.com/profile/vocabulary/time-representation/classReference-1762084173609-8a7f-5df7-a937\",\"https://czbiextension.com/profile/vocabulary/time-representation/classReference-1762084179826-c81a-fe45-8553\"]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "null";
+    kv:dataPsmTechnicalLabel "\"time_representation\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/time-representation/or-1762083262587-9520-fde3-b6dc\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/time-representation/or-1762083262587-9520-fde3-b6dc\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Or\"]".
+:classReference-1762084173609-8a7f-5df7-a937 a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://czbiextension.com/profile/vocabulary/time-interval/class-1750713556573-db1c-483c-bcb7\"";
+    kv:dataPsmSpecification "\"https://czbiextension.com/profile/vocabulary/time-interval/\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/time-representation/classReference-1762084173609-8a7f-5df7-a937\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/time-representation/classReference-1762084173609-8a7f-5df7-a937\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:classReference-1762084179826-c81a-fe45-8553 a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://czbiextension.com/profile/vocabulary/time-instant/class-1750713474658-dd87-9fe9-a4ab\"";
+    kv:dataPsmSpecification "\"https://czbiextension.com/profile/vocabulary/time-instant/\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/time-representation/classReference-1762084179826-c81a-fe45-8553\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/time-representation/classReference-1762084179826-c81a-fe45-8553\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".

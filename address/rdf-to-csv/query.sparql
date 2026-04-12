@@ -1,0 +1,39 @@
+PREFIX ns1: <http://www.w3.org/ns/locn#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?label) (?v3 AS ?full_address) (?v4 AS ?po_box) (?v5 AS ?thoroughfare) (?v6 AS ?locator_designator) (?v7 AS ?locator_name) (?v8 AS ?address_area) (?v9 AS ?post_name) (?v10 AS ?administrative_unit_level_1) (?v11 AS ?administrative_unit_level_2) (?v12 AS ?post_code)
+WHERE {
+  ?v1 a ns1:Address .
+  OPTIONAL {
+    ?v1 rdfs:label ?v2 .
+  }
+  OPTIONAL {
+    ?v1 ns1:fullAddress ?v3 .
+  }
+  OPTIONAL {
+    ?v1 ns1:poBox ?v4 .
+  }
+  OPTIONAL {
+    ?v1 ns1:thoroughfare ?v5 .
+  }
+  OPTIONAL {
+    ?v1 ns1:locatorDesignator ?v6 .
+  }
+  OPTIONAL {
+    ?v1 ns1:locatorName ?v7 .
+  }
+  OPTIONAL {
+    ?v1 ns1:addressArea ?v8 .
+  }
+  OPTIONAL {
+    ?v1 ns1:postName ?v9 .
+  }
+  OPTIONAL {
+    ?v1 ns1:adminUnitL1 ?v10 .
+  }
+  OPTIONAL {
+    ?v1 ns1:adminUnitL2 ?v11 .
+  }
+  OPTIONAL {
+    ?v1 ns1:postCode ?v12 .
+  }
+}

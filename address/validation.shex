@@ -1,0 +1,40 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<4a5b97b40518e69740cd5780d6b990daaddressShExShape> IRI{
+	a [<http://www.w3.org/ns/locn#Address>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Address label" ;
+	<http://www.w3.org/ns/locn#fullAddress> xsd:string *
+		// rdfs:label	"full address"
+		// rdfs:comment	"The complete address written as a string." ;
+	<http://www.w3.org/ns/locn#poBox> xsd:string *
+		// rdfs:label	"post office box"
+		// rdfs:comment	"A location designator for a postal delivery point at a post office, usually a number." ;
+	<http://www.w3.org/ns/locn#thoroughfare> xsd:string *
+		// rdfs:label	"thoroughfare"
+		// rdfs:comment	"The name of a passage or way through from one location to another." ;
+	<http://www.w3.org/ns/locn#locatorDesignator> xsd:string *
+		// rdfs:label	"locator designator"
+		// rdfs:comment	"A number or sequence of characters that uniquely identifies the locator within the relevant scope." ;
+	<http://www.w3.org/ns/locn#locatorName> xsd:string *
+		// rdfs:label	"locator name"
+		// rdfs:comment	"Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building." ;
+	<http://www.w3.org/ns/locn#addressArea> xsd:string *
+		// rdfs:label	"address area"
+		// rdfs:comment	"The name of a geographic area that groups Addresses." ;
+	<http://www.w3.org/ns/locn#postName> xsd:string *
+		// rdfs:label	"post name"
+		// rdfs:comment	"A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. " ;
+	<http://www.w3.org/ns/locn#adminUnitL1> xsd:string *
+		// rdfs:label	"administrative unit level 1"
+		// rdfs:comment	"The name of the uppermost level of the address, almost always a country." ;
+	<http://www.w3.org/ns/locn#adminUnitL2> xsd:string *
+		// rdfs:label	"administrative unit level 2"
+		// rdfs:comment	"The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities." ;
+	<http://www.w3.org/ns/locn#postCode> xsd:string *
+		// rdfs:label	"post code"
+		// rdfs:comment	"The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+}

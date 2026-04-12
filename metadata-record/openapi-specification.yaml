@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/metadata_record": {
+      "parameters": [
+        {
+          "name": "language",
+          "in": "path",
+          "description": "A language used in the textual metadata describing titles, descriptions of the metadata record.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "qualified_relation",
+          "in": "path",
+          "description": "Link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "date_updated",
+          "in": "path",
+          "description": "Date on which the resource was changed.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "date_created",
+          "in": "path",
+          "description": "The date on which the metadata record was created.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "conforms_to_standard",
+          "in": "path",
+          "description": "An established standard to which the metadata record conforms.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "original_repository",
+          "in": "path",
+          "description": "Link to the repository in which the metadata were originally stored and curated.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Description of the metadata record of the dataset. ",
+        "description": "Description of the metadata record of the dataset. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "metadata_record": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "description": "A language used in the textual metadata describing titles, descriptions of the metadata record.",
+            "type": "string"
+          },
+          "qualified_relation": {
+            "description": "Link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship.",
+            "type": "string"
+          },
+          "date_updated": {
+            "description": "Date on which the resource was changed.",
+            "type": "string"
+          },
+          "date_created": {
+            "description": "The date on which the metadata record was created.",
+            "type": "string"
+          },
+          "conforms_to_standard": {
+            "description": "An established standard to which the metadata record conforms.",
+            "type": "string"
+          },
+          "original_repository": {
+            "description": "Link to the repository in which the metadata were originally stored and curated.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

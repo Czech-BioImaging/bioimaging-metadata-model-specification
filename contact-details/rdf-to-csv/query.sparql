@@ -1,0 +1,54 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns2: <http://www.w3.org/ns/locn#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+SELECT (?v2 AS ?data_box) (?v3 AS ?email) (?v4 AS ?phone) (?v6 AS ?address_label) (?v7 AS ?address_full_address) (?v8 AS ?address_po_box) (?v9 AS ?address_thoroughfare) (?v10 AS ?address_locator_designator) (?v11 AS ?address_locator_name) (?v12 AS ?address_address_area) (?v13 AS ?address_post_name) (?v14 AS ?address_administrative_unit_level_1) (?v15 AS ?address_administrative_unit_level_2) (?v16 AS ?address_post_code)
+WHERE {
+  ?v1 a ns1:ContactDetails .
+  OPTIONAL {
+    ?v1 ns1:dataBox ?v2 .
+  }
+  OPTIONAL {
+    ?v1 ns1:email ?v3 .
+  }
+  OPTIONAL {
+    ?v1 ns1:phone ?v4 .
+  }
+  OPTIONAL {
+    ?v5 a ns2:Address .
+    OPTIONAL {
+      ?v5 rdfs:label ?v6 .
+    }
+    OPTIONAL {
+      ?v5 ns2:fullAddress ?v7 .
+    }
+    OPTIONAL {
+      ?v5 ns2:poBox ?v8 .
+    }
+    OPTIONAL {
+      ?v5 ns2:thoroughfare ?v9 .
+    }
+    OPTIONAL {
+      ?v5 ns2:locatorDesignator ?v10 .
+    }
+    OPTIONAL {
+      ?v5 ns2:locatorName ?v11 .
+    }
+    OPTIONAL {
+      ?v5 ns2:addressArea ?v12 .
+    }
+    OPTIONAL {
+      ?v5 ns2:postName ?v13 .
+    }
+    OPTIONAL {
+      ?v5 ns2:adminUnitL1 ?v14 .
+    }
+    OPTIONAL {
+      ?v5 ns2:adminUnitL2 ?v15 .
+    }
+    OPTIONAL {
+      ?v5 ns2:postCode ?v16 .
+    }
+    ?v1 vcard:hasAddress ?v5 .
+  }
+}

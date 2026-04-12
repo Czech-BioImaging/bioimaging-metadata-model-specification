@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/validation_result": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the validation result.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data.",
+        "description": "Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "validation_result": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the validation result.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

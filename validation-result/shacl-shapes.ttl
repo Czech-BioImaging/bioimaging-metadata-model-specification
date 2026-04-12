@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<0d325e93ba1624f67686aa2f47c2a0edvalidation_resultShape> a sh:NodeShape;
+    sh:targetClass <https://model.ccmm.cz/vocabulary/ccmm#ValidationResult>;
+    sh:class <https://model.ccmm.cz/vocabulary/ccmm#ValidationResult>;
+    sh:nodeKind sh:IRI;
+    sh:description "Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data."@en;
+    sh:name "Validation result"@en.
+<762dda30ff7e9504c084944c8a968a4blabelShape> a sh:PropertyShape;
+    sh:description "Label of the validation result."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<0d325e93ba1624f67686aa2f47c2a0edvalidation_resultShape> sh:property <762dda30ff7e9504c084944c8a968a4blabelShape>.

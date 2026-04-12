@@ -1,0 +1,26 @@
+PREFIX ns0: <http://www.w3.org/ns/adms#>
+PREFIX ns1: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns3: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:Identifier .
+  ?v0 ns1:notation ?v1 .
+  ?v0 ns2:inScheme ?v2 .
+  ?v2 a ns2:IdentifierScheme .
+  ?v2 ns3:label ?v3 .
+  ?v0 ns2:authorized ?v4 .
+}
+WHERE {
+  ?v0 a ns0:Identifier .
+  ?v0 ns1:notation ?v1 .
+  ?v0 ns2:inScheme ?v2 .
+  OPTIONAL {
+    ?v2 a ns2:IdentifierScheme .
+  }
+  OPTIONAL {
+    ?v2 ns3:label ?v3 .
+  }
+  OPTIONAL {
+    ?v0 ns2:authorized ?v4 .
+  }
+}

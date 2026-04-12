@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/distribution-data-service/schema.json",
+  "title": "Distribution - data service",
+  "description": "Physical embodiment of the dataset distribution as a particular data service. ",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "title"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Distribution - data service"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Distribution - data service"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "title": {
+      "title": "title",
+      "description": "A name given to the distribution.",
+      "type": "string"
+    },
+    "access_service": {
+      "title": "služba pro přístup k datům",
+      "description": "Umístění či přístupový bod zpřístupňující distribuci datové sady.",
+      "type": "array",
+      "items": {
+        "$ref": "../data-service/schema.json"
+      }
+    },
+    "conforms_to_specification": {
+      "title": "conforms to specification",
+      "description": "An established schema to which the described Distribution conforms.",
+      "type": "array",
+      "items": {
+        "$ref": "../application-profile/schema.json"
+      }
+    },
+    "documentation": {
+      "title": "has documentation",
+      "description": "A page or document about this Distribution.",
+      "type": "array",
+      "items": {
+        "$ref": "../documentation/schema.json"
+      }
+    },
+    "description": {
+      "title": "description",
+      "description": "A free-text account of the Distribution.",
+      "type": "array",
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "additionalProperties": {
+          "title": "Hodnota v jiném jazyce",
+          "type": "string"
+        },
+        "properties": {
+          "cs": {
+            "title": "Hodnota v českém jazyce",
+            "type": "string"
+          },
+          "en": {
+            "title": "Hodnota v anglickém jazyce",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

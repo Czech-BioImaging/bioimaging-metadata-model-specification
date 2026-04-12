@@ -1,0 +1,9 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<d52d5c523e19458dd7b00b9c9488d450resource_agent_role_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Resource agent role type label."
+}

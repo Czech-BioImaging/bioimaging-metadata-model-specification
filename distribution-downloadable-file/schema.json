@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/distribution-downloadable-file/schema.json",
+  "title": "Distribution - downloadable file",
+  "description": "Physical embodiment of the dataset in a particular format. ",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "title",
+    "access_url",
+    "format",
+    "byte_size"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Distribution - downloadable file"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Distribution - downloadable file"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "title": {
+      "title": "title",
+      "description": "A name given to the distribution.",
+      "type": "string"
+    },
+    "access_url": {
+      "title": "přístupová adresa",
+      "description": "URL zdroje, přes které je přístupná distribuce datové sady. Příkladem může být vstupní stránka, RSS kanál či SPARQL endpoint. Použijte ve všech případech kromě URL souboru ke stažení, pro které je lepší použít dcat:downloadURL.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../file/schema.json"
+      }
+    },
+    "download_url": {
+      "title": "URL souboru ke stažení",
+      "description": "URL souboru ke stažení v daném formátu, například CSV nebo RDF soubor. Formát je popsán vlastností distribuce dcterms:format a/nebo dcat:mediaType.",
+      "type": "array",
+      "items": {
+        "$ref": "../file/schema.json"
+      }
+    },
+    "conforms_to_schema": {
+      "title": "conforms to schema",
+      "description": "An established schema to which the described Distribution conforms.",
+      "type": "array",
+      "items": {
+        "$ref": "../application-profile/schema.json"
+      }
+    },
+    "format": {
+      "$ref": "../format/schema.json"
+    },
+    "media_type": {
+      "$ref": "../media-type/schema.json"
+    },
+    "byte_size": {
+      "title": "byte size",
+      "description": "The size of a Distribution in bytes. ",
+      "type": "integer"
+    },
+    "checksum": {
+      "$ref": "../checksum/schema.json"
+    }
+  }
+}

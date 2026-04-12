@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/resource_to_agent_relationship": {
+      "parameters": [
+        {
+          "name": "relation",
+          "in": "path",
+          "description": "Specifies the agent an a given role in the relationship with the resource.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "role",
+          "in": "path",
+          "description": "The function of an entity or agent with respect to another entity or resource.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "An association class for attaching additional information to a relationship between Resource and Agent.",
+        "description": "An association class for attaching additional information to a relationship between Resource and Agent.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "resource_to_agent_relationship": {
+        "type": "object",
+        "properties": {
+          "relation": {
+            "description": "Specifies the agent an a given role in the relationship with the resource.",
+            "type": "string"
+          },
+          "role": {
+            "description": "The function of an entity or agent with respect to another entity or resource.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/location": {
+      "parameters": [
+        {
+          "name": "bounding_box",
+          "in": "path",
+          "description": "Bounding box of the location geometry.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "name",
+          "in": "path",
+          "description": "Name of the spatial location.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "geometry",
+          "in": "path",
+          "description": "The corresponding geometry for a resource.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "related_object",
+          "in": "path",
+          "description": "Relation to the spatial object.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "relation_type",
+          "in": "path",
+          "description": "Relation of the location to the dataset.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Spatial region, named place or geometry representation of a place related to the resource. ",
+        "description": "Spatial region, named place or geometry representation of a place related to the resource. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "location": {
+        "type": "object",
+        "properties": {
+          "bounding_box": {
+            "description": "Bounding box of the location geometry.",
+            "type": "string"
+          },
+          "name": {
+            "description": "Name of the spatial location.",
+            "type": "string"
+          },
+          "geometry": {
+            "description": "The corresponding geometry for a resource.",
+            "type": "string"
+          },
+          "related_object": {
+            "description": "Relation to the spatial object.",
+            "type": "string"
+          },
+          "relation_type": {
+            "description": "Relation of the location to the dataset.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

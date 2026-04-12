@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<59ad282bc687546efd0e62562db57773alternate_title_typeShape> a sh:NodeShape;
+    sh:targetClass <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:nodeKind sh:IRI;
+    sh:description "Type of alternate title."@en;
+    sh:name "Alternate title type"@en.
+<a3625e937fd322a362278a869fe5ca7flabelShape> a sh:PropertyShape;
+    sh:description "Alternate title type label."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<59ad282bc687546efd0e62562db57773alternate_title_typeShape> sh:property <a3625e937fd322a362278a869fe5ca7flabelShape>.

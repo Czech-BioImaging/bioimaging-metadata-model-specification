@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<f126dd148096a9fce29a20b0bbcbf2a6repositoryShape> a sh:NodeShape;
+    sh:targetClass <http://www.w3.org/ns/dcat#Catalog>;
+    sh:class <http://www.w3.org/ns/dcat#Catalog>;
+    sh:nodeKind sh:IRI;
+    sh:description "A catalogue or repository that hosts the Datasets or Data Services being described."@en, "Una colección curada de metadatos sobre recursos (por ejemplo, conjuntos de datos y servicios de datos en el contexto de un catálogo de datos)."@es, "Una raccolta curata di metadati sulle risorse (ad es. sui dataset e relativi servizi nel contesto di cataloghi di dati)."@it, "Une collection élaborée de métadonnées sur les jeux de données"@fr, "Řízená kolekce metadat o datových sadách a datových službách"@cs, "Μια επιμελημένη συλλογή μεταδεδομένων περί συνόλων δεδομένων"@el, "مجموعة من توصيفات قوائم البيانات"@ar, "データ・カタログは、データセットに関するキュレートされたメタデータの集合です。"@ja, "En udvalgt og arrangeret samling af metadata om ressourcer (fx datasæt og datatjenester i kontekst af et datakatalog). "@da;
+    sh:name "Repository"@en, "Catalogo"@it, "Catalogue"@fr, "Catálogo"@es, "Katalog"@cs, "Κατάλογος"@el, "فهرس قوائم البيانات"@ar, "カタログ"@ja, "Katalog"@da.
+<cdf14c928cff05a3b85f458c1e99d85dlabelShape> a sh:PropertyShape;
+    sh:description "Human readable name of the repository."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<f126dd148096a9fce29a20b0bbcbf2a6repositoryShape> sh:property <cdf14c928cff05a3b85f458c1e99d85dlabelShape>.

@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Subject": {
+      "@id": "https://model.ccmm.cz/vocabulary/datacite#Subject",
+      "@context": {
+        "title": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "definition": {
+          "@id": "http://www.w3.org/2004/02/skos/core#definition",
+          "@container": "@language"
+        },
+        "classification_code": {
+          "@id": "https://model.ccmm.cz/vocabulary/datacite#subjectClassificationCode",
+          "@type": "xsd:string"
+        },
+        "subject_scheme": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme",
+          "@context": "../subject-scheme/context.jsonld"
+        }
+      }
+    }
+  }
+}

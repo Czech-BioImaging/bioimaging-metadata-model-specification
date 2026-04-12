@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/dataset/schema.json",
+  "title": "Datová sada",
+  "description": "Konceptuální entita představující publikovaná data.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "metadata_identification",
+    "identifier",
+    "title",
+    "publication_year",
+    "time_reference",
+    "terms_of_use",
+    "subject"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Datová sada"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Datová sada"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "metadata_identification": {
+      "title": "is described by",
+      "description": "Inverse relation between dataset and metadata record.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../metadata-record/schema.json"
+      }
+    },
+    "identifier": {
+      "title": "has identifier",
+      "description": "has identifier",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../identifier/schema.json"
+      }
+    },
+    "version": {
+      "title": "version",
+      "description": "The version indicator (name or identifier) of a resource.",
+      "type": "string"
+    },
+    "title": {
+      "title": "title",
+      "description": "A name given to the dataset.",
+      "type": "string"
+    },
+    "alternate_title": {
+      "title": "has alternate title",
+      "type": "array",
+      "items": {
+        "$ref": "../alternate-title/schema.json"
+      }
+    },
+    "qualified_relation": {
+      "title": "qualified relation",
+      "type": "array",
+      "items": {
+        "$ref": "../resource-to-agent-relationship/schema.json"
+      }
+    },
+    "publication_year": {
+      "title": "publication year",
+      "description": "The year when the item was or will be made publicly available.",
+      "type": "string"
+    },
+    "time_reference": {
+      "title": "has time reference",
+      "description": "Reference to events related to the dataset.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../time-reference/schema.json"
+      }
+    },
+    "resource_type": {
+      "$ref": "../resource-type/schema.json"
+    },
+    "primary_language": {
+      "$ref": "../language-system/schema.json"
+    },
+    "other_language": {
+      "title": "has other language",
+      "description": "Any other languages of the Dataset.",
+      "type": "array",
+      "items": {
+        "$ref": "../language-system/schema.json"
+      }
+    },
+    "terms_of_use": {
+      "$ref": "../terms-of-use/schema.json"
+    },
+    "subject": {
+      "title": "has subject",
+      "description": "Dataset described using a subject.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../subject/schema.json"
+      }
+    },
+    "description": {
+      "title": "has description",
+      "description": "Relation to the description of a dataset.",
+      "type": "array",
+      "items": {
+        "$ref": "../description/schema.json"
+      }
+    },
+    "location": {
+      "title": "has location",
+      "description": "The geographical area covered by the dataset.",
+      "type": "array",
+      "items": {
+        "$ref": "../location/schema.json"
+      }
+    },
+    "funding_reference": {
+      "title": "has funding reference",
+      "description": "Has reference for funding of a dataset acquisition.",
+      "type": "array",
+      "items": {
+        "$ref": "../funding-reference/schema.json"
+      }
+    },
+    "related_resource": {
+      "title": "has related resource",
+      "description": "Reference to the resource in any way related to the described dataset.",
+      "type": "array",
+      "items": {
+        "$ref": "../related-resource/schema.json"
+      }
+    },
+    "distribution": {
+      "title": "has distribution",
+      "description": "Dostupná distribuce datové sady.",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "../distribution-data-service/schema.json"
+          },
+          {
+            "$ref": "../distribution-downloadable-file/schema.json"
+          }
+        ]
+      }
+    },
+    "validation_result": {
+      "title": "has validation result",
+      "description": "Reference to the report about the dataset validation.",
+      "type": "array",
+      "items": {
+        "$ref": "../validation-result/schema.json"
+      }
+    },
+    "provenance": {
+      "title": "has provenance",
+      "description": "A statement about the lineage of a Dataset.",
+      "type": "array",
+      "items": {
+        "$ref": "../provenance-statement/schema.json"
+      }
+    }
+  }
+}

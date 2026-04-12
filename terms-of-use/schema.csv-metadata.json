@@ -1,0 +1,334 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "94bd13ce-5dae-4ba4-af6f-1215a8e4ba57/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "access_rights_label",
+                "titles": "access_rights_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Label of the access rights vocabulary value.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "license_label",
+                "titles": "license_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Label of the license document.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "description",
+                "titles": "description",
+                "dc:title": {
+                    "@value": "description",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Descriptive text on details of rights and licensing.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://purl.org/dc/terms/description",
+                "datatype": "string",
+                "lang": "cs"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_identifier_value",
+                "titles": "contact_point_identifier_value",
+                "dc:title": {
+                    "@value": "value",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Value of the identifer within the given identifier scheme.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_identifier_scheme_label",
+                "titles": "contact_point_identifier_scheme_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Identifier scheme label",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_identifier_authorized",
+                "titles": "contact_point_identifier_authorized",
+                "dc:title": {
+                    "@value": "authorized",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Specifies whether the identifier is authorized by the subject it represents.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#authorized"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_name",
+                "titles": "contact_point_name",
+                "dc:title": {
+                    "@value": "name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Name of the agent.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://xmlns.com/foaf/0.1/name"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_alternate_name",
+                "titles": "contact_point_alternate_name",
+                "dc:title": {
+                    "@value": "alternate name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "To specify the organizational name associated with the object",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2006/vcard/ns#organization-name",
+                "datatype": "string",
+                "lang": "cs"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_data_box",
+                "titles": "contact_point_contact_point_data_box",
+                "dc:title": {
+                    "@value": "data box",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Code of the data box.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#dataBox"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_email",
+                "titles": "contact_point_contact_point_email",
+                "dc:title": {
+                    "@value": "email",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Email address.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#email"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_phone",
+                "titles": "contact_point_contact_point_phone",
+                "dc:title": {
+                    "@value": "phone",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Phone number",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/ccmm#phone"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_label",
+                "titles": "contact_point_contact_point_address_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Address label",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_full_address",
+                "titles": "contact_point_contact_point_address_full_address",
+                "dc:title": {
+                    "@value": "full address",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The complete address written as a string.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#fullAddress"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_po_box",
+                "titles": "contact_point_contact_point_address_po_box",
+                "dc:title": {
+                    "@value": "post office box",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A location designator for a postal delivery point at a post office, usually a number.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#poBox"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_thoroughfare",
+                "titles": "contact_point_contact_point_address_thoroughfare",
+                "dc:title": {
+                    "@value": "thoroughfare",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a passage or way through from one location to another.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#thoroughfare"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_locator_designator",
+                "titles": "contact_point_contact_point_address_locator_designator",
+                "dc:title": {
+                    "@value": "locator designator",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#locatorDesignator"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_locator_name",
+                "titles": "contact_point_contact_point_address_locator_name",
+                "dc:title": {
+                    "@value": "locator name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#locatorName"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_address_area",
+                "titles": "contact_point_contact_point_address_address_area",
+                "dc:title": {
+                    "@value": "address area",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a geographic area that groups Addresses.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#addressArea"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_post_name",
+                "titles": "contact_point_contact_point_address_post_name",
+                "dc:title": {
+                    "@value": "post name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#postName"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_administrative_unit_level_1",
+                "titles": "contact_point_contact_point_address_administrative_unit_level_1",
+                "dc:title": {
+                    "@value": "administrative unit level 1",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of the uppermost level of the address, almost always a country.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL1"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_administrative_unit_level_2",
+                "titles": "contact_point_contact_point_address_administrative_unit_level_2",
+                "dc:title": {
+                    "@value": "administrative unit level 2",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL2"
+            },
+            {
+                "@type": "Column",
+                "name": "contact_point_contact_point_address_post_code",
+                "titles": "contact_point_contact_point_address_post_code",
+                "dc:title": {
+                    "@value": "post code",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#postCode"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "https://model.ccmm.cz/vocabulary/datacite#Rights",
+                "virtual": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/alternate_title": {
+      "parameters": [
+        {
+          "name": "title",
+          "in": "path",
+          "description": "A human-readable name for the subject.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "alternate_title_type",
+          "in": "path",
+          "description": "Type of the alternate name relation.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Alternate title of the resource.",
+        "description": "Alternate title of the resource.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "alternate_title": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "description": "A human-readable name for the subject.",
+            "type": "string"
+          },
+          "alternate_title_type": {
+            "description": "Type of the alternate name relation.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

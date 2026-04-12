@@ -1,0 +1,190 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/organization": {
+      "parameters": [
+        {
+          "name": "identifier",
+          "in": "path",
+          "description": "has identifier",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "name",
+          "in": "path",
+          "description": "Name of the agent.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "alternate_name",
+          "in": "path",
+          "description": "To specify the organizational name associated with the object",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "contact_point",
+          "in": "path",
+          "description": "Relevant contact information for the catalogued resource. ",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures. ",
+        "description": "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/person": {
+      "parameters": [
+        {
+          "name": "identifier",
+          "in": "path",
+          "description": "has identifier",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "name",
+          "in": "path",
+          "description": "Name of the agent.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "given_name",
+          "in": "path",
+          "description": "The given name associated with the person.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "family_name",
+          "in": "path",
+          "description": "The family name associated with the person.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "contact_point",
+          "in": "path",
+          "description": "Relevant contact information for the catalogued resource. ",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "affiliation",
+          "in": "path",
+          "description": "Affiliation of the person to an organization.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Physical person. ",
+        "description": "Physical person. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "organization": {
+        "type": "object",
+        "properties": {
+          "identifier": {
+            "description": "has identifier",
+            "type": "string"
+          },
+          "name": {
+            "description": "Name of the agent.",
+            "type": "string"
+          },
+          "alternate_name": {
+            "description": "To specify the organizational name associated with the object",
+            "type": "string"
+          },
+          "contact_point": {
+            "description": "Relevant contact information for the catalogued resource. ",
+            "type": "string"
+          }
+        }
+      },
+      "person": {
+        "type": "object",
+        "properties": {
+          "identifier": {
+            "description": "has identifier",
+            "type": "string"
+          },
+          "name": {
+            "description": "Name of the agent.",
+            "type": "string"
+          },
+          "given_name": {
+            "description": "The given name associated with the person.",
+            "type": "string"
+          },
+          "family_name": {
+            "description": "The family name associated with the person.",
+            "type": "string"
+          },
+          "contact_point": {
+            "description": "Relevant contact information for the catalogued resource. ",
+            "type": "string"
+          },
+          "affiliation": {
+            "description": "Affiliation of the person to an organization.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

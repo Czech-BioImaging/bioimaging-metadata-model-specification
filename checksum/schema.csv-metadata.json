@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "8cf79d2c-1dfe-40ca-afdc-0773f11a3201/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "checksum_value",
+                "titles": "checksum_value",
+                "dc:title": {
+                    "@value": "checksum value",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A lower case hexadecimal encoded digest value produced using a specific algorithm. ",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://spdx.org/rdf/terms#checksumValue",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "algorithm_label",
+                "titles": "algorithm_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A human-readable name for the subject.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://spdx.org/rdf/terms#Checksum",
+                "virtual": true
+            }
+        ]
+    }
+}

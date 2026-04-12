@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Resource to agent relationship": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#ResourceToAgentRelationship",
+      "@context": {
+        "relation": {
+          "@id": "http://purl.org/dc/terms/relation",
+          "@context": "../organization/context.jsonld"
+        },
+        "role": {
+          "@id": "http://www.w3.org/ns/dcat#hadRole",
+          "@context": "../resource-agent-role-type/context.jsonld"
+        }
+      }
+    }
+  }
+}

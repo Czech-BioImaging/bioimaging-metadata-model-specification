@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/geometry": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of geometry object.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "gml",
+          "in": "path",
+          "description": "Representation of geometry object as GML Literal.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "wkt",
+          "in": "path",
+          "description": "Representation of geometry object as WKT Literal.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "The Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.",
+        "description": "The Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "geometry": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of geometry object.",
+            "type": "string"
+          },
+          "gml": {
+            "description": "Representation of geometry object as GML Literal.",
+            "type": "string"
+          },
+          "wkt": {
+            "description": "Representation of geometry object as WKT Literal.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<b7dabfe3aecadd42b6a3c91328a6b548geometryShExShape> IRI{
+	a [<http://www.w3.org/ns/locn#Geometry>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of geometry object." ;
+	<http://www.opengis.net/ont/geosparql#asGML> <http://www.opengis.net/ont/geosparql#gmlLiteral> ?
+		// rdfs:label	"geography markup language literal"
+		// rdfs:comment	"Representation of geometry object as GML Literal." ;
+	<http://www.opengis.net/ont/geosparql#asWKT> <http://www.opengis.net/ont/geosparql#wktLiteral> ?
+		// rdfs:label	"well known text literal"
+		// rdfs:comment	"Representation of geometry object as WKT Literal."
+}

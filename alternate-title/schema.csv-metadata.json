@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "0dc51c4f-16a8-4044-8c23-d13b5cc659ee/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "title",
+                "titles": "title",
+                "dc:title": {
+                    "@value": "title",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A human-readable name for the subject.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://purl.org/dc/terms/title",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "alternate_title_type_label",
+                "titles": "alternate_title_type_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Alternate title type label.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle",
+                "virtual": true
+            }
+        ]
+    }
+}

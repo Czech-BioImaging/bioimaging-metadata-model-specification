@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Checksum": {
+      "@id": "http://spdx.org/rdf/terms#Checksum",
+      "@context": {
+        "checksum_value": {
+          "@id": "http://spdx.org/rdf/terms#checksumValue",
+          "@type": "xsd:hexBinary"
+        },
+        "algorithm": {
+          "@id": "http://spdx.org/rdf/terms#algorithm",
+          "@context": "../checksum-algorithm/context.jsonld"
+        }
+      }
+    }
+  }
+}

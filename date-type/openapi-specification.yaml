@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/date_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Date type label.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Type of a date in relation to the resource.",
+        "description": "Type of a date in relation to the resource.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "date_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Date type label.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShape> a sh:NodeShape;
+    sh:targetClass <https://model.ccmm.cz/vocabulary/ccmm#ContactDetails>;
+    sh:class <https://model.ccmm.cz/vocabulary/ccmm#ContactDetails>;
+    sh:nodeKind sh:IRI;
+    sh:description "Details to contact the agent in a relationship to the resource."@en;
+    sh:name "Contact details"@en.
+<deeaf3b6ec62462830ad06cecbb47fe8data_boxShape> a sh:PropertyShape;
+    sh:description "Code of the data box."@en;
+    sh:name "data box"@en;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#dataBox>.
+
+<deeaf3b6ec62462830ad06cecbb47fe8data_boxShape> sh:datatype xsd:string.
+<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShape> sh:property <deeaf3b6ec62462830ad06cecbb47fe8data_boxShape>.
+<8a9547890713cc558c035763873497e9emailShape> a sh:PropertyShape;
+    sh:description "Email address."@en;
+    sh:name "email"@en;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#email>;
+    sh:datatype xsd:string.
+<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShape> sh:property <8a9547890713cc558c035763873497e9emailShape>.
+<77d882e1b5ed73ed2a2f60e8d74702ccphoneShape> a sh:PropertyShape;
+    sh:description "Phone number"@en;
+    sh:name "phone"@en;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#phone>;
+    sh:datatype xsd:string.
+<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShape> sh:property <77d882e1b5ed73ed2a2f60e8d74702ccphoneShape>.
+<ec53ab46a88524d69ff4228e9d53c061addressShape> a sh:PropertyShape;
+    sh:description "To specify the components of the delivery address for the object"@en;
+    sh:name "has address"@en;
+    sh:path <http://www.w3.org/2006/vcard/ns#hasAddress>;
+    sh:nodeKind sh:IRI.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> a sh:NodeShape;
+    sh:class <http://www.w3.org/ns/locn#Address>;
+    sh:nodeKind sh:IRI;
+    sh:description "A spatial object that in a human-readable way identifies a fixed location. "@en;
+    sh:name "Address"@en.
+<ff78551383f781b6b7ab394e457de1eflabelShape> a sh:PropertyShape;
+    sh:description "Address label"@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <ff78551383f781b6b7ab394e457de1eflabelShape>.
+<5202f8fabe3e6435002e6bfe84c4993cfull_addressShape> a sh:PropertyShape;
+    sh:description "The complete address written as a string."@en;
+    sh:name "full address"@en;
+    sh:path <http://www.w3.org/ns/locn#fullAddress>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <5202f8fabe3e6435002e6bfe84c4993cfull_addressShape>.
+<777779d01c9b1ae389a0b6127dec84d3po_boxShape> a sh:PropertyShape;
+    sh:description "A location designator for a postal delivery point at a post office, usually a number."@en;
+    sh:name "post office box"@en;
+    sh:path <http://www.w3.org/ns/locn#poBox>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <777779d01c9b1ae389a0b6127dec84d3po_boxShape>.
+<520e3cd78e28ea803188d6c6cb68d5e6thoroughfareShape> a sh:PropertyShape;
+    sh:description "The name of a passage or way through from one location to another."@en;
+    sh:name "thoroughfare"@en;
+    sh:path <http://www.w3.org/ns/locn#thoroughfare>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <520e3cd78e28ea803188d6c6cb68d5e6thoroughfareShape>.
+<a525a29fb360ff024b83c9860397b3b5locator_designatorShape> a sh:PropertyShape;
+    sh:description "A number or sequence of characters that uniquely identifies the locator within the relevant scope."@en;
+    sh:name "locator designator"@en;
+    sh:path <http://www.w3.org/ns/locn#locatorDesignator>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <a525a29fb360ff024b83c9860397b3b5locator_designatorShape>.
+<d83968d29d674ec9b825799cf79776e2locator_nameShape> a sh:PropertyShape;
+    sh:description "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building."@en;
+    sh:name "locator name"@en;
+    sh:path <http://www.w3.org/ns/locn#locatorName>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <d83968d29d674ec9b825799cf79776e2locator_nameShape>.
+<3c891d1f88cf14f1d6db7456ee8eaf13address_areaShape> a sh:PropertyShape;
+    sh:description "The name of a geographic area that groups Addresses."@en;
+    sh:name "address area"@en;
+    sh:path <http://www.w3.org/ns/locn#addressArea>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <3c891d1f88cf14f1d6db7456ee8eaf13address_areaShape>.
+<e2f549480df2951bb33329582ebf9b57post_nameShape> a sh:PropertyShape;
+    sh:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. "@en;
+    sh:name "post name"@en;
+    sh:path <http://www.w3.org/ns/locn#postName>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <e2f549480df2951bb33329582ebf9b57post_nameShape>.
+<419ca48a8aba4548dfc64516cb6928f4administrative_unit_level_1Shape> a sh:PropertyShape;
+    sh:description "The name of the uppermost level of the address, almost always a country."@en;
+    sh:name "administrative unit level 1"@en;
+    sh:path <http://www.w3.org/ns/locn#adminUnitL1>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <419ca48a8aba4548dfc64516cb6928f4administrative_unit_level_1Shape>.
+<93615373de41bd8868f2ee995e15b0f6administrative_unit_level_2Shape> a sh:PropertyShape;
+    sh:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
+    sh:name "administrative unit level 2"@en;
+    sh:path <http://www.w3.org/ns/locn#adminUnitL2>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <93615373de41bd8868f2ee995e15b0f6administrative_unit_level_2Shape>.
+<faa33ad8d60ba525f755e205e25217dcpost_codeShape> a sh:PropertyShape;
+    sh:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+    sh:name "post code"@en;
+    sh:path <http://www.w3.org/ns/locn#postCode>;
+    sh:datatype xsd:string.
+<4a5b97b40518e69740cd5780d6b990daaddressShape> sh:property <faa33ad8d60ba525f755e205e25217dcpost_codeShape>.
+<ec53ab46a88524d69ff4228e9d53c061addressShape> sh:node <4a5b97b40518e69740cd5780d6b990daaddressShape>.
+<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShape> sh:property <ec53ab46a88524d69ff4228e9d53c061addressShape>.

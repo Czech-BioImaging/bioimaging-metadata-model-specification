@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/organization/schema.json",
+  "title": "Organization",
+  "description": "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures. ",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "allOf": [
+        {
+          "type": "array",
+          "contains": {
+            "const": "Agent"
+          },
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Organization"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "identifier": {
+      "title": "has identifier",
+      "description": "has identifier",
+      "type": "array",
+      "items": {
+        "$ref": "../identifier/schema.json"
+      }
+    },
+    "name": {
+      "title": "name",
+      "description": "Name of the agent.",
+      "type": "string"
+    },
+    "alternate_name": {
+      "title": "alternate name",
+      "description": "To specify the organizational name associated with the object",
+      "type": "array",
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "additionalProperties": {
+          "title": "Hodnota v jiném jazyce",
+          "type": "string"
+        },
+        "properties": {
+          "cs": {
+            "title": "Hodnota v českém jazyce",
+            "type": "string"
+          },
+          "en": {
+            "title": "Hodnota v anglickém jazyce",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "contact_point": {
+      "title": "má kontaktní bod",
+      "description": "Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard.",
+      "type": "array",
+      "items": {
+        "$ref": "../contact-details/schema.json"
+      }
+    }
+  }
+}

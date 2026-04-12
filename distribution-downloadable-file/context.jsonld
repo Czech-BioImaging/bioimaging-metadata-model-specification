@@ -1,0 +1,48 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "title": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "xsd:string"
+    },
+    "Distribution - downloadable file": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#Distribution-DownloadableFile",
+      "@context": {
+        "access_url": {
+          "@id": "http://www.w3.org/ns/dcat#accessURL",
+          "@container": "@set",
+          "@context": "../file/context.jsonld"
+        },
+        "download_url": {
+          "@id": "http://www.w3.org/ns/dcat#downloadURL",
+          "@container": "@set",
+          "@context": "../file/context.jsonld"
+        },
+        "conforms_to_schema": {
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@container": "@set",
+          "@context": "../application-profile/context.jsonld"
+        },
+        "format": {
+          "@id": "http://purl.org/dc/terms/format",
+          "@context": "../format/context.jsonld"
+        },
+        "media_type": {
+          "@id": "http://www.w3.org/ns/dcat#mediaType",
+          "@context": "../media-type/context.jsonld"
+        },
+        "byte_size": {
+          "@id": "http://www.w3.org/ns/dcat#byteSize",
+          "@type": "xsd:integer"
+        },
+        "checksum": {
+          "@id": "http://spdx.org/rdf/terms#checksum",
+          "@context": "../checksum/context.jsonld"
+        }
+      }
+    }
+  }
+}

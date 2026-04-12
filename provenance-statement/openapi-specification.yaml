@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/provenance_statement": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Provenance state label.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Information about entities, activities, and people involved in producing a piece of data or thing.",
+        "description": "Information about entities, activities, and people involved in producing a piece of data or thing.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "provenance_statement": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Provenance state label.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

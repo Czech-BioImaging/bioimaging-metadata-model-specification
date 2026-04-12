@@ -1,0 +1,18 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<59ad282bc687546efd0e62562db57773alternate_title_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Alternate title type label."
+}
+<c764aa2c64cde037c135d613c70f899falternate_titleShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle>] ;
+	<http://purl.org/dc/terms/title> rdf:langString +
+		// rdfs:label	"title"
+		// rdfs:comment	"A human-readable name for the subject." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasType> @<59ad282bc687546efd0e62562db57773alternate_title_typeShExShape> ?
+		// rdfs:label	"has alternate title type"
+		// rdfs:comment	"Type of the alternate name relation."
+}

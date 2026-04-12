@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/time-instant/schema.json",
+  "title": "Time instant",
+  "description": "A temporal entity with zero extent or duration.",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Time instant"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Time instant"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "date_time"
+      ],
+      "properties": {
+        "date_time": {
+          "title": "Datum a čas",
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "date"
+      ],
+      "properties": {
+        "date": {
+          "title": "Datum",
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  ]
+}

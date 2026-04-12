@@ -1,0 +1,14 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/datacite#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?description_text) (?v4 AS ?description_type_label)
+WHERE {
+  ?v1 a ns1:Description .
+  ?v1 ns1:descriptionText ?v2 .
+  OPTIONAL {
+    ?v3 a ns1:DescriptionType .
+    OPTIONAL {
+      ?v3 rdfs:label ?v4 .
+    }
+    ?v1 ns1:hasDescriptionType ?v3 .
+  }
+}

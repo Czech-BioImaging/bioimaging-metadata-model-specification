@@ -1,0 +1,176 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "f8eff112-c4c9-4766-9680-43496191e809/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "label",
+                "titles": "label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Address label",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "name": "full_address",
+                "titles": "full_address",
+                "dc:title": {
+                    "@value": "full address",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The complete address written as a string.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#fullAddress"
+            },
+            {
+                "@type": "Column",
+                "name": "po_box",
+                "titles": "po_box",
+                "dc:title": {
+                    "@value": "post office box",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A location designator for a postal delivery point at a post office, usually a number.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#poBox"
+            },
+            {
+                "@type": "Column",
+                "name": "thoroughfare",
+                "titles": "thoroughfare",
+                "dc:title": {
+                    "@value": "thoroughfare",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a passage or way through from one location to another.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#thoroughfare"
+            },
+            {
+                "@type": "Column",
+                "name": "locator_designator",
+                "titles": "locator_designator",
+                "dc:title": {
+                    "@value": "locator designator",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#locatorDesignator"
+            },
+            {
+                "@type": "Column",
+                "name": "locator_name",
+                "titles": "locator_name",
+                "dc:title": {
+                    "@value": "locator name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#locatorName"
+            },
+            {
+                "@type": "Column",
+                "name": "address_area",
+                "titles": "address_area",
+                "dc:title": {
+                    "@value": "address area",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a geographic area that groups Addresses.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#addressArea"
+            },
+            {
+                "@type": "Column",
+                "name": "post_name",
+                "titles": "post_name",
+                "dc:title": {
+                    "@value": "post name",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#postName"
+            },
+            {
+                "@type": "Column",
+                "name": "administrative_unit_level_1",
+                "titles": "administrative_unit_level_1",
+                "dc:title": {
+                    "@value": "administrative unit level 1",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of the uppermost level of the address, almost always a country.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL1"
+            },
+            {
+                "@type": "Column",
+                "name": "administrative_unit_level_2",
+                "titles": "administrative_unit_level_2",
+                "dc:title": {
+                    "@value": "administrative unit level 2",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL2"
+            },
+            {
+                "@type": "Column",
+                "name": "post_code",
+                "titles": "post_code",
+                "dc:title": {
+                    "@value": "post code",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/ns/locn#postCode"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://www.w3.org/ns/locn#Address",
+                "virtual": true
+            }
+        ]
+    }
+}

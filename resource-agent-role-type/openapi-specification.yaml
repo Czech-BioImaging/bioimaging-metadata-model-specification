@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/resource_agent_role_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Resource agent role type label.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Role of the agent in the relationship to the resource. ",
+        "description": "Role of the agent in the relationship to the resource. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "resource_agent_role_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Resource agent role type label.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

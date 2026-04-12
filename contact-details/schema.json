@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/contact-details/schema.json",
+  "title": "Contact details",
+  "description": "Details to contact the agent in a relationship to the resource.",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Contact details"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Contact details"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "data_box": {
+      "title": "data box",
+      "description": "Code of the data box.",
+      "type": "array",
+      "items": {
+        "title": "Řetězec",
+        "type": "string"
+      }
+    },
+    "email": {
+      "title": "email",
+      "description": "Email address.",
+      "type": "array",
+      "items": {
+        "title": "Řetězec",
+        "type": "string"
+      }
+    },
+    "phone": {
+      "title": "phone",
+      "description": "Phone number",
+      "type": "array",
+      "items": {
+        "title": "Řetězec",
+        "type": "string"
+      }
+    },
+    "address": {
+      "title": "has address",
+      "description": "To specify the components of the delivery address for the object",
+      "type": "array",
+      "items": {
+        "$ref": "../address/schema.json"
+      }
+    }
+  }
+}

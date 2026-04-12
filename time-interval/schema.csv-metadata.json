@@ -1,0 +1,50 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "9bb91d7b-ee59-4a31-910d-377ecd48d3a9/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "beginning_null_date_time",
+                "titles": "beginning_null_date_time",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDateTime",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "beginning_null_date",
+                "titles": "beginning_null_date",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDate",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "end_null_date_time",
+                "titles": "end_null_date_time",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDateTime",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "end_null_date",
+                "titles": "end_null_date",
+                "propertyUrl": "http://www.w3.org/2006/time#inXSDDate",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://www.w3.org/2006/time#Interval",
+                "virtual": true
+            }
+        ]
+    }
+}

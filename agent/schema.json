@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/agent/schema.json",
+  "anyOf": [
+    {
+      "$ref": "../organization/schema.json"
+    },
+    {
+      "$ref": "../person/schema.json"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "e394bb5d-8663-4f26-9736-2e6d1550a6de/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "name": "title",
+                "titles": "title",
+                "dc:title": {
+                    "@value": "title",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Title of the subject.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://purl.org/dc/terms/title",
+                "required": true
+            },
+            {
+                "@type": "Column",
+                "name": "definition",
+                "titles": "definition",
+                "dc:title": {
+                    "@value": "definition",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Definition of the subject in the given context.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2004/02/skos/core#definition",
+                "datatype": "string",
+                "lang": "cs"
+            },
+            {
+                "@type": "Column",
+                "name": "classification_code",
+                "titles": "classification_code",
+                "dc:title": {
+                    "@value": "classification code",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "The classification code used for notation of the subject term in the subject scheme.",
+                    "@language": "en"
+                },
+                "propertyUrl": "https://model.ccmm.cz/vocabulary/datacite#subjectClassificationCode"
+            },
+            {
+                "@type": "Column",
+                "name": "subject_scheme_label",
+                "titles": "subject_scheme_label",
+                "dc:title": {
+                    "@value": "label",
+                    "@language": "en"
+                },
+                "dc:description": {
+                    "@value": "Label of the subject scheme.",
+                    "@language": "en"
+                },
+                "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": "https://model.ccmm.cz/vocabulary/datacite#Subject",
+                "virtual": true
+            }
+        ]
+    }
+}

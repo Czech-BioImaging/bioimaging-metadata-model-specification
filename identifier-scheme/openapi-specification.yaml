@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/identifier_scheme": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Identifier scheme label",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier.",
+        "description": "Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "identifier_scheme": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Identifier scheme label",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

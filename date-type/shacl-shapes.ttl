@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<143d320394f7b999b5614d178bf85188date_typeShape> a sh:NodeShape;
+    sh:targetClass <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>;
+    sh:nodeKind sh:IRI;
+    sh:description "Type of a date in relation to the resource."@en;
+    sh:name "Date type"@en.
+<d1be2601b515cf93156352d99ab329a6labelShape> a sh:PropertyShape;
+    sh:description "Date type label."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<143d320394f7b999b5614d178bf85188date_typeShape> sh:property <d1be2601b515cf93156352d99ab329a6labelShape>.

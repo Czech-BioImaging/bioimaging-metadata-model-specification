@@ -1,0 +1,79 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ns1: <http://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ns2: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX ns3: <http://www.w3.org/ns/locn#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+SELECT (?v3 AS ?identifier_value) (?v5 AS ?identifier_scheme_label) (?v6 AS ?identifier_authorized) (?v7 AS ?name) (?v8 AS ?alternate_name) (?v10 AS ?contact_point_data_box) (?v11 AS ?contact_point_email) (?v12 AS ?contact_point_phone) (?v14 AS ?contact_point_address_label) (?v15 AS ?contact_point_address_full_address) (?v16 AS ?contact_point_address_po_box) (?v17 AS ?contact_point_address_thoroughfare) (?v18 AS ?contact_point_address_locator_designator) (?v19 AS ?contact_point_address_locator_name) (?v20 AS ?contact_point_address_address_area) (?v21 AS ?contact_point_address_post_name) (?v22 AS ?contact_point_address_administrative_unit_level_1) (?v23 AS ?contact_point_address_administrative_unit_level_2) (?v24 AS ?contact_point_address_post_code)
+WHERE {
+  ?v1 a foaf:Agent .
+  OPTIONAL {
+    ?v2 a ns1:Identifier .
+    ?v2 skos:notation ?v3 .
+    ?v4 a ns2:IdentifierScheme .
+    OPTIONAL {
+      ?v4 rdfs:label ?v5 .
+    }
+    ?v2 ns2:inScheme ?v4 .
+    OPTIONAL {
+      ?v2 ns2:authorized ?v6 .
+    }
+    ?v1 ns2:hasIdentifier ?v2 .
+  }
+  ?v1 foaf:name ?v7 .
+  OPTIONAL {
+    ?v1 vcard:organization-name ?v8 .
+  }
+  OPTIONAL {
+    ?v9 a ns2:ContactDetails .
+    OPTIONAL {
+      ?v9 ns2:dataBox ?v10 .
+    }
+    OPTIONAL {
+      ?v9 ns2:email ?v11 .
+    }
+    OPTIONAL {
+      ?v9 ns2:phone ?v12 .
+    }
+    OPTIONAL {
+      ?v13 a ns3:Address .
+      OPTIONAL {
+        ?v13 rdfs:label ?v14 .
+      }
+      OPTIONAL {
+        ?v13 ns3:fullAddress ?v15 .
+      }
+      OPTIONAL {
+        ?v13 ns3:poBox ?v16 .
+      }
+      OPTIONAL {
+        ?v13 ns3:thoroughfare ?v17 .
+      }
+      OPTIONAL {
+        ?v13 ns3:locatorDesignator ?v18 .
+      }
+      OPTIONAL {
+        ?v13 ns3:locatorName ?v19 .
+      }
+      OPTIONAL {
+        ?v13 ns3:addressArea ?v20 .
+      }
+      OPTIONAL {
+        ?v13 ns3:postName ?v21 .
+      }
+      OPTIONAL {
+        ?v13 ns3:adminUnitL1 ?v22 .
+      }
+      OPTIONAL {
+        ?v13 ns3:adminUnitL2 ?v23 .
+      }
+      OPTIONAL {
+        ?v13 ns3:postCode ?v24 .
+      }
+      ?v9 vcard:hasAddress ?v13 .
+    }
+    ?v1 dcat:contactPoint ?v9 .
+  }
+}

@@ -1,0 +1,18 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<d06a64a6614181fa3a5f071abcc76eaadescription_typeShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/datacite#DescriptionType>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of the description type."
+}
+<8315f141b8aa15515763dc6828e2cd4bdescriptionShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/datacite#Description>] ;
+	<https://model.ccmm.cz/vocabulary/datacite#descriptionText> rdf:langString
+		// rdfs:label	"description text"
+		// rdfs:comment	"Text describing the resource." ;
+	<https://model.ccmm.cz/vocabulary/datacite#hasDescriptionType> @<d06a64a6614181fa3a5f071abcc76eaadescription_typeShExShape> ?
+		// rdfs:label	"has description type"
+		// rdfs:comment	"Relation to the type of the description."
+}

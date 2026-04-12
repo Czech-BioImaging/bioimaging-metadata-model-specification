@@ -1,0 +1,226 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Identifier scheme label"
+}
+<06821ce2a8c116297c754fbb6ddf57d2identifierShExShape> IRI{
+	a [<http://www.w3.org/ns/adms#Identifier>] ;
+	<http://www.w3.org/2004/02/skos/core#notation> xsd:string
+		// rdfs:label	"value"
+		// rdfs:comment	"Value of the identifer within the given identifier scheme." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#inScheme> @<c5ba6196fd582a9721af9eb7a111dbc0identifier_schemeShExShape>
+		// rdfs:label	"in scheme"
+		// rdfs:comment	"Relation between the identifier and scheme in which it is defined and unique." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#authorized> xsd:boolean ?
+		// rdfs:label	"authorized"
+		// rdfs:comment	"Specifies whether the identifier is authorized by the subject it represents."
+}
+<59ad282bc687546efd0e62562db57773alternate_title_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Alternate title type label."
+}
+<c764aa2c64cde037c135d613c70f899falternate_titleShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle>] ;
+	<http://purl.org/dc/terms/title> rdf:langString +
+		// rdfs:label	"title"
+		// rdfs:comment	"A human-readable name for the subject." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasType> @<59ad282bc687546efd0e62562db57773alternate_title_typeShExShape> ?
+		// rdfs:label	"has alternate title type"
+		// rdfs:comment	"Type of the alternate name relation."
+}
+<4a5b97b40518e69740cd5780d6b990daaddressShExShape> IRI{
+	a [<http://www.w3.org/ns/locn#Address>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Address label" ;
+	<http://www.w3.org/ns/locn#fullAddress> xsd:string *
+		// rdfs:label	"full address"
+		// rdfs:comment	"The complete address written as a string." ;
+	<http://www.w3.org/ns/locn#poBox> xsd:string *
+		// rdfs:label	"post office box"
+		// rdfs:comment	"A location designator for a postal delivery point at a post office, usually a number." ;
+	<http://www.w3.org/ns/locn#thoroughfare> xsd:string *
+		// rdfs:label	"thoroughfare"
+		// rdfs:comment	"The name of a passage or way through from one location to another." ;
+	<http://www.w3.org/ns/locn#locatorDesignator> xsd:string *
+		// rdfs:label	"locator designator"
+		// rdfs:comment	"A number or sequence of characters that uniquely identifies the locator within the relevant scope." ;
+	<http://www.w3.org/ns/locn#locatorName> xsd:string *
+		// rdfs:label	"locator name"
+		// rdfs:comment	"Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building." ;
+	<http://www.w3.org/ns/locn#addressArea> xsd:string *
+		// rdfs:label	"address area"
+		// rdfs:comment	"The name of a geographic area that groups Addresses." ;
+	<http://www.w3.org/ns/locn#postName> xsd:string *
+		// rdfs:label	"post name"
+		// rdfs:comment	"A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. " ;
+	<http://www.w3.org/ns/locn#adminUnitL1> xsd:string *
+		// rdfs:label	"administrative unit level 1"
+		// rdfs:comment	"The name of the uppermost level of the address, almost always a country." ;
+	<http://www.w3.org/ns/locn#adminUnitL2> xsd:string *
+		// rdfs:label	"administrative unit level 2"
+		// rdfs:comment	"The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities." ;
+	<http://www.w3.org/ns/locn#postCode> xsd:string *
+		// rdfs:label	"post code"
+		// rdfs:comment	"The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+}
+<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#ContactDetails>] ;
+	<https://model.ccmm.cz/vocabulary/ccmm#dataBox> xsd:string *
+		// rdfs:label	"data box"
+		// rdfs:comment	"Code of the data box." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#email> xsd:string *
+		// rdfs:label	"email"
+		// rdfs:comment	"Email address." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#phone> xsd:string *
+		// rdfs:label	"phone"
+		// rdfs:comment	"Phone number" ;
+	<http://www.w3.org/2006/vcard/ns#hasAddress> @<4a5b97b40518e69740cd5780d6b990daaddressShExShape> *
+		// rdfs:label	"has address"
+		// rdfs:comment	"To specify the components of the delivery address for the object"
+}
+<9a6dea023212110a08e52b6d7ca2b318organizationShExShape> IRI{
+	a [foaf:Agent] ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier> @<06821ce2a8c116297c754fbb6ddf57d2identifierShExShape> *
+		// rdfs:label	"has identifier"
+		// rdfs:comment	"has identifier" ;
+	foaf:name xsd:string
+		// rdfs:label	"name"
+		// rdfs:comment	"Name of the agent." ;
+	<http://www.w3.org/2006/vcard/ns#organization-name> rdf:langString *
+		// rdfs:label	"alternate name"
+		// rdfs:comment	"To specify the organizational name associated with the object" ;
+	<http://www.w3.org/ns/dcat#contactPoint> @<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShExShape> *
+		// rdfs:label	"Punto de contacto"
+		// rdfs:comment	"Información relevante de contacto para el recurso catalogado. Se recomienda el uso de vCard."
+}
+<dc580536d66c0ce98db3e694cd042dd7personShExShape> IRI{
+	a [<http://www.w3.org/ns/prov#Person>] ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier> @<06821ce2a8c116297c754fbb6ddf57d2identifierShExShape> *
+		// rdfs:label	"has identifier"
+		// rdfs:comment	"has identifier" ;
+	foaf:name xsd:string
+		// rdfs:label	"name"
+		// rdfs:comment	"Name of the agent." ;
+	<http://www.w3.org/2006/vcard/ns#given-name> xsd:string *
+		// rdfs:label	"given name"
+		// rdfs:comment	"The given name associated with the person." ;
+	<http://www.w3.org/2006/vcard/ns#family-name> xsd:string *
+		// rdfs:label	"family name"
+		// rdfs:comment	"The family name associated with the person." ;
+	<http://www.w3.org/ns/dcat#contactPoint> @<c9f623d3bdeabe7bda81f5b38a11ee15contact_detailsShExShape> *
+		// rdfs:label	"Punto de contacto"
+		// rdfs:comment	"Información relevante de contacto para el recurso catalogado. Se recomienda el uso de vCard." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation> @<9a6dea023212110a08e52b6d7ca2b318organizationShExShape> *
+		// rdfs:label	"has affiliation"
+		// rdfs:comment	"Affiliation of the person to an organization."
+}
+<d52d5c523e19458dd7b00b9c9488d450resource_agent_role_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Resource agent role type label."
+}
+<0ab6912098853e7edf5754474006ca54resource_to_agent_relationshipShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#ResourceToAgentRelationship>] ;
+	<http://purl.org/dc/terms/relation> @<9a6dea023212110a08e52b6d7ca2b318organizationShExShape> @<dc580536d66c0ce98db3e694cd042dd7personShExShape>
+		// rdfs:label	"has related agent"
+		// rdfs:comment	"Specifies the agent an a given role in the relationship with the resource." ;
+	<http://purl.org/dc/terms/relation> @<9a6dea023212110a08e52b6d7ca2b318organizationShExShape> @<dc580536d66c0ce98db3e694cd042dd7personShExShape>
+		// rdfs:label	"has related agent"
+		// rdfs:comment	"Specifies the agent an a given role in the relationship with the resource." ;
+	<http://www.w3.org/ns/dcat#hadRole> @<d52d5c523e19458dd7b00b9c9488d450resource_agent_role_typeShExShape>
+		// rdfs:label	"tiene rol"
+		// rdfs:comment	"Funkce entity či agenta ve vztahu k jiné entitě či zdroji."
+}
+<3aad54ea119347be503192172e3c5a71ShExShape> IRI{
+	a [<null>] ;
+	<http://www.w3.org/2006/time#inXSDDateTime> xsd:dateTime ;
+	<http://www.w3.org/2006/time#inXSDDate> xsd:date
+}
+<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape> IRI{
+	a [<http://www.w3.org/2006/time#Instant>] ;
+	<null> @<3aad54ea119347be503192172e3c5a71ShExShape>
+}
+<8edcf93959b48f4f379a6046b3c0f593time_intervalShExShape> IRI{
+	a [<http://www.w3.org/2006/time#Interval>] ;
+	<http://www.w3.org/2006/time#hasBeginning> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has beginning"
+		// rdfs:comment	"Time instant representing the beginning of a temporal interval." ;
+	<http://www.w3.org/2006/time#hasEnd> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has end"
+		// rdfs:comment	"Time instant representing the end of a temporal interval."
+}
+<143d320394f7b999b5614d178bf85188date_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Date type label."
+}
+<360183ad708ed2e9fbc102720659969atime_referenceShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#TimeReference>] ;
+	<http://www.w3.org/2006/time#hasTime> @<8edcf93959b48f4f379a6046b3c0f593time_intervalShExShape> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has temporal representation" ;
+	<http://www.w3.org/2006/time#hasTime> @<8edcf93959b48f4f379a6046b3c0f593time_intervalShExShape> @<6bb4013338e804008cc07c3abf78d4f7time_instantShExShape>
+		// rdfs:label	"has temporal representation" ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasType> @<143d320394f7b999b5614d178bf85188date_typeShExShape>
+		// rdfs:label	"has date type"
+		// rdfs:comment	"Reference to the codelist of date types." ;
+	<https://model.ccmm.cz/vocabulary/datacite#dateInformation> rdf:langString ?
+		// rdfs:label	"date information"
+		// rdfs:comment	"Additional information to the date in text form."
+}
+<da5b93228a4155ca50962295fbcb695fresource_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of the resource type."
+}
+<4f84e2cbaab6f2206dc674134466b8f1resource_relation_typeShExShape> IRI{
+	a [<http://www.w3.org/2004/02/skos/core#Concept>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of the relation type."
+}
+<ecc6facfdef19f92962bd3ec9e44304arelated_resourceShExShape> IRI{
+	a [rdfs:Resource] ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier> @<06821ce2a8c116297c754fbb6ddf57d2identifierShExShape> *
+		// rdfs:label	"has identifier"
+		// rdfs:comment	"has identifier" ;
+	<http://purl.org/dc/terms/title> xsd:string ?
+		// rdfs:label	"title"
+		// rdfs:comment	"A name given to the resource." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle> @<c764aa2c64cde037c135d613c70f899falternate_titleShExShape> *
+		// rdfs:label	"has alternate title" ;
+	<https://model.ccmm.cz/vocabulary/ccmm#resourceUrl> xsd:anyURI ?
+		// rdfs:label	"resource URL"
+		// rdfs:comment	"Human readable resolvable URL representing the resource." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#qualifiedRelation> @<0ab6912098853e7edf5754474006ca54resource_to_agent_relationshipShExShape> *
+		// rdfs:label	"qualified relation" ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference> @<360183ad708ed2e9fbc102720659969atime_referenceShExShape> *
+		// rdfs:label	"has time reference"
+		// rdfs:comment	"Reference to events related to the resource." ;
+	<http://purl.org/dc/terms/type> @<da5b93228a4155ca50962295fbcb695fresource_typeShExShape> ?
+		// rdfs:label	"has resource type"
+		// rdfs:comment	"The resource type of the resource." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#hasType> @<4f84e2cbaab6f2206dc674134466b8f1resource_relation_typeShExShape> ?
+		// rdfs:label	"has resource relation type"
+		// rdfs:comment	"Relation to the relation type between dataset and resource."
+}
+<a21601b8d4adcb5b78ae166fa7efbd9fdata_serviceShExShape> IRI{
+	a [<http://www.w3.org/ns/dcat#DataService>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Data service label" ;
+	<http://www.w3.org/ns/dcat#endpointURL> @<ecc6facfdef19f92962bd3ec9e44304arelated_resourceShExShape> +
+		// rdfs:label	"end-point del servicio"
+		// rdfs:comment	"Kořenové umístění nebo hlavní přístupový bod služby (IRI přístupné přes Web)."
+}

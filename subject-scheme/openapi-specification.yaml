@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/subject_scheme": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the subject scheme.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Collection of subjects (keywords, concepts, classification codes) curated by a single source.",
+        "description": "Collection of subjects (keywords, concepts, classification codes) curated by a single source.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "subject_scheme": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the subject scheme.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

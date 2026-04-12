@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/alternate_title_type": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Alternate title type label.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Type of alternate title.",
+        "description": "Type of alternate title.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "alternate_title_type": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Alternate title type label.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

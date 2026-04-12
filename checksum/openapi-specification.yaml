@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/checksum": {
+      "parameters": [
+        {
+          "name": "checksum_value",
+          "in": "path",
+          "description": "A lower case hexadecimal encoded digest value produced using a specific algorithm. ",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "algorithm",
+          "in": "path",
+          "description": "The algorithm used to produce the subject Checksum.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A value that allows the contents of a file to be authenticated.",
+        "description": "A value that allows the contents of a file to be authenticated.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "checksum": {
+        "type": "object",
+        "properties": {
+          "checksum_value": {
+            "description": "A lower case hexadecimal encoded digest value produced using a specific algorithm. ",
+            "type": "string"
+          },
+          "algorithm": {
+            "description": "The algorithm used to produce the subject Checksum.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

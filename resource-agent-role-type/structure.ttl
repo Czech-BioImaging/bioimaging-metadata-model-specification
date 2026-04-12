@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/resource-agent-role-type/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/resource-agent-role-type/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Resource agent role type. An idea or notion; a unit of thought.\",\"en\":\"Data structure for Resource agent role type. An idea or notion; a unit of thought.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Resource agent role type\",\"en\":\"Resource agent role type\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/class-1742235606195-b8fa-9b2f-a5cf\",\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/attribute-1753791625528-fae3-a34f-8492\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/class-1742235606195-b8fa-9b2f-a5cf\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/resource-agent-role-type\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1742235606195-b8fa-9b2f-a5cf a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#ResourceAgentRoleType\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/attribute-1753791625528-fae3-a34f-8492\"]";
+    kv:dataPsmTechnicalLabel "\"resource_agent_role_type\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/class-1742235606195-b8fa-9b2f-a5cf\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/resource-agent-role-type/class-1742235606195-b8fa-9b2f-a5cf\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1753791625528-fae3-a34f-8492 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/ResourceAgentRoleType.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/resource-agent-role-type/attribute-1753791625528-fae3-a34f-8492\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/resource-agent-role-type/attribute-1753791625528-fae3-a34f-8492\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

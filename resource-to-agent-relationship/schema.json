@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/resource-to-agent-relationship/schema.json",
+  "title": "Resource to agent relationship",
+  "description": "An association class for attaching additional information to a relationship between Resource and Agent.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "relation",
+    "role"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Resource to agent relationship"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Resource to agent relationship"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "relation": {
+      "title": "has related agent",
+      "description": "Specifies the agent an a given role in the relationship with the resource.",
+      "anyOf": [
+        {
+          "$ref": "../organization/schema.json"
+        },
+        {
+          "$ref": "../person/schema.json"
+        }
+      ]
+    },
+    "role": {
+      "$ref": "../resource-agent-role-type/schema.json"
+    }
+  }
+}

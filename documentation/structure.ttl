@@ -1,0 +1,36 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/documentation/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/documentation/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Documentation. A textual resource intended for human consumption that contains information about the data service.\",\"en\":\"Data structure for Documentation. A textual resource intended for human consumption that contains information about the data service.\"}";
+    kv:dataPsmHumanLabel "{\"cs\":\"Documentation\",\"en\":\"Documentation\"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/documentation/class-1742341119213-d3b3-b949-8fcd\",\"https://czbiextension.com/profile/vocabulary/documentation/attribute-1742341123274-8d7e-2951-81fd\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/documentation/class-1742341119213-d3b3-b949-8fcd\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/documentation/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/documentation\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1742341119213-d3b3-b949-8fcd a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#Documentation\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/documentation/attribute-1742341123274-8d7e-2951-81fd\"]";
+    kv:dataPsmTechnicalLabel "\"documentation\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/documentation/class-1742341119213-d3b3-b949-8fcd\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/documentation/class-1742341119213-d3b3-b949-8fcd\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1742341123274-8d7e-2951-81fd a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Documentation.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/documentation/attribute-1742341123274-8d7e-2951-81fd\"";
+    kv:profiling "[\"006f1524-b323-4974-a055-dcf253e57d85/4a8feb80-6cde-42c2-b462-64e6c33dd529/documentation/attribute-1742341123274-8d7e-2951-81fd\"]";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

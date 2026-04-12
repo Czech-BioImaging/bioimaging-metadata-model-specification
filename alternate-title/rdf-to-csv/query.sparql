@@ -1,0 +1,16 @@
+PREFIX ns1: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?v2 AS ?title) (?v4 AS ?alternate_title_type_label)
+WHERE {
+  ?v1 a ns1:AlternateTitle .
+  ?v1 dc:title ?v2 .
+  OPTIONAL {
+    ?v3 a skos:Concept .
+    OPTIONAL {
+      ?v3 rdfs:label ?v4 .
+    }
+    ?v1 ns1:hasType ?v3 .
+  }
+}

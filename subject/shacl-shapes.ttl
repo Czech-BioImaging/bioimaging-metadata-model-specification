@@ -1,0 +1,50 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<94203b40f47f56668e3cf1d6ce9772cfsubjectShape> a sh:NodeShape;
+    sh:targetClass <https://model.ccmm.cz/vocabulary/datacite#Subject>;
+    sh:class <https://model.ccmm.cz/vocabulary/datacite#Subject>;
+    sh:nodeKind sh:IRI;
+    sh:description "Subject, keyword, classification code, or key phrase describing the resource."@en;
+    sh:name "Subject"@en.
+<adab928464d3883194f93273b5ff350dtitleShape> a sh:PropertyShape;
+    sh:description "Title of the subject."@en;
+    sh:name "title"@en;
+    sh:minCount 1;
+    sh:path <http://purl.org/dc/terms/title>;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<94203b40f47f56668e3cf1d6ce9772cfsubjectShape> sh:property <adab928464d3883194f93273b5ff350dtitleShape>.
+<a80b7b675203174b642315fa502e773fdefinitionShape> a sh:PropertyShape;
+    sh:description "Definition of the subject in the given context."@en;
+    sh:name "definition"@en;
+    sh:path <http://www.w3.org/2004/02/skos/core#definition>.
+
+<a80b7b675203174b642315fa502e773fdefinitionShape> sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<94203b40f47f56668e3cf1d6ce9772cfsubjectShape> sh:property <a80b7b675203174b642315fa502e773fdefinitionShape>.
+<5ad2ed93e1c03544c0e64d3c57ebbbceclassification_codeShape> a sh:PropertyShape;
+    sh:description "The classification code used for notation of the subject term in the subject scheme."@en;
+    sh:name "classification code"@en;
+    sh:maxCount 1;
+    sh:path <https://model.ccmm.cz/vocabulary/datacite#subjectClassificationCode>;
+    sh:datatype xsd:string.
+<94203b40f47f56668e3cf1d6ce9772cfsubjectShape> sh:property <5ad2ed93e1c03544c0e64d3c57ebbbceclassification_codeShape>.
+<42d332046753c8883c3385f3314da156subject_schemeShape> a sh:PropertyShape;
+    sh:description "Belonging of the subject to the subject scheme."@en;
+    sh:name "in subject scheme"@en;
+    sh:maxCount 1;
+    sh:path <https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme>;
+    sh:nodeKind sh:IRI.
+<58b14b9ebdf283c807d129bd2dbe817bsubject_schemeShape> a sh:NodeShape;
+    sh:class <https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme>;
+    sh:nodeKind sh:IRI;
+    sh:description "Collection of subjects (keywords, concepts, classification codes) curated by a single source."@en;
+    sh:name "Subject scheme"@en.
+<57a2ae3593e60ce4f2e9a366e3a4ad8alabelShape> a sh:PropertyShape;
+    sh:description "Label of the subject scheme."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<58b14b9ebdf283c807d129bd2dbe817bsubject_schemeShape> sh:property <57a2ae3593e60ce4f2e9a366e3a4ad8alabelShape>.
+<42d332046753c8883c3385f3314da156subject_schemeShape> sh:node <58b14b9ebdf283c807d129bd2dbe817bsubject_schemeShape>.
+<94203b40f47f56668e3cf1d6ce9772cfsubjectShape> sh:property <42d332046753c8883c3385f3314da156subject_schemeShape>.

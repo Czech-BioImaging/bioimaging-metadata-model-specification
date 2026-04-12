@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/terms_of_use": {
+      "parameters": [
+        {
+          "name": "access_rights",
+          "in": "path",
+          "description": "Information about the conditions to access the resource or an indication of its security status.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "license",
+          "in": "path",
+          "description": "Reference to the legal document giving official permission to do something with the resource.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "description",
+          "in": "path",
+          "description": "Descriptive text on details of rights and licensing.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "contact_point",
+          "in": "path",
+          "description": "Contact point for the further details about the terms of use.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Terms of use defines overall conditions and rights regarding access and usage  of dataset. ",
+        "description": "Terms of use defines overall conditions and rights regarding access and usage  of dataset. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "terms_of_use": {
+        "type": "object",
+        "properties": {
+          "access_rights": {
+            "description": "Information about the conditions to access the resource or an indication of its security status.",
+            "type": "string"
+          },
+          "license": {
+            "description": "Reference to the legal document giving official permission to do something with the resource.",
+            "type": "string"
+          },
+          "description": {
+            "description": "Descriptive text on details of rights and licensing.",
+            "type": "string"
+          },
+          "contact_point": {
+            "description": "Contact point for the further details about the terms of use.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

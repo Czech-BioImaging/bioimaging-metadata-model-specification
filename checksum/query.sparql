@@ -1,0 +1,20 @@
+PREFIX ns0: <http://spdx.org/rdf/terms#>
+PREFIX ns1: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?v0 a ns0:Checksum .
+  ?v0 ns0:checksumValue ?v1 .
+  ?v0 ns0:algorithm ?v2 .
+  ?v2 a ns0:ChecksumAlgorithm .
+  ?v2 ns1:label ?v3 .
+}
+WHERE {
+  ?v0 a ns0:Checksum .
+  ?v0 ns0:checksumValue ?v1 .
+  ?v0 ns0:algorithm ?v2 .
+  OPTIONAL {
+    ?v2 a ns0:ChecksumAlgorithm .
+  }
+  OPTIONAL {
+    ?v2 ns1:label ?v3 .
+  }
+}

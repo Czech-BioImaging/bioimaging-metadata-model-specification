@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/identifier": {
+      "parameters": [
+        {
+          "name": "value",
+          "in": "path",
+          "description": "Value of the identifer within the given identifier scheme.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "scheme",
+          "in": "path",
+          "description": "Relation between the identifier and scheme in which it is defined and unique.",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "authorized",
+          "in": "path",
+          "description": "Specifies whether the identifier is authorized by the subject it represents.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+        "description": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "identifier": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Value of the identifer within the given identifier scheme.",
+            "type": "string"
+          },
+          "scheme": {
+            "description": "Relation between the identifier and scheme in which it is defined and unique.",
+            "type": "string"
+          },
+          "authorized": {
+            "description": "Specifies whether the identifier is authorized by the subject it represents.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

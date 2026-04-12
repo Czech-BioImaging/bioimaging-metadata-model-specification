@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/description/schema.json",
+  "title": "Description",
+  "description": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "description_text"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Description"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Description"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "description_text": {
+      "title": "description text",
+      "description": "Text describing the resource.",
+      "type": "object",
+      "required": [
+        "@value",
+        "@language"
+      ],
+      "properties": {
+        "@value": {
+          "title": "Text v daném jazyce",
+          "type": "string"
+        },
+        "@language": {
+          "title": "Jazyk textu",
+          "type": "string"
+        }
+      }
+    },
+    "description_type": {
+      "$ref": "../description-type/schema.json"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/time-interval/schema.json",
+  "title": "Time interval",
+  "description": "A temporal entity with an extent or duration",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "beginning",
+    "end"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Time interval"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Time interval"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "beginning": {
+      "$ref": "../time-instant/schema.json"
+    },
+    "end": {
+      "$ref": "../time-instant/schema.json"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/related-resource/schema.json",
+  "title": "Related resource",
+  "description": "Resource represents any resource, physical or digital, that is related to the described dataset. ",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Related resource"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Related resource"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "identifier": {
+      "title": "has identifier",
+      "description": "has identifier",
+      "type": "array",
+      "items": {
+        "$ref": "../identifier/schema.json"
+      }
+    },
+    "title": {
+      "title": "title",
+      "description": "A name given to the resource.",
+      "type": "string"
+    },
+    "alternate_title": {
+      "title": "has alternate title",
+      "type": "array",
+      "items": {
+        "$ref": "../alternate-title/schema.json"
+      }
+    },
+    "resource_url": {
+      "title": "resource URL",
+      "description": "Human readable resolvable URL representing the resource.",
+      "type": "string",
+      "format": "iri"
+    },
+    "qualified_relation": {
+      "title": "qualified relation",
+      "type": "array",
+      "items": {
+        "$ref": "../resource-to-agent-relationship/schema.json"
+      }
+    },
+    "time_reference": {
+      "title": "has time reference",
+      "description": "Reference to events related to the resource.",
+      "type": "array",
+      "items": {
+        "$ref": "../time-reference/schema.json"
+      }
+    },
+    "resource_type": {
+      "$ref": "../resource-type/schema.json"
+    },
+    "resource_relation_type": {
+      "$ref": "../resource-relation-type/schema.json"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/data_service": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Data service label",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "endpoint_url",
+          "in": "path",
+          "description": "The root location or primary endpoint of the service (an IRI).",
+          "required": 1,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A collection of operations that provides access to one or more datasets or data processing functions.",
+        "description": "A collection of operations that provides access to one or more datasets or data processing functions.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "data_service": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Data service label",
+            "type": "string"
+          },
+          "endpoint_url": {
+            "description": "The root location or primary endpoint of the service (an IRI).",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

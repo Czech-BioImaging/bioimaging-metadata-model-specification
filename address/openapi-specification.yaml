@@ -1,0 +1,180 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/address": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Address label",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "full_address",
+          "in": "path",
+          "description": "The complete address written as a string.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "po_box",
+          "in": "path",
+          "description": "A location designator for a postal delivery point at a post office, usually a number.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "thoroughfare",
+          "in": "path",
+          "description": "The name of a passage or way through from one location to another.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "locator_designator",
+          "in": "path",
+          "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "locator_name",
+          "in": "path",
+          "description": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "address_area",
+          "in": "path",
+          "description": "The name of a geographic area that groups Addresses.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "post_name",
+          "in": "path",
+          "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "administrative_unit_level_1",
+          "in": "path",
+          "description": "The name of the uppermost level of the address, almost always a country.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "administrative_unit_level_2",
+          "in": "path",
+          "description": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "post_code",
+          "in": "path",
+          "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A spatial object that in a human-readable way identifies a fixed location. ",
+        "description": "A spatial object that in a human-readable way identifies a fixed location. ",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "address": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Address label",
+            "type": "string"
+          },
+          "full_address": {
+            "description": "The complete address written as a string.",
+            "type": "string"
+          },
+          "po_box": {
+            "description": "A location designator for a postal delivery point at a post office, usually a number.",
+            "type": "string"
+          },
+          "thoroughfare": {
+            "description": "The name of a passage or way through from one location to another.",
+            "type": "string"
+          },
+          "locator_designator": {
+            "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+            "type": "string"
+          },
+          "locator_name": {
+            "description": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+            "type": "string"
+          },
+          "address_area": {
+            "description": "The name of a geographic area that groups Addresses.",
+            "type": "string"
+          },
+          "post_name": {
+            "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+            "type": "string"
+          },
+          "administrative_unit_level_1": {
+            "description": "The name of the uppermost level of the address, almost always a country.",
+            "type": "string"
+          },
+          "administrative_unit_level_2": {
+            "description": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+            "type": "string"
+          },
+          "post_code": {
+            "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

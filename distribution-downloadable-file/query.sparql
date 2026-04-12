@@ -1,0 +1,91 @@
+PREFIX ns0: <https://model.ccmm.cz/vocabulary/ccmm#>
+PREFIX ns1: <http://purl.org/dc/terms/>
+PREFIX ns2: <http://www.w3.org/ns/dcat#>
+PREFIX ns3: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns4: <http://spdx.org/rdf/terms#>
+CONSTRUCT {
+  ?v0 a ns0:Distribution-DownloadableFile .
+  ?v0 ns1:title ?v1 .
+  ?v0 ns2:accessURL ?v2 .
+  ?v2 a ns3:Resource .
+  ?v2 ns3:label ?v3 .
+  ?v0 ns2:downloadURL ?v4 .
+  ?v4 a ns3:Resource .
+  ?v4 ns3:label ?v5 .
+  ?v0 ns1:conformsTo ?v6 .
+  ?v6 a ns1:Standard .
+  ?v6 ns3:label ?v7 .
+  ?v0 ns1:format ?v8 .
+  ?v8 a ns1:MediaTypeOrExtent .
+  ?v8 ns3:label ?v9 .
+  ?v0 ns2:mediaType ?v10 .
+  ?v10 a ns1:MediaType .
+  ?v10 ns3:label ?v11 .
+  ?v0 ns2:byteSize ?v12 .
+  ?v0 ns4:checksum ?v13 .
+  ?v13 a ns4:Checksum .
+  ?v13 ns4:checksumValue ?v14 .
+  ?v13 ns4:algorithm ?v15 .
+  ?v15 a ns4:ChecksumAlgorithm .
+  ?v15 ns3:label ?v16 .
+}
+WHERE {
+  ?v0 a ns0:Distribution-DownloadableFile .
+  ?v0 ns1:title ?v1 .
+  ?v0 ns2:accessURL ?v2 .
+  OPTIONAL {
+    ?v2 a ns3:Resource .
+  }
+  OPTIONAL {
+    ?v2 ns3:label ?v3 .
+  }
+  OPTIONAL {
+    ?v0 ns2:downloadURL ?v4 .
+    OPTIONAL {
+      ?v4 a ns3:Resource .
+    }
+    OPTIONAL {
+      ?v4 ns3:label ?v5 .
+    }
+  }
+  OPTIONAL {
+    ?v0 ns1:conformsTo ?v6 .
+    OPTIONAL {
+      ?v6 a ns1:Standard .
+    }
+    OPTIONAL {
+      ?v6 ns3:label ?v7 .
+    }
+  }
+  ?v0 ns1:format ?v8 .
+  OPTIONAL {
+    ?v8 a ns1:MediaTypeOrExtent .
+  }
+  OPTIONAL {
+    ?v8 ns3:label ?v9 .
+  }
+  OPTIONAL {
+    ?v0 ns2:mediaType ?v10 .
+    OPTIONAL {
+      ?v10 a ns1:MediaType .
+    }
+    OPTIONAL {
+      ?v10 ns3:label ?v11 .
+    }
+  }
+  ?v0 ns2:byteSize ?v12 .
+  OPTIONAL {
+    ?v0 ns4:checksum ?v13 .
+    OPTIONAL {
+      ?v13 a ns4:Checksum .
+    }
+    ?v13 ns4:checksumValue ?v14 .
+    ?v13 ns4:algorithm ?v15 .
+    OPTIONAL {
+      ?v15 a ns4:ChecksumAlgorithm .
+    }
+    OPTIONAL {
+      ?v15 ns3:label ?v16 .
+    }
+  }
+}

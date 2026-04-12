@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<16a3b3b3c082bddfb9c74028dc3fc351documentationShape> a sh:NodeShape;
+    sh:targetClass <http://xmlns.com/foaf/0.1/Document>;
+    sh:class <http://xmlns.com/foaf/0.1/Document>;
+    sh:nodeKind sh:IRI;
+    sh:description "A textual resource intended for human consumption that contains information about the data service."@en;
+    sh:name "Documentation"@en.
+<5250b0adb41b4524e6cef8fafe530700labelShape> a sh:PropertyShape;
+    sh:description "Documentation label"@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<16a3b3b3c082bddfb9c74028dc3fc351documentationShape> sh:property <5250b0adb41b4524e6cef8fafe530700labelShape>.

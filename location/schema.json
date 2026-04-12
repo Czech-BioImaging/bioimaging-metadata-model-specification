@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/location/schema.json",
+  "title": "Location",
+  "description": "Spatial region, named place or geometry representation of a place related to the resource. ",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "relation_type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "allOf": [
+        {
+          "type": "array",
+          "contains": {
+            "const": "Location"
+          },
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "GeoLocation"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "bounding_box": {
+      "title": "bounding box",
+      "description": "Bounding box of the location geometry.",
+      "type": "array",
+      "items": {
+        "title": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "type": "string"
+      }
+    },
+    "name": {
+      "title": "name",
+      "description": "Name of the spatial location.",
+      "type": "array",
+      "items": {
+        "title": "Řetězec",
+        "type": "string"
+      }
+    },
+    "geometry": {
+      "$ref": "../geometry/schema.json"
+    },
+    "related_object": {
+      "title": "has related object",
+      "description": "Relation to the spatial object.",
+      "type": "array",
+      "items": {
+        "$ref": "../related-resource/schema.json"
+      }
+    },
+    "relation_type": {
+      "$ref": "../location-relation-type/schema.json"
+    }
+  }
+}

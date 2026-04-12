@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/application_profile": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of application profile",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A standard or other specification to which a metadata record conforms.",
+        "description": "A standard or other specification to which a metadata record conforms.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "application_profile": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of application profile",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

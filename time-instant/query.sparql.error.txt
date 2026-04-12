@@ -1,0 +1,18 @@
+null is not an object (evaluating 'iri.match')
+
+TypeError: null is not an object (evaluating 'iri.match')
+    at namespaceFromIri (/usr/packages/xml/lib/conventions.js:54:19)
+    at nodeFromIri (/usr/packages/sparql-query/lib/sparql-model-adapter.js:73:23)
+    at propertyToTriples (/usr/packages/sparql-query/lib/sparql-model-adapter.js:140:27)
+    at classToTriples (/usr/packages/sparql-query/lib/sparql-model-adapter.js:119:18)
+    at fromRoots (/usr/packages/sparql-query/lib/sparql-model-adapter.js:44:18)
+    at generateToObject (/usr/packages/sparql-query/lib/sparql-generator.js:34:32)
+    at generateToStream (/usr/packages/sparql-query/lib/sparql-generator.js:13:34)
+    at generateToStream (/usr/packages/sparql-query/lib/sparql-generator.js:12:28)
+    at generateArtefact (/usr/packages/core/lib/generator/generator.js:35:25)
+    at async writeArtifacts (/usr/packages/specification/lib/v1/default-artifact-builder.js:91:37)
+    at async build (unknown)
+    at async generateArtifacts (unknown)
+    at unknown
+    at async <anonymous> (/usr/src/app/src/utils/async-handler.ts:13:11)
+    at processTicksAndRejections (native:7:39)

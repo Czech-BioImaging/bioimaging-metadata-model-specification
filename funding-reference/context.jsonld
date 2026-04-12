@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Funding reference": {
+      "@id": "https://model.ccmm.cz/vocabulary/datacite#FundingReference",
+      "@context": {
+        "local_identifier": {
+          "@id": "https://model.ccmm.cz/vocabulary/datacite#awardNumber",
+          "@type": "xsd:string"
+        },
+        "award_title": {
+          "@id": "https://model.ccmm.cz/vocabulary/datacite#awardTitle",
+          "@type": "xsd:string"
+        },
+        "funding_program": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#fundingProgram",
+          "@type": "xsd:anyURI"
+        },
+        "funder": {
+          "@id": "https://model.ccmm.cz/vocabulary/datacite#hasFunderIdentifier",
+          "@container": "@set",
+          "@context": "../organization/context.jsonld"
+        }
+      }
+    }
+  }
+}

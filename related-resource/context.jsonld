@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "identifier": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier",
+      "@container": "@set",
+      "@context": "../identifier/context.jsonld"
+    },
+    "title": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "xsd:string"
+    },
+    "alternate_title": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle",
+      "@container": "@set",
+      "@context": "../alternate-title/context.jsonld"
+    },
+    "qualified_relation": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#qualifiedRelation",
+      "@container": "@set",
+      "@context": "../resource-to-agent-relationship/context.jsonld"
+    },
+    "time_reference": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference",
+      "@container": "@set",
+      "@context": "../time-reference/context.jsonld"
+    },
+    "resource_type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@context": "../resource-type/context.jsonld"
+    },
+    "Related resource": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "@context": {
+        "resource_url": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl",
+          "@type": "xsd:anyURI"
+        },
+        "resource_relation_type": {
+          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
+          "@context": "../resource-relation-type/context.jsonld"
+        }
+      }
+    }
+  }
+}

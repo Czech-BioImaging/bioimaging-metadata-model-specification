@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Terms of use": {
+      "@id": "https://model.ccmm.cz/vocabulary/datacite#Rights",
+      "@context": {
+        "access_rights": {
+          "@id": "http://purl.org/dc/terms/accessRights",
+          "@context": "../access-rights/context.jsonld"
+        },
+        "license": {
+          "@id": "http://purl.org/dc/terms/license",
+          "@context": "../license-document/context.jsonld"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@container": "@language"
+        },
+        "contact_point": {
+          "@id": "http://www.w3.org/ns/dcat#contactPoint",
+          "@container": "@set",
+          "@context": "../organization/context.jsonld"
+        }
+      }
+    }
+  }
+}

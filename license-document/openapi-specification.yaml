@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/license_document": {
+      "parameters": [
+        {
+          "name": "label",
+          "in": "path",
+          "description": "Label of the license document.",
+          "required": 0,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "A legal document giving official permission to do something with a resource.",
+        "description": "A legal document giving official permission to do something with a resource.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "license_document": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "Label of the license document.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

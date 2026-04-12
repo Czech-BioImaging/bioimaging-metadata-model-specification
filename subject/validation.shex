@@ -1,0 +1,25 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<58b14b9ebdf283c807d129bd2dbe817bsubject_schemeShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme>] ;
+	rdfs:label rdf:langString *
+		// rdfs:label	"label"
+		// rdfs:comment	"Label of the subject scheme."
+}
+<94203b40f47f56668e3cf1d6ce9772cfsubjectShExShape> IRI{
+	a [<https://model.ccmm.cz/vocabulary/datacite#Subject>] ;
+	<http://purl.org/dc/terms/title> rdf:langString +
+		// rdfs:label	"title"
+		// rdfs:comment	"Title of the subject." ;
+	<http://www.w3.org/2004/02/skos/core#definition> rdf:langString *
+		// rdfs:label	"definition"
+		// rdfs:comment	"Definition of the subject in the given context." ;
+	<https://model.ccmm.cz/vocabulary/datacite#subjectClassificationCode> xsd:string ?
+		// rdfs:label	"classification code"
+		// rdfs:comment	"The classification code used for notation of the subject term in the subject scheme." ;
+	<https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme> @<58b14b9ebdf283c807d129bd2dbe817bsubject_schemeShExShape> ?
+		// rdfs:label	"in subject scheme"
+		// rdfs:comment	"Belonging of the subject to the subject scheme."
+}

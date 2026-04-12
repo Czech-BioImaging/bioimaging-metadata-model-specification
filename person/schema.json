@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/person/schema.json",
+  "title": "Person",
+  "description": "Physical person. ",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "Person"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "Person"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "identifier": {
+      "title": "has identifier",
+      "description": "has identifier",
+      "type": "array",
+      "items": {
+        "$ref": "../identifier/schema.json"
+      }
+    },
+    "name": {
+      "title": "name",
+      "description": "Name of the agent.",
+      "type": "string"
+    },
+    "given_name": {
+      "title": "given name",
+      "description": "The given name associated with the person.",
+      "type": "array",
+      "items": {
+        "title": "Řetězec",
+        "type": "string"
+      }
+    },
+    "family_name": {
+      "title": "family name",
+      "description": "The family name associated with the person.",
+      "type": "array",
+      "items": {
+        "title": "Řetězec",
+        "type": "string"
+      }
+    },
+    "contact_point": {
+      "title": "má kontaktní bod",
+      "description": "Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard.",
+      "type": "array",
+      "items": {
+        "$ref": "../contact-details/schema.json"
+      }
+    },
+    "affiliation": {
+      "title": "has affiliation",
+      "description": "Affiliation of the person to an organization.",
+      "type": "array",
+      "items": {
+        "$ref": "../organization/schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<d06a64a6614181fa3a5f071abcc76eaadescription_typeShape> a sh:NodeShape;
+    sh:targetClass <https://model.ccmm.cz/vocabulary/datacite#DescriptionType>;
+    sh:class <https://model.ccmm.cz/vocabulary/datacite#DescriptionType>;
+    sh:nodeKind sh:IRI;
+    sh:description "The type of the description."@en;
+    sh:name "Description type"@en.
+<878bfe707a9ab348663ac62a6ba0b646labelShape> a sh:PropertyShape;
+    sh:description "Label of the description type."@en;
+    sh:name "label"@en;
+    sh:path rdfs:label;
+    sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.
+<d06a64a6614181fa3a5f071abcc76eaadescription_typeShape> sh:property <878bfe707a9ab348663ac62a6ba0b646labelShape>.
