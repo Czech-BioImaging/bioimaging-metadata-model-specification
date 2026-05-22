@@ -1024,13 +1024,6 @@
     dsv:specializes :Specimen;
     a dsv:ClassProfile;
     dsv:class <http://purl.obolibrary.org/obo/OBI_0000953>.
-:ImagingSample dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
-    a dsv:TermProfile;
-    skos:prefLabel "Imaging Sample"@en;
-    skos:definition "A processed specimen that is an input for Image Acquisition."@en;
-    dsv:specializes :ProcessedSpecimen;
-    a dsv:ClassProfile;
-    dsv:class <http://purl.obolibrary.org/obo/OBI_0000953>.
 :ProcessingStep dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
     skos:prefLabel "Arbeitsschritt"@de, "Processing Step"@en;
@@ -1084,7 +1077,7 @@
     dsv:class skos:Concept.
 :Software dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
-    dsv:specializes <3zptr8lx9m2mnd24crr>, :Resource;
+    dsv:specializes <3zptr8lx9m2mnd24crr>, :Tool;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty rdfs:label;
@@ -1154,6 +1147,13 @@
 ];
     a dsv:ClassProfile;
     dsv:class <http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18>.
+:BiogenicEntityType dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Biogenic Entity type"@en;
+    skos:definition "Type of biogenic entity"@en;
+    skos:scopeNote "Here is the list of ontologies used:"@en;
+    a dsv:ClassProfile;
+    dsv:class skos:Concept.
 
 <https://model.ccmm.cz/research-data/Dataset.hasRelatedResource> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
@@ -2571,7 +2571,7 @@
     dsv:property <http://purl.obolibrary.org/obo/RO_0002233>;
     dsv:domain :ImageAcquisition;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :ImagingSample.
+    dsv:objectPropertyRange <fwoji2ccppmnd3b9ij>.
 
 <https://czbiextension.com/profile/vocabulary#ImageAcquisition.hasOutput> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
@@ -2670,21 +2670,6 @@
     dsv:domain :Tool;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ToolType.
-
-<https://czbiextension.com/profile/vocabulary#ProcessingStep.used> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
-    a dsv:TermProfile;
-    skos:prefLabel "used software"@en;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty rdfs:comment;
-  dsv:reusedAsProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/prov#used>
-];
-    dsv:cardinality cardinality:0n;
-    dsv:property <http://www.w3.org/ns/prov#used>;
-    dsv:domain :ProcessingStep;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :Software.
 
 <https://czbiextension.com/profile/vocabulary#Tool.implements> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
@@ -2816,32 +2801,12 @@
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dct:isPartOf
 ];
-    dsv:cardinality cardinality:0n;
+    dsv:cardinality cardinality:11;
     dsv:property dct:isPartOf;
     dsv:domain :BiogenicEntity;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :Organism.
-
-<https://czbiextension.com/profile/vocabulary#Organism.taxonId> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
-    a dsv:TermProfile;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty rdfs:label;
-  dsv:reusedAsProperty skos:prefLabel;
-  dsv:reusedFromResource <http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19>
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty rdfs:comment;
-  dsv:reusedAsProperty skos:definition;
-  dsv:reusedFromResource <http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19>
-];
-    dsv:cardinality cardinality:11;
-    dsv:property <http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19>;
-    dsv:domain :Organism;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :Taxon-2023-09-18.
-
-<https://czbiextension.com/profile/vocabulary#BiogenicEntity.isPartOf> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
+    dsv:objectPropertyRange :Organism;
+    dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -2859,6 +2824,31 @@
     dsv:domain :BiogenicEntity;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :BiogenicEntity.
+
+<https://czbiextension.com/profile/vocabulary#Organism.type> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    skos:prefLabel "belongs to taxon"@en;
+    skos:definition "This relation is intended to be used to specify a type of dwc:Taxon."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property rdf:type;
+    dsv:domain :Organism;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Taxon-2023-09-18.
+
+<https://czbiextension.com/profile/vocabulary#BiogenicEntity.type> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
+    a dsv:TermProfile;
+    skos:definition "The Biogenic Entity is an instance of a Biogenic Entity type"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource rdf:type
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property rdf:type;
+    dsv:domain :BiogenicEntity;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :BiogenicEntityType.
 
 <https://model.ccmm.cz/research-data/Dataset.title> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
@@ -4629,51 +4619,6 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdfs:Literal.
 
-<https://czbiextension.com/profile/vocabulary#MethodsAndTools.label> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
-    a dsv:TermProfile;
-    skos:definition "A human-readable name for the subject."@en;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty rdfs:label;
-  dsv:reusedAsProperty skos:prefLabel;
-  dsv:reusedFromResource rdfs:label
-];
-    dsv:cardinality cardinality:0n;
-    dsv:property rdfs:label;
-    dsv:domain :MethodsAndTools;
-    a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdfs:Literal.
-
-<https://czbiextension.com/profile/vocabulary#BiogenicEntity.label> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
-    a dsv:TermProfile;
-    skos:definition "A human-readable name for the biogenic entity."@en;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty rdfs:label;
-  dsv:reusedAsProperty skos:prefLabel;
-  dsv:reusedFromResource rdfs:label
-];
-    dsv:cardinality cardinality:0n;
-    dsv:property rdfs:label;
-    dsv:domain :BiogenicEntity;
-    a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdfs:Literal.
-
-<https://czbiextension.com/profile/vocabulary#Specimen.name> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
-    a dsv:TermProfile;
-    skos:definition "A name for specimen."@en;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty rdfs:label;
-  dsv:reusedAsProperty skos:prefLabel;
-  dsv:reusedFromResource <http://xmlns.com/foaf/0.1/name>
-];
-    dsv:cardinality cardinality:0n;
-    dsv:property <http://xmlns.com/foaf/0.1/name>;
-    dsv:domain :Specimen;
-    a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdfs:Literal.
-
 <https://czbiextension.com/profile/vocabulary#ToolType.label> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
     skos:definition "A human-readable name for the tool type."@en;
@@ -4714,21 +4659,21 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdfs:Literal.
 
-<https://czbiextension.com/profile/vocabulary#MethodsAndTools.name> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
+<https://czbiextension.com/profile/vocabulary#BiogenicEntityType.label> dct:isPartOf <https://czbiextension.com/profile/vocabulary#>;
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty rdfs:label;
   dsv:reusedAsProperty skos:prefLabel;
-  dsv:reusedFromResource <http://xmlns.com/foaf/0.1/name>
+  dsv:reusedFromResource rdfs:label
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty rdfs:comment;
   dsv:reusedAsProperty skos:definition;
-  dsv:reusedFromResource <http://xmlns.com/foaf/0.1/name>
+  dsv:reusedFromResource rdfs:label
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property <http://xmlns.com/foaf/0.1/name>;
-    dsv:domain :MethodsAndTools;
+    dsv:property rdfs:label;
+    dsv:domain :BiogenicEntityType;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdfs:Literal.

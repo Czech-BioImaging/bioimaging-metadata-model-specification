@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/specimen_": {
+      "parameters": [],
+      "get": {
+        "summary": "A material entity that is collected for potential use as an input upon which measurements or observations are performed.",
+        "description": "A material entity that is collected for potential use as an input upon which measurements or observations are performed.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "specimen_": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}

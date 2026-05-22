@@ -1,0 +1,9 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<c37680f8f21d4349cf284cb5e87373ffspecimen_Shape> a sh:NodeShape;
+    sh:targetClass <null>;
+    sh:class <null>;
+    sh:nodeKind sh:IRI;
+    sh:description "A material entity that is collected for potential use as an input upon which measurements or observations are performed."@en;
+    sh:name "Specimen "@en.

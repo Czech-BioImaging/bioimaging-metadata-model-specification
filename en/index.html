@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>CZBI extension AP ver. 2.1</title>
+    <title>CZBI extension AP ver. 0.3</title>
     <meta name="color-scheme" content="light dark">
     <script type="application/ld+json">
       {
@@ -25,7 +25,7 @@
             "prof:Profile"
           ],
           "title": {
-            "en": "CZBI extension AP ver. 2.1"
+            "en": "CZBI extension AP ver. 0.3"
           },
           "isProfileOf": [
             {
@@ -669,6 +669,16 @@
                 "prof:ResourceDescriptor"
               ],
               "hasArtifact": "../resource-agent-role-type/structure.ttl",
+              "hasRole": "role:schema",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "dsv:Structure"
+            },
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "../specimen-/structure.ttl",
               "hasRole": "role:schema",
               "format": "filetype:RDF_TURTLE",
               "conformsTo": "dsv:Structure"
@@ -1727,6 +1737,28 @@
               "hasRole": "role:schema",
               "format": "filetype:JSON_LD",
               "conformsTo": "http://www.w3.org/ns/json-ld"
+            },
+            {
+              "@id": "41cd930a-52f0-4709-828a-56180ba39575#jsonschema",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "../../specimen-/schema.json",
+              "hasRole": "role:schema",
+              "format": "filetype:JSON",
+              "conformsTo": "https://json-schema.org/draft/2020-12/schema"
+            },
+            {
+              "@id": "41cd930a-52f0-4709-828a-56180ba39575#jsonLd",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "../../specimen-/context.jsonld",
+              "hasRole": "role:schema",
+              "format": "filetype:JSON_LD",
+              "conformsTo": "http://www.w3.org/ns/json-ld"
             }
           ]
         }
@@ -1900,7 +1932,7 @@
     <section id="abstract">
       <p>
       This file documents
-      <strong>CZBI extension AP ver. 2.1</strong>.</p>
+      <strong>CZBI extension AP ver. 0.3</strong>.</p>
     </section>
     <section>
       
@@ -3991,7 +4023,7 @@
                     <td>
                       <a href="#Organism">Organism</a>
               
-                          [0..*]
+                          [1..1]
               
                   </td>
                   </tr>
@@ -4099,7 +4131,122 @@
                     </tr>
               
                 </table>
-              </section>    <section id="BiogenicEntity.label">
+              </section>    <section id="BiogenicEntity.type">
+                <h4>type</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        
+                        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://czbiextension.com/profile/vocabulary#BiogenicEntity.type">https://czbiextension.com/profile/vocabulary#BiogenicEntity.type</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>type</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>The Biogenic Entity is an instance of a Biogenic Entity type</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#BiogenicEntity">Biogenic Entity</a>
+              
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#BiogenicEntityType">Biogenic Entity type</a>
+              
+                          [0..*]
+              
+                  </td>
+                  </tr>
+              
+              
+              
+                    <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                        profiles
+                    property
+                    
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">type</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a>)
+                      <br />Definition: <i>The subject is an instance of a class.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>          <section id="BiogenicEntityType">
+            <h4>Biogenic Entity type</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://czbiextension.com/profile/vocabulary#BiogenicEntityType">https://czbiextension.com/profile/vocabulary#BiogenicEntityType</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Biogenic Entity type</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>Type of biogenic entity</td>
+              </tr>
+          
+                <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                                    profiles
+                class
+                
+                <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+              <tr>
+                <td>Usage note</td>
+                <td>Here is the list of ontologies used:</td>
+              </tr>
+            </table>
+          
+              <p>Backwards associations</p>
+              <ul>
+                  <li>from domain <a href="#BiogenicEntity"></a> → <a href="#BiogenicEntity.type"></a></li>
+              </ul>
+          
+              <section id="BiogenicEntityType.label">
                 <h4>label</h4>
               
                 <table class="def">
@@ -4112,7 +4259,7 @@
                   </tr>
                   <tr>
                     <td>IRI</td>
-                    <td><a href="https://czbiextension.com/profile/vocabulary#BiogenicEntity.label">https://czbiextension.com/profile/vocabulary#BiogenicEntity.label</a></td>
+                    <td><a href="https://czbiextension.com/profile/vocabulary#BiogenicEntityType.label">https://czbiextension.com/profile/vocabulary#BiogenicEntityType.label</a></td>
                   </tr>
                   <tr>
                     <td>Label</td>
@@ -4120,12 +4267,12 @@
                   </tr>
                   <tr>
                     <td>Definition</td>
-                    <td>A human-readable name for the biogenic entity.</td>
+                    <td>A human-readable name for the subject.</td>
                   </tr>
                   <tr>
                     <td>Domain</td>
                     <td>
-                      <a href="#BiogenicEntity">Biogenic Entity</a>
+                      <a href="#BiogenicEntityType">Biogenic Entity type</a>
               
                           [0..*]
               
@@ -10585,7 +10732,7 @@
                   <tr>
                     <td>Range</td>
                     <td>
-                      <a href="#ImagingSample">Imaging Sample</a>
+                      <a href="fwoji2ccppmnd3b9ij">fwoji2ccppmnd3b9ij</a>
               
                           [1..*]
               
@@ -11080,195 +11227,6 @@
               
                 </table>
               </section>
-          </section>          <section id="ImagingSample">
-            <h4>Imaging Sample</h4>
-          
-            <table class="def">
-              <tr>
-                <td>Profiled class IRI(s)</td>
-                <td>
-                    
-                    <a href="http://purl.obolibrary.org/obo/OBI_0000953">http://purl.obolibrary.org/obo/OBI_0000953</a>
-                </td>
-              </tr>
-              <tr>
-                <td>IRI</td>
-                <td><a href="https://czbiextension.com/profile/vocabulary#ImagingSample">https://czbiextension.com/profile/vocabulary#ImagingSample</a></td>
-              </tr>
-              <tr>
-                <td>Label</td>
-                <td>Imaging Sample</td>
-              </tr>
-              <tr>
-                <td>Definition</td>
-                <td>A processed specimen that is an input for Image Acquisition.</td>
-              </tr>
-          
-                <tr>
-                  <td>Hierarchy</td>
-                  <td>
-                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
-                          <li>
-                                    profiles
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/OBI_0000953">processed specimen</a> (<a href="http://purl.obolibrary.org/obo/OBI_0000953">http://purl.obolibrary.org/obo/OBI_0000953</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  specializes
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/COB_0000026">processed material entity</a> (<a href="http://purl.obolibrary.org/obo/COB_0000026">http://purl.obolibrary.org/obo/COB_0000026</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                      <li>
-                                  specializes
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/OBI_0100051">specimen</a> (<a href="http://purl.obolibrary.org/obo/OBI_0100051">http://purl.obolibrary.org/obo/OBI_0100051</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                          </li>
-                        <li>
-                                  specializes
-                
-                class profile
-                <a href="#ProcessedSpecimen">Processed Specimen</a> (<a href="https://czbiextension.com/profile/vocabulary#ProcessedSpecimen">https://czbiextension.com/profile/vocabulary#ProcessedSpecimen</a>)
-                  <br />Definition: <i>A specimen that has been intentionally physically modified.</i>
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  profiles
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/OBI_0000953">processed specimen</a> (<a href="http://purl.obolibrary.org/obo/OBI_0000953">http://purl.obolibrary.org/obo/OBI_0000953</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  specializes
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/COB_0000026">processed material entity</a> (<a href="http://purl.obolibrary.org/obo/COB_0000026">http://purl.obolibrary.org/obo/COB_0000026</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                      <li>
-                                  specializes
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/OBI_0100051">specimen</a> (<a href="http://purl.obolibrary.org/obo/OBI_0100051">http://purl.obolibrary.org/obo/OBI_0100051</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                      </li>
-                      <li>
-                                  specializes
-                
-                class profile
-                <a href="#Specimen">Specimen </a> (<a href="https://czbiextension.com/profile/vocabulary#Specimen">https://czbiextension.com/profile/vocabulary#Specimen</a>)
-                  <br />Definition: <i>A material entity that is collected for potential use as an input upon which measurements or observations are performed.</i>
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  profiles
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/OBI_0100051">specimen</a> (<a href="http://purl.obolibrary.org/obo/OBI_0100051">http://purl.obolibrary.org/obo/OBI_0100051</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                      <li>
-                                  specializes
-                
-                class profile
-                <a href="#BiogenicEntity">Biogenic Entity</a> (<a href="https://czbiextension.com/profile/vocabulary#BiogenicEntity">https://czbiextension.com/profile/vocabulary#BiogenicEntity</a>)
-                  <br />Definition: <i>A material entity with biogenic origin.</i>
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  profiles
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/BFO_0000040">material entity</a> (<a href="http://purl.obolibrary.org/obo/BFO_0000040">http://purl.obolibrary.org/obo/BFO_0000040</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                      <li>
-                                  specializes
-                
-                class profile
-                <a href="#MaterialEntity">Material Entity</a> (<a href="https://czbiextension.com/profile/vocabulary#MaterialEntity">https://czbiextension.com/profile/vocabulary#MaterialEntity</a>)
-                  <br />Definition: <i>An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</i>
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  profiles
-                class
-                
-                <a href="http://purl.obolibrary.org/obo/BFO_0000040">material entity</a> (<a href="http://purl.obolibrary.org/obo/BFO_0000040">http://purl.obolibrary.org/obo/BFO_0000040</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                      <li>
-                                  specializes
-                
-                class profile
-                <a href="#Resource">Resource</a> (<a href="https://czbiextension.com/profile/vocabulary#Resource">https://czbiextension.com/profile/vocabulary#Resource</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  profiles
-                
-                class profile
-                <a href="https://model.ccmm.cz/research-data/en/#Resource">Resource</a> (<a href="https://model.ccmm.cz/research-data/Resource">https://model.ccmm.cz/research-data/Resource</a>)
-                  <ul style="list-style-type: disclosure-closed;">
-                      <li>
-                                  profiles
-                class
-                
-                <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
-                  <br />Definition: <i>The class resource, everything.</i>
-                  <ul style="list-style-type: disclosure-closed;">
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                      </li>
-                  </ul>
-          
-                        </li>
-                    </ul>
-                  </td>
-                </tr>
-          
-            </table>
-          
-              <p>Backwards associations</p>
-              <ul>
-                  <li>from domain <a href="#ImageAcquisition"></a> → <a href="#ImageAcquisition.hasInput"></a></li>
-              </ul>
-          
-          
           </section>          <section id="LanguageSystem">
             <h4>Language system</h4>
           
@@ -13579,142 +13537,6 @@
                     </tr>
               
                 </table>
-              </section>    <section id="MethodsAndTools.label">
-                <h4>label</h4>
-              
-                <table class="def">
-                  <tr>
-                    <td>Profiled relationship IRI(s)</td>
-                    <td>
-                        
-                        <a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>IRI</td>
-                    <td><a href="https://czbiextension.com/profile/vocabulary#MethodsAndTools.label">https://czbiextension.com/profile/vocabulary#MethodsAndTools.label</a></td>
-                  </tr>
-                  <tr>
-                    <td>Label</td>
-                    <td>label</td>
-                  </tr>
-                  <tr>
-                    <td>Definition</td>
-                    <td>A human-readable name for the subject.</td>
-                  </tr>
-                  <tr>
-                    <td>Domain</td>
-                    <td>
-                      <a href="#MethodsAndTools">Methods and Tools</a>
-              
-                          [0..*]
-              
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Range</td>
-                    <td>
-                      <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
-              
-                          [0..*]
-              
-                  </td>
-                  </tr>
-              
-              
-              
-                    <tr>
-                      <td>Hierarchy</td>
-                      <td>
-                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
-                              <li>
-                                        profiles
-                    property
-                    
-                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-                      <br />Definition: <i>A human-readable name for the subject.</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                      </ul>
-              
-                              </li>
-                        </ul>
-                      </td>
-                    </tr>
-              
-                </table>
-              </section>    <section id="MethodsAndTools.name">
-                <h4>name</h4>
-              
-                <table class="def">
-                  <tr>
-                    <td>Profiled relationship IRI(s)</td>
-                    <td>
-                        
-                        <a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>IRI</td>
-                    <td><a href="https://czbiextension.com/profile/vocabulary#MethodsAndTools.name">https://czbiextension.com/profile/vocabulary#MethodsAndTools.name</a></td>
-                  </tr>
-                  <tr>
-                    <td>Label</td>
-                    <td>name</td>
-                  </tr>
-                  <tr>
-                    <td>Definition</td>
-                    <td>A name for some thing.</td>
-                  </tr>
-                  <tr>
-                    <td>Domain</td>
-                    <td>
-                      <a href="#MethodsAndTools">Methods and Tools</a>
-              
-                          [0..*]
-              
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Range</td>
-                    <td>
-                      <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
-              
-                          [0..*]
-              
-                  </td>
-                  </tr>
-              
-              
-              
-                    <tr>
-                      <td>Hierarchy</td>
-                      <td>
-                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
-                              <li>
-                                        profiles
-                    property
-                    
-                    <a href="http://xmlns.com/foaf/0.1/name">name</a> (<a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>)
-                      <br />Definition: <i>A name for some thing.</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                          <li>
-                                      specializes
-                    property
-                    
-                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-                      <br />Definition: <i>A human-readable name for the subject.</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                      </ul>
-              
-                          </li>
-                      </ul>
-              
-                              </li>
-                        </ul>
-                      </td>
-                    </tr>
-              
-                </table>
               </section>
           </section>          <section id="Organism">
             <h4>Organism</h4>
@@ -13765,28 +13587,28 @@
                   <li>from domain <a href="#BiogenicEntity"></a> → <a href="#BiogenicEntity.isPartOf"></a></li>
               </ul>
           
-              <section id="Organism.taxonId">
-                <h4>Taxon ID</h4>
+              <section id="Organism.type">
+                <h4>belongs to taxon</h4>
               
                 <table class="def">
                   <tr>
                     <td>Profiled relationship IRI(s)</td>
                     <td>
                         
-                        <a href="http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19">http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19</a>
+                        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a>
                     </td>
                   </tr>
                   <tr>
                     <td>IRI</td>
-                    <td><a href="https://czbiextension.com/profile/vocabulary#Organism.taxonId">https://czbiextension.com/profile/vocabulary#Organism.taxonId</a></td>
+                    <td><a href="https://czbiextension.com/profile/vocabulary#Organism.type">https://czbiextension.com/profile/vocabulary#Organism.type</a></td>
                   </tr>
                   <tr>
                     <td>Label</td>
-                    <td>Taxon ID</td>
+                    <td>belongs to taxon</td>
                   </tr>
                   <tr>
                     <td>Definition</td>
-                    <td>A global unique identifier for the taxon (name in a classification).</td>
+                    <td>This relation is intended to be used to specify a type of dwc:Taxon.</td>
                   </tr>
                   <tr>
                     <td>Domain</td>
@@ -13816,8 +13638,8 @@
                                         profiles
                     property
                     
-                    <a href="http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19">Taxon ID</a> (<a href="http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19">http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19</a>)
-                      <br />Definition: <i>A global unique identifier for the taxon (name in a classification).</i>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">type</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a>)
+                      <br />Definition: <i>The subject is an instance of a class.</i>
                       <ul style="list-style-type: disclosure-closed;">
                       </ul>
               
@@ -14912,78 +14734,6 @@
                     
                     <a href="http://purl.obolibrary.org/obo/BFO_0000055">realizes</a> (<a href="http://purl.obolibrary.org/obo/BFO_0000055">http://purl.obolibrary.org/obo/BFO_0000055</a>)
                       <br />Definition: <i>Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                      </ul>
-              
-                          </li>
-                      </ul>
-              
-                              </li>
-                        </ul>
-                      </td>
-                    </tr>
-              
-                </table>
-              </section>    <section id="ProcessingStep.used">
-                <h4>used software</h4>
-              
-                <table class="def">
-                  <tr>
-                    <td>Profiled relationship IRI(s)</td>
-                    <td>
-                        
-                        <a href="http://www.w3.org/ns/prov#used">prov:used</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>IRI</td>
-                    <td><a href="https://czbiextension.com/profile/vocabulary#ProcessingStep.used">https://czbiextension.com/profile/vocabulary#ProcessingStep.used</a></td>
-                  </tr>
-                  <tr>
-                    <td>Label</td>
-                    <td>used software</td>
-                  </tr>
-                  <tr>
-                    <td>Definition</td>
-                    <td>A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven .</td>
-                  </tr>
-                  <tr>
-                    <td>Domain</td>
-                    <td>
-                      <a href="#ProcessingStep">Processing Step</a>
-              
-                      
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Range</td>
-                    <td>
-                      <a href="#Software">Software</a>
-              
-                          [0..*]
-              
-                  </td>
-                  </tr>
-              
-              
-              
-                    <tr>
-                      <td>Hierarchy</td>
-                      <td>
-                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
-                              <li>
-                                        profiles
-                    property
-                    
-                    <a href="http://www.w3.org/ns/prov#used">used</a> (<a href="http://www.w3.org/ns/prov#used">prov:used</a>)
-                      <br />Definition: <i>A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven .</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                          <li>
-                                      specializes
-                    property
-                    
-                    <a href="http://www.w3.org/ns/prov#wasInfluencedBy">wasInfluencedBy</a> (<a href="http://www.w3.org/ns/prov#wasInfluencedBy">prov:wasInfluencedBy</a>)
-                      <br />Definition: <i>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href&#x3D;&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</i>
                       <ul style="list-style-type: disclosure-closed;">
                       </ul>
               
@@ -17165,6 +16915,39 @@
                                   specializes
                 
                 class profile
+                <a href="#Tool">Tool</a> (<a href="https://czbiextension.com/profile/vocabulary#Tool">https://czbiextension.com/profile/vocabulary#Tool</a>)
+                  <br />Definition: <i>Object that helps an agent to perform an action. e.g., confocal microscope / imageJ software</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiles
+                class
+                
+                <a href="http://w3id.org/nfdi4ing/metadata4ing#Tool">tool</a> (<a href="http://w3id.org/nfdi4ing/metadata4ing#Tool">http://w3id.org/nfdi4ing/metadata4ing#Tool</a>)
+                  <br />Definition: <i>Object that helps an agent perform an action (e.g., John wrote a book with a pen), i.e., an object of the relation schema:instrument or m4i:hasTool</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                      <li>
+                                  specializes
+                
+                class profile
+                <a href="#MethodsAndTools">Methods and Tools</a> (<a href="https://czbiextension.com/profile/vocabulary#MethodsAndTools">https://czbiextension.com/profile/vocabulary#MethodsAndTools</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                                  profiles
+                class
+                
+                <a href="https://nrp.dataspecer.com/api/preview/en/index.html?iri=84e5059a-978b-4ae1-b483-a125f44dad1f#MethodsAndTools">Methods and Tools</a> (<a href="https://czbiextensionvoc.com/vocabulary#MethodsAndTools">https://czbiextensionvoc.com/vocabulary#MethodsAndTools</a>)
+                  <br />Definition: <i>An abstract class for Methods and Tools</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                      <li>
+                                  specializes
+                
+                class profile
                 <a href="#Resource">Resource</a> (<a href="https://czbiextension.com/profile/vocabulary#Resource">https://czbiextension.com/profile/vocabulary#Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -17188,6 +16971,12 @@
                       </li>
                   </ul>
           
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
                         </li>
                     </ul>
                   </td>
@@ -17195,10 +16984,6 @@
           
             </table>
           
-              <p>Backwards associations</p>
-              <ul>
-                  <li>from domain <a href="#ProcessingStep"></a> → <a href="#ProcessingStep.used"></a></li>
-              </ul>
           
           
           </section>          <section id="Specimen">
@@ -17315,80 +17100,7 @@
                   <li>from domain <a href="#SamplePreparation"></a> → <a href="#SamplePreparation.hasInput"></a></li>
               </ul>
           
-              <section id="Specimen.name">
-                <h4>name</h4>
-              
-                <table class="def">
-                  <tr>
-                    <td>Profiled relationship IRI(s)</td>
-                    <td>
-                        
-                        <a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>IRI</td>
-                    <td><a href="https://czbiextension.com/profile/vocabulary#Specimen.name">https://czbiextension.com/profile/vocabulary#Specimen.name</a></td>
-                  </tr>
-                  <tr>
-                    <td>Label</td>
-                    <td>name</td>
-                  </tr>
-                  <tr>
-                    <td>Definition</td>
-                    <td>A name for specimen.</td>
-                  </tr>
-                  <tr>
-                    <td>Domain</td>
-                    <td>
-                      <a href="#Specimen">Specimen </a>
-              
-                          [0..*]
-              
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Range</td>
-                    <td>
-                      <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
-              
-                          [0..*]
-              
-                  </td>
-                  </tr>
-              
-              
-              
-                    <tr>
-                      <td>Hierarchy</td>
-                      <td>
-                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
-                              <li>
-                                        profiles
-                    property
-                    
-                    <a href="http://xmlns.com/foaf/0.1/name">name</a> (<a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>)
-                      <br />Definition: <i>A name for some thing.</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                          <li>
-                                      specializes
-                    property
-                    
-                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-                      <br />Definition: <i>A human-readable name for the subject.</i>
-                      <ul style="list-style-type: disclosure-closed;">
-                      </ul>
-              
-                          </li>
-                      </ul>
-              
-                              </li>
-                        </ul>
-                      </td>
-                    </tr>
-              
-                </table>
-              </section>
+          
           </section>          <section id="Subject">
             <h4>Subject</h4>
           
@@ -17935,7 +17647,7 @@
           
               <p>Backwards associations</p>
               <ul>
-                  <li>from domain <a href="#Organism"></a> → <a href="#Organism.taxonId"></a></li>
+                  <li>from domain <a href="#Organism"></a> → <a href="#Organism.type"></a></li>
               </ul>
           
               <section id="Taxon.acceptedScientificName">
@@ -27053,7 +26765,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource type</a>
+        <a href="#BiogenicEntityType">Resource type</a>
         (Type of the resource.)
       </dd>
 
@@ -28540,7 +28252,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Alternate title type</a>
+        <a href="#BiogenicEntityType">Alternate title type</a>
         (Type of alternate title.)
       </dd>
 
@@ -28882,6 +28594,12 @@
           <td><a href="http://www.w3.org/2001/xml.xsd">http://www.w3.org/2001/xml.xsd</a></td>
           <td></td>
         </tr>
+        <tr>
+            <td><code>gml</code></td>
+            <td><a href="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml/3.2</a></td>
+          <td><a href="https://schemas.opengis.net/gml/3.2.1/gml.xsd">https://schemas.opengis.net/gml/3.2.1/gml.xsd</a></td>
+          <td></td>
+        </tr>
     </tbody>
   </table>
 </section>
@@ -29051,7 +28769,7 @@
         <div style="margin-left: 40px;">
       <dt>Content</dt>
       <dd>
-          The content of the element is of type <a href="http://www.w3.org/2001/XMLSchemaanySimpleType"><code>xs:anySimpleType</code></a>.
+          The content of the element is of type <a href=""><code>gml:GeometryPropertyType</code></a>.
       </dd>
 
 
@@ -29090,10 +28808,6 @@
     
       <dt>Element type</dt>
         <div style="margin-left: 40px;">
-      <dt>Content</dt>
-      <dd>
-          The content of the element is of type <a href="http://www.w3.org/2001/XMLSchemaanySimpleType"><code>xs:anySimpleType</code></a>.
-      </dd>
 
 
     
@@ -31838,7 +31552,7 @@
   <dl>
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Date type</a>
+        <a href="#BiogenicEntityType">Date type</a>
         (Type of a date in relation to the resource.)
       </dd>
 
@@ -32516,7 +32230,7 @@
   <dl>
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource relation type</a>
+        <a href="#BiogenicEntityType">Resource relation type</a>
         (Type of the relation between the dataset and given resource.)
       </dd>
 
@@ -32937,7 +32651,7 @@
   <dl>
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource type</a>
+        <a href="#BiogenicEntityType">Resource type</a>
         (Type of the resource.)
       </dd>
 
@@ -33358,7 +33072,7 @@
   <dl>
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Location relation type</a>
+        <a href="#BiogenicEntityType">Location relation type</a>
         (Relation of the dataset to the resource.)
       </dd>
 
@@ -34200,7 +33914,7 @@
   <dl>
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Alternate title type</a>
+        <a href="#BiogenicEntityType">Alternate title type</a>
         (Type of alternate title.)
       </dd>
 
@@ -41554,7 +41268,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Date type</a>
+        <a href="#BiogenicEntityType">Date type</a>
         (Type of a date in relation to the resource.)
       </dd>
 
@@ -42454,7 +42168,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource type</a>
+        <a href="#BiogenicEntityType">Resource type</a>
         (Type of the resource.)
       </dd>
 
@@ -42500,7 +42214,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource relation type</a>
+        <a href="#BiogenicEntityType">Resource relation type</a>
         (Type of the relation between the dataset and given resource.)
       </dd>
 
@@ -43152,7 +42866,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Location relation type</a>
+        <a href="#BiogenicEntityType">Location relation type</a>
         (Relation of the dataset to the resource.)
       </dd>
 
@@ -44891,7 +44605,7 @@
 
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource agent role type</a>
+        <a href="#BiogenicEntityType">Resource agent role type</a>
         (Role of the agent in the relationship to the resource. )
       </dd>
 
@@ -45232,7 +44946,7 @@
   <dl>
         <dt>Meaning</dt>
       <dd>
-        <a href="#MethodType">Resource agent role type</a>
+        <a href="#BiogenicEntityType">Resource agent role type</a>
         (Role of the agent in the relationship to the resource. )
       </dd>
 
@@ -45320,6 +45034,131 @@
 
     
   </div>
+
+    
+  </dl>
+</section>
+
+</section>
+      </section>
+      <section>
+      <h2>
+        Data structure specification for
+        Specimen 
+      </h2>
+      <p>Data structure for Specimen . A material entity that is collected for potential use as an input upon which measurements or observations are performed.</p>
+
+      <section id="json-schema--specimen-">
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1>
+
+      JSON structure for
+    Specimen 
+  </h1>
+
+    <dl>
+      <dt>IRI</dt>
+      <dd><code>/specimen-/schema.json</code></dd>
+      <dt>Defined in</dt>
+      <dd><code><a href="../specimen-/schema.json">../specimen-/schema.json</a></code></dd>
+        <dt>Language version used</dt>
+        <dd><a href="https://json-schema.org/specification-links.html#2020-12-release" target="_blank">2020-12</a> (metaschema IRI: <code>https://json-schema.org/draft/2020-12/schema</code>)</dd>
+    </dl>
+
+    <h2>Root</h2>
+    The root of the JSON schema is
+          
+  
+  
+    string
+  (format: <code>iri</code>)
+  
+
+
+  
+  
+  
+  
+  
+
+
+
+</section>
+
+
+
+
+
+
+<section>
+<h3>Overview of XML Structure</h3>
+<p>
+  This section describes the XSD capturing the structure for <i>Specimen </i>, which is defined in the file <a href="../specimen-/schema.xsd"><code>../specimen-/schema.xsd</code></a>.
+</p>
+
+
+<section>
+<h4>Imports</h4>
+<p>
+  List of schemas that are imported and used by this schema.
+</p>
+  <i>Nothing is imported.</i>
+</section>
+
+<section>
+  <h4>Root Entities of the XSD Schema</h4>
+  <ul>
+      <li>element <a href="#element-specimen_"><code>specimen_</code></a></li>
+
+      <li> complex type <a href="#type-specimen_"><code>specimen_</code></a></li>
+  </ul>
+</section>
+
+
+<section id="element-specimen_">
+  <h4>Root element <code>&lt;specimen_&gt;</code></h4>
+  <dl>
+    
+
+    
+      <dt>Element type</dt>
+        <div style="margin-left: 40px;">
+      <dt>Content</dt>
+      <dd>
+          The content of the element is of type <a href="#type-specimen_"><code>specimen_</code></a>.
+      </dd>
+
+
+    
+
+
+    
+  </div>
+
+      </dl>
+</section>
+
+
+<section id="type-specimen_">
+  <h4>Root complex type <code>specimen_</code></h4>
+  <dl>
+        <dt>Meaning</dt>
+      <dd>
+        <a href="">Specimen </a>
+        (A material entity that is collected for potential use as an input upon which measurements or observations are performed.)
+      </dd>
+
 
     
   </dl>
@@ -45560,10 +45399,16 @@
               <td>Description of structure model</td>
               <td><a href="../resource-agent-role-type/structure.ttl">../resource-agent-role-type/structure.ttl</a></td>
             </tr>
+            <tr>
+              <td>Description of structure model</td>
+              <td><a href="../specimen-/structure.ttl">../specimen-/structure.ttl</a></td>
+            </tr>
             <tr><td>JSON schema</td><td><a href="../application-profile/schema.json">../application-profile/schema.json</a></td></tr>
             <tr><td>JSON example</td><td><a href="../application-profile/example.json">../application-profile/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../application-profile/context.jsonld">../application-profile/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../application-profile/schema.xsd">../application-profile/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../application-profile/lifting.xslt">../application-profile/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../application-profile/lowering.xslt">../application-profile/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../application-profile/schema.csv-metadata.json">../application-profile/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../application-profile/rdf-to-csv/">../application-profile/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../application-profile/query.sparql">../application-profile/query.sparql</a></td></tr>
@@ -45575,6 +45420,8 @@
             <tr><td>JSON example</td><td><a href="../media-type/example.json">../media-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../media-type/context.jsonld">../media-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../media-type/schema.xsd">../media-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../media-type/lifting.xslt">../media-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../media-type/lowering.xslt">../media-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../media-type/schema.csv-metadata.json">../media-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../media-type/rdf-to-csv/">../media-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../media-type/query.sparql">../media-type/query.sparql</a></td></tr>
@@ -45586,6 +45433,8 @@
             <tr><td>JSON example</td><td><a href="../file/example.json">../file/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../file/context.jsonld">../file/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../file/schema.xsd">../file/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../file/lifting.xslt">../file/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../file/lowering.xslt">../file/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../file/schema.csv-metadata.json">../file/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../file/rdf-to-csv/">../file/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../file/query.sparql">../file/query.sparql</a></td></tr>
@@ -45597,6 +45446,8 @@
             <tr><td>JSON example</td><td><a href="../validation-result/example.json">../validation-result/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../validation-result/context.jsonld">../validation-result/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../validation-result/schema.xsd">../validation-result/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../validation-result/lifting.xslt">../validation-result/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../validation-result/lowering.xslt">../validation-result/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../validation-result/schema.csv-metadata.json">../validation-result/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../validation-result/rdf-to-csv/">../validation-result/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../validation-result/query.sparql">../validation-result/query.sparql</a></td></tr>
@@ -45608,6 +45459,8 @@
             <tr><td>JSON example</td><td><a href="../subject-scheme/example.json">../subject-scheme/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../subject-scheme/context.jsonld">../subject-scheme/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../subject-scheme/schema.xsd">../subject-scheme/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../subject-scheme/lifting.xslt">../subject-scheme/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../subject-scheme/lowering.xslt">../subject-scheme/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../subject-scheme/schema.csv-metadata.json">../subject-scheme/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../subject-scheme/rdf-to-csv/">../subject-scheme/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../subject-scheme/query.sparql">../subject-scheme/query.sparql</a></td></tr>
@@ -45619,6 +45472,8 @@
             <tr><td>JSON example</td><td><a href="../address/example.json">../address/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../address/context.jsonld">../address/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../address/schema.xsd">../address/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../address/lifting.xslt">../address/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../address/lowering.xslt">../address/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../address/schema.csv-metadata.json">../address/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../address/rdf-to-csv/">../address/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../address/query.sparql">../address/query.sparql</a></td></tr>
@@ -45630,6 +45485,8 @@
             <tr><td>JSON example</td><td><a href="../provenance-statement/example.json">../provenance-statement/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../provenance-statement/context.jsonld">../provenance-statement/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../provenance-statement/schema.xsd">../provenance-statement/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../provenance-statement/lifting.xslt">../provenance-statement/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../provenance-statement/lowering.xslt">../provenance-statement/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../provenance-statement/schema.csv-metadata.json">../provenance-statement/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../provenance-statement/rdf-to-csv/">../provenance-statement/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../provenance-statement/query.sparql">../provenance-statement/query.sparql</a></td></tr>
@@ -45641,6 +45498,8 @@
             <tr><td>JSON example</td><td><a href="../subject/example.json">../subject/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../subject/context.jsonld">../subject/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../subject/schema.xsd">../subject/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../subject/lifting.xslt">../subject/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../subject/lowering.xslt">../subject/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../subject/schema.csv-metadata.json">../subject/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../subject/rdf-to-csv/">../subject/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../subject/query.sparql">../subject/query.sparql</a></td></tr>
@@ -45652,6 +45511,8 @@
             <tr><td>JSON example</td><td><a href="../metadata-record/example.json">../metadata-record/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../metadata-record/context.jsonld">../metadata-record/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../metadata-record/schema.xsd">../metadata-record/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../metadata-record/lifting.xslt">../metadata-record/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../metadata-record/lowering.xslt">../metadata-record/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../metadata-record/schema.csv-metadata.json">../metadata-record/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../metadata-record/rdf-to-csv/">../metadata-record/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../metadata-record/query.sparql">../metadata-record/query.sparql</a></td></tr>
@@ -45663,6 +45524,8 @@
             <tr><td>JSON example</td><td><a href="../repository/example.json">../repository/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../repository/context.jsonld">../repository/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../repository/schema.xsd">../repository/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../repository/lifting.xslt">../repository/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../repository/lowering.xslt">../repository/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../repository/schema.csv-metadata.json">../repository/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../repository/rdf-to-csv/">../repository/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../repository/query.sparql">../repository/query.sparql</a></td></tr>
@@ -45674,6 +45537,8 @@
             <tr><td>JSON example</td><td><a href="../agent/example.json">../agent/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../agent/context.jsonld">../agent/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../agent/schema.xsd">../agent/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../agent/lifting.xslt">../agent/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../agent/lowering.xslt">../agent/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../agent/schema.csv-metadata.json">../agent/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../agent/rdf-to-csv/">../agent/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../agent/query.sparql">../agent/query.sparql</a></td></tr>
@@ -45685,6 +45550,8 @@
             <tr><td>JSON example</td><td><a href="../dataset/example.json">../dataset/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../dataset/context.jsonld">../dataset/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../dataset/schema.xsd">../dataset/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../dataset/lifting.xslt">../dataset/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../dataset/lowering.xslt">../dataset/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../dataset/schema.csv-metadata.json">../dataset/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../dataset/rdf-to-csv/">../dataset/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../dataset/query.sparql">../dataset/query.sparql</a></td></tr>
@@ -45696,6 +45563,8 @@
             <tr><td>JSON example</td><td><a href="../identifier/example.json">../identifier/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../identifier/context.jsonld">../identifier/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../identifier/schema.xsd">../identifier/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../identifier/lifting.xslt">../identifier/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../identifier/lowering.xslt">../identifier/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../identifier/schema.csv-metadata.json">../identifier/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../identifier/rdf-to-csv/">../identifier/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../identifier/query.sparql">../identifier/query.sparql</a></td></tr>
@@ -45707,6 +45576,8 @@
             <tr><td>JSON example</td><td><a href="../alternate-title/example.json">../alternate-title/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../alternate-title/context.jsonld">../alternate-title/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../alternate-title/schema.xsd">../alternate-title/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../alternate-title/lifting.xslt">../alternate-title/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../alternate-title/lowering.xslt">../alternate-title/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../alternate-title/schema.csv-metadata.json">../alternate-title/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../alternate-title/rdf-to-csv/">../alternate-title/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../alternate-title/query.sparql">../alternate-title/query.sparql</a></td></tr>
@@ -45718,6 +45589,8 @@
             <tr><td>JSON example</td><td><a href="../geometry/example.json">../geometry/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../geometry/context.jsonld">../geometry/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../geometry/schema.xsd">../geometry/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../geometry/lifting.xslt">../geometry/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../geometry/lowering.xslt">../geometry/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../geometry/schema.csv-metadata.json">../geometry/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../geometry/rdf-to-csv/">../geometry/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../geometry/query.sparql">../geometry/query.sparql</a></td></tr>
@@ -45729,6 +45602,8 @@
             <tr><td>JSON example</td><td><a href="../documentation/example.json">../documentation/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../documentation/context.jsonld">../documentation/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../documentation/schema.xsd">../documentation/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../documentation/lifting.xslt">../documentation/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../documentation/lowering.xslt">../documentation/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../documentation/schema.csv-metadata.json">../documentation/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../documentation/rdf-to-csv/">../documentation/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../documentation/query.sparql">../documentation/query.sparql</a></td></tr>
@@ -45740,6 +45615,8 @@
             <tr><td>JSON example</td><td><a href="../data-service/example.json">../data-service/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../data-service/context.jsonld">../data-service/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../data-service/schema.xsd">../data-service/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../data-service/lifting.xslt">../data-service/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../data-service/lowering.xslt">../data-service/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../data-service/schema.csv-metadata.json">../data-service/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../data-service/rdf-to-csv/">../data-service/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../data-service/query.sparql">../data-service/query.sparql</a></td></tr>
@@ -45751,6 +45628,8 @@
             <tr><td>JSON example</td><td><a href="../checksum/example.json">../checksum/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../checksum/context.jsonld">../checksum/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../checksum/schema.xsd">../checksum/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../checksum/lifting.xslt">../checksum/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../checksum/lowering.xslt">../checksum/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../checksum/schema.csv-metadata.json">../checksum/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../checksum/rdf-to-csv/">../checksum/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../checksum/query.sparql">../checksum/query.sparql</a></td></tr>
@@ -45762,6 +45641,8 @@
             <tr><td>JSON example</td><td><a href="../organization/example.json">../organization/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../organization/context.jsonld">../organization/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../organization/schema.xsd">../organization/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../organization/lifting.xslt">../organization/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../organization/lowering.xslt">../organization/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../organization/schema.csv-metadata.json">../organization/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../organization/rdf-to-csv/">../organization/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../organization/query.sparql">../organization/query.sparql</a></td></tr>
@@ -45773,6 +45654,8 @@
             <tr><td>JSON example</td><td><a href="../license-document/example.json">../license-document/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../license-document/context.jsonld">../license-document/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../license-document/schema.xsd">../license-document/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../license-document/lifting.xslt">../license-document/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../license-document/lowering.xslt">../license-document/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../license-document/schema.csv-metadata.json">../license-document/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../license-document/rdf-to-csv/">../license-document/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../license-document/query.sparql">../license-document/query.sparql</a></td></tr>
@@ -45784,6 +45667,8 @@
             <tr><td>JSON example</td><td><a href="../date-type/example.json">../date-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../date-type/context.jsonld">../date-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../date-type/schema.xsd">../date-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../date-type/lifting.xslt">../date-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../date-type/lowering.xslt">../date-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../date-type/schema.csv-metadata.json">../date-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../date-type/rdf-to-csv/">../date-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../date-type/query.sparql">../date-type/query.sparql</a></td></tr>
@@ -45795,6 +45680,8 @@
             <tr><td>JSON example</td><td><a href="../distribution/example.json">../distribution/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../distribution/context.jsonld">../distribution/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../distribution/schema.xsd">../distribution/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../distribution/lifting.xslt">../distribution/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../distribution/lowering.xslt">../distribution/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../distribution/schema.csv-metadata.json">../distribution/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../distribution/rdf-to-csv/">../distribution/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../distribution/query.sparql">../distribution/query.sparql</a></td></tr>
@@ -45806,6 +45693,8 @@
             <tr><td>JSON example</td><td><a href="../resource-relation-type/example.json">../resource-relation-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../resource-relation-type/context.jsonld">../resource-relation-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../resource-relation-type/schema.xsd">../resource-relation-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../resource-relation-type/lifting.xslt">../resource-relation-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../resource-relation-type/lowering.xslt">../resource-relation-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../resource-relation-type/schema.csv-metadata.json">../resource-relation-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../resource-relation-type/rdf-to-csv/">../resource-relation-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../resource-relation-type/query.sparql">../resource-relation-type/query.sparql</a></td></tr>
@@ -45817,6 +45706,8 @@
             <tr><td>JSON example</td><td><a href="../resource-type/example.json">../resource-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../resource-type/context.jsonld">../resource-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../resource-type/schema.xsd">../resource-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../resource-type/lifting.xslt">../resource-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../resource-type/lowering.xslt">../resource-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../resource-type/schema.csv-metadata.json">../resource-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../resource-type/rdf-to-csv/">../resource-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../resource-type/query.sparql">../resource-type/query.sparql</a></td></tr>
@@ -45828,6 +45719,8 @@
             <tr><td>JSON example</td><td><a href="../location-relation-type/example.json">../location-relation-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../location-relation-type/context.jsonld">../location-relation-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../location-relation-type/schema.xsd">../location-relation-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../location-relation-type/lifting.xslt">../location-relation-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../location-relation-type/lowering.xslt">../location-relation-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../location-relation-type/schema.csv-metadata.json">../location-relation-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../location-relation-type/rdf-to-csv/">../location-relation-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../location-relation-type/query.sparql">../location-relation-type/query.sparql</a></td></tr>
@@ -45839,6 +45732,8 @@
             <tr><td>JSON example</td><td><a href="../format/example.json">../format/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../format/context.jsonld">../format/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../format/schema.xsd">../format/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../format/lifting.xslt">../format/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../format/lowering.xslt">../format/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../format/schema.csv-metadata.json">../format/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../format/rdf-to-csv/">../format/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../format/query.sparql">../format/query.sparql</a></td></tr>
@@ -45850,6 +45745,8 @@
             <tr><td>JSON example</td><td><a href="../alternate-title-type/example.json">../alternate-title-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../alternate-title-type/context.jsonld">../alternate-title-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../alternate-title-type/schema.xsd">../alternate-title-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../alternate-title-type/lifting.xslt">../alternate-title-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../alternate-title-type/lowering.xslt">../alternate-title-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../alternate-title-type/schema.csv-metadata.json">../alternate-title-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../alternate-title-type/rdf-to-csv/">../alternate-title-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../alternate-title-type/query.sparql">../alternate-title-type/query.sparql</a></td></tr>
@@ -45861,6 +45758,8 @@
             <tr><td>JSON example</td><td><a href="../access-rights/example.json">../access-rights/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../access-rights/context.jsonld">../access-rights/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../access-rights/schema.xsd">../access-rights/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../access-rights/lifting.xslt">../access-rights/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../access-rights/lowering.xslt">../access-rights/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../access-rights/schema.csv-metadata.json">../access-rights/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../access-rights/rdf-to-csv/">../access-rights/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../access-rights/query.sparql">../access-rights/query.sparql</a></td></tr>
@@ -45872,6 +45771,8 @@
             <tr><td>JSON example</td><td><a href="../language-system/example.json">../language-system/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../language-system/context.jsonld">../language-system/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../language-system/schema.xsd">../language-system/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../language-system/lifting.xslt">../language-system/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../language-system/lowering.xslt">../language-system/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../language-system/schema.csv-metadata.json">../language-system/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../language-system/rdf-to-csv/">../language-system/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../language-system/query.sparql">../language-system/query.sparql</a></td></tr>
@@ -45883,6 +45784,8 @@
             <tr><td>JSON example</td><td><a href="../identifier-scheme/example.json">../identifier-scheme/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../identifier-scheme/context.jsonld">../identifier-scheme/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../identifier-scheme/schema.xsd">../identifier-scheme/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../identifier-scheme/lifting.xslt">../identifier-scheme/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../identifier-scheme/lowering.xslt">../identifier-scheme/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../identifier-scheme/schema.csv-metadata.json">../identifier-scheme/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../identifier-scheme/rdf-to-csv/">../identifier-scheme/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../identifier-scheme/query.sparql">../identifier-scheme/query.sparql</a></td></tr>
@@ -45894,6 +45797,8 @@
             <tr><td>JSON example</td><td><a href="../time-instant/example.json">../time-instant/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../time-instant/context.jsonld">../time-instant/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../time-instant/schema.xsd">../time-instant/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../time-instant/lifting.xslt">../time-instant/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../time-instant/lowering.xslt">../time-instant/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../time-instant/schema.csv-metadata.json">../time-instant/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../time-instant/rdf-to-csv/">../time-instant/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../time-instant/query.sparql">../time-instant/query.sparql</a></td></tr>
@@ -45905,6 +45810,8 @@
             <tr><td>JSON example</td><td><a href="../time-interval/example.json">../time-interval/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../time-interval/context.jsonld">../time-interval/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../time-interval/schema.xsd">../time-interval/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../time-interval/lifting.xslt">../time-interval/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../time-interval/lowering.xslt">../time-interval/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../time-interval/schema.csv-metadata.json">../time-interval/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../time-interval/rdf-to-csv/">../time-interval/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../time-interval/query.sparql">../time-interval/query.sparql</a></td></tr>
@@ -45916,6 +45823,8 @@
             <tr><td>JSON example</td><td><a href="../contact-details/example.json">../contact-details/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../contact-details/context.jsonld">../contact-details/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../contact-details/schema.xsd">../contact-details/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../contact-details/lifting.xslt">../contact-details/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../contact-details/lowering.xslt">../contact-details/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../contact-details/schema.csv-metadata.json">../contact-details/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../contact-details/rdf-to-csv/">../contact-details/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../contact-details/query.sparql">../contact-details/query.sparql</a></td></tr>
@@ -45927,6 +45836,8 @@
             <tr><td>JSON example</td><td><a href="../checksum-algorithm/example.json">../checksum-algorithm/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../checksum-algorithm/context.jsonld">../checksum-algorithm/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../checksum-algorithm/schema.xsd">../checksum-algorithm/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../checksum-algorithm/lifting.xslt">../checksum-algorithm/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../checksum-algorithm/lowering.xslt">../checksum-algorithm/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../checksum-algorithm/schema.csv-metadata.json">../checksum-algorithm/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../checksum-algorithm/rdf-to-csv/">../checksum-algorithm/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../checksum-algorithm/query.sparql">../checksum-algorithm/query.sparql</a></td></tr>
@@ -45938,6 +45849,8 @@
             <tr><td>JSON example</td><td><a href="../description-type/example.json">../description-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../description-type/context.jsonld">../description-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../description-type/schema.xsd">../description-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../description-type/lifting.xslt">../description-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../description-type/lowering.xslt">../description-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../description-type/schema.csv-metadata.json">../description-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../description-type/rdf-to-csv/">../description-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../description-type/query.sparql">../description-type/query.sparql</a></td></tr>
@@ -45949,6 +45862,8 @@
             <tr><td>JSON example</td><td><a href="../description/example.json">../description/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../description/context.jsonld">../description/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../description/schema.xsd">../description/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../description/lifting.xslt">../description/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../description/lowering.xslt">../description/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../description/schema.csv-metadata.json">../description/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../description/rdf-to-csv/">../description/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../description/query.sparql">../description/query.sparql</a></td></tr>
@@ -45960,6 +45875,8 @@
             <tr><td>JSON example</td><td><a href="../distribution-data-service/example.json">../distribution-data-service/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../distribution-data-service/context.jsonld">../distribution-data-service/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../distribution-data-service/schema.xsd">../distribution-data-service/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../distribution-data-service/lifting.xslt">../distribution-data-service/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../distribution-data-service/lowering.xslt">../distribution-data-service/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../distribution-data-service/schema.csv-metadata.json">../distribution-data-service/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../distribution-data-service/rdf-to-csv/">../distribution-data-service/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../distribution-data-service/query.sparql">../distribution-data-service/query.sparql</a></td></tr>
@@ -45971,6 +45888,8 @@
             <tr><td>JSON example</td><td><a href="../person/example.json">../person/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../person/context.jsonld">../person/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../person/schema.xsd">../person/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../person/lifting.xslt">../person/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../person/lowering.xslt">../person/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../person/schema.csv-metadata.json">../person/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../person/rdf-to-csv/">../person/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../person/query.sparql">../person/query.sparql</a></td></tr>
@@ -45982,6 +45901,8 @@
             <tr><td>JSON example</td><td><a href="../distribution-downloadable-file/example.json">../distribution-downloadable-file/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../distribution-downloadable-file/context.jsonld">../distribution-downloadable-file/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../distribution-downloadable-file/schema.xsd">../distribution-downloadable-file/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../distribution-downloadable-file/lifting.xslt">../distribution-downloadable-file/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../distribution-downloadable-file/lowering.xslt">../distribution-downloadable-file/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../distribution-downloadable-file/schema.csv-metadata.json">../distribution-downloadable-file/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../distribution-downloadable-file/rdf-to-csv/">../distribution-downloadable-file/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../distribution-downloadable-file/query.sparql">../distribution-downloadable-file/query.sparql</a></td></tr>
@@ -45993,6 +45914,8 @@
             <tr><td>JSON example</td><td><a href="../time-representation/example.json">../time-representation/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../time-representation/context.jsonld">../time-representation/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../time-representation/schema.xsd">../time-representation/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../time-representation/lifting.xslt">../time-representation/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../time-representation/lowering.xslt">../time-representation/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../time-representation/schema.csv-metadata.json">../time-representation/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../time-representation/rdf-to-csv/">../time-representation/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../time-representation/query.sparql">../time-representation/query.sparql</a></td></tr>
@@ -46004,6 +45927,8 @@
             <tr><td>JSON example</td><td><a href="../time-reference/example.json">../time-reference/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../time-reference/context.jsonld">../time-reference/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../time-reference/schema.xsd">../time-reference/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../time-reference/lifting.xslt">../time-reference/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../time-reference/lowering.xslt">../time-reference/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../time-reference/schema.csv-metadata.json">../time-reference/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../time-reference/rdf-to-csv/">../time-reference/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../time-reference/query.sparql">../time-reference/query.sparql</a></td></tr>
@@ -46015,6 +45940,8 @@
             <tr><td>JSON example</td><td><a href="../related-resource/example.json">../related-resource/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../related-resource/context.jsonld">../related-resource/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../related-resource/schema.xsd">../related-resource/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../related-resource/lifting.xslt">../related-resource/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../related-resource/lowering.xslt">../related-resource/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../related-resource/schema.csv-metadata.json">../related-resource/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../related-resource/rdf-to-csv/">../related-resource/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../related-resource/query.sparql">../related-resource/query.sparql</a></td></tr>
@@ -46026,6 +45953,8 @@
             <tr><td>JSON example</td><td><a href="../location/example.json">../location/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../location/context.jsonld">../location/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../location/schema.xsd">../location/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../location/lifting.xslt">../location/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../location/lowering.xslt">../location/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../location/schema.csv-metadata.json">../location/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../location/rdf-to-csv/">../location/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../location/query.sparql">../location/query.sparql</a></td></tr>
@@ -46037,6 +45966,8 @@
             <tr><td>JSON example</td><td><a href="../funding-reference/example.json">../funding-reference/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../funding-reference/context.jsonld">../funding-reference/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../funding-reference/schema.xsd">../funding-reference/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../funding-reference/lifting.xslt">../funding-reference/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../funding-reference/lowering.xslt">../funding-reference/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../funding-reference/schema.csv-metadata.json">../funding-reference/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../funding-reference/rdf-to-csv/">../funding-reference/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../funding-reference/query.sparql">../funding-reference/query.sparql</a></td></tr>
@@ -46048,6 +45979,8 @@
             <tr><td>JSON example</td><td><a href="../terms-of-use/example.json">../terms-of-use/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../terms-of-use/context.jsonld">../terms-of-use/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../terms-of-use/schema.xsd">../terms-of-use/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../terms-of-use/lifting.xslt">../terms-of-use/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../terms-of-use/lowering.xslt">../terms-of-use/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../terms-of-use/schema.csv-metadata.json">../terms-of-use/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../terms-of-use/rdf-to-csv/">../terms-of-use/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../terms-of-use/query.sparql">../terms-of-use/query.sparql</a></td></tr>
@@ -46059,6 +45992,8 @@
             <tr><td>JSON example</td><td><a href="../resource-to-agent-relationship/example.json">../resource-to-agent-relationship/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../resource-to-agent-relationship/context.jsonld">../resource-to-agent-relationship/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../resource-to-agent-relationship/schema.xsd">../resource-to-agent-relationship/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../resource-to-agent-relationship/lifting.xslt">../resource-to-agent-relationship/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../resource-to-agent-relationship/lowering.xslt">../resource-to-agent-relationship/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../resource-to-agent-relationship/schema.csv-metadata.json">../resource-to-agent-relationship/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../resource-to-agent-relationship/rdf-to-csv/">../resource-to-agent-relationship/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../resource-to-agent-relationship/query.sparql">../resource-to-agent-relationship/query.sparql</a></td></tr>
@@ -46070,6 +46005,8 @@
             <tr><td>JSON example</td><td><a href="../resource-agent-role-type/example.json">../resource-agent-role-type/example.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="../resource-agent-role-type/context.jsonld">../resource-agent-role-type/context.jsonld</a></td></tr>
             <tr><td>XML schema</td><td><a href="../resource-agent-role-type/schema.xsd">../resource-agent-role-type/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../resource-agent-role-type/lifting.xslt">../resource-agent-role-type/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../resource-agent-role-type/lowering.xslt">../resource-agent-role-type/lowering.xslt</a></td></tr>
             <tr><td>CSV schema</td><td><a href="../resource-agent-role-type/schema.csv-metadata.json">../resource-agent-role-type/schema.csv-metadata.json</a></td></tr>
             <tr><td>RDF to CSV</td><td><a href="../resource-agent-role-type/rdf-to-csv/">../resource-agent-role-type/rdf-to-csv/</a></td></tr>
             <tr><td>SPARQL</td><td><a href="../resource-agent-role-type/query.sparql">../resource-agent-role-type/query.sparql</a></td></tr>
@@ -46077,6 +46014,19 @@
             <tr><td>ShEx</td><td><a href="../resource-agent-role-type/validation.shex">../resource-agent-role-type/validation.shex</a></td></tr>
             <tr><td>ShEx Map</td><td><a href="../resource-agent-role-type/validation.shexmap">../resource-agent-role-type/validation.shexmap</a></td></tr>
             <tr><td>OpenAPI</td><td><a href="../resource-agent-role-type/openapi-specification.yaml">../resource-agent-role-type/openapi-specification.yaml</a></td></tr>
+            <tr><td>JSON schema</td><td><a href="../specimen-/schema.json">../specimen-/schema.json</a></td></tr>
+            <tr><td>JSON example</td><td><a href="../specimen-/example.json">../specimen-/example.json</a></td></tr>
+            <tr><td>JSON-LD context</td><td><a href="../specimen-/context.jsonld">../specimen-/context.jsonld</a></td></tr>
+            <tr><td>XML schema</td><td><a href="../specimen-/schema.xsd">../specimen-/schema.xsd</a></td></tr>
+            <tr><td>XSLT lifting</td><td><a href="../specimen-/lifting.xslt">../specimen-/lifting.xslt</a></td></tr>
+            <tr><td>XSLT lowering</td><td><a href="../specimen-/lowering.xslt">../specimen-/lowering.xslt</a></td></tr>
+            <tr><td>CSV schema</td><td><a href="../specimen-/schema.csv-metadata.json">../specimen-/schema.csv-metadata.json</a></td></tr>
+            <tr><td>RDF to CSV</td><td><a href="../specimen-/rdf-to-csv/">../specimen-/rdf-to-csv/</a></td></tr>
+            <tr><td>SPARQL</td><td><a href="../specimen-/query.sparql">../specimen-/query.sparql</a></td></tr>
+            <tr><td>SHACL</td><td><a href="../specimen-/shacl-shapes.ttl">../specimen-/shacl-shapes.ttl</a></td></tr>
+            <tr><td>ShEx</td><td><a href="../specimen-/validation.shex">../specimen-/validation.shex</a></td></tr>
+            <tr><td>ShEx Map</td><td><a href="../specimen-/validation.shexmap">../specimen-/validation.shexmap</a></td></tr>
+            <tr><td>OpenAPI</td><td><a href="../specimen-/openapi-specification.yaml">../specimen-/openapi-specification.yaml</a></td></tr>
             <tr><td>PlantUML diagram</td><td><a href="../conceptual-model.plantuml">../conceptual-model.plantuml</a></td></tr>
             <tr><td>Conceptual diagram</td><td><a href="../conceptual-model.svg">../conceptual-model.svg</a></td></tr>
             <tr><td>Documentation</td><td><a href="">#</a></td></tr>

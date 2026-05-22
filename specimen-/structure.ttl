@@ -1,0 +1,22 @@
+@prefix : <https://czbiextension.com/profile/vocabulary/specimen-/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://czbiextension.com/profile/vocabulary/specimen-/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Specimen . A material entity that is collected for potential use as an input upon which measurements or observations are performed.\",\"cs\":\"Datová struktura pro Specimen . A material entity that is collected for potential use as an input upon which measurements or observations are performed.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Specimen \",\"cs\":\"Specimen \"}";
+    kv:dataPsmParts "[\"https://czbiextension.com/profile/vocabulary/specimen-/class-1779194536554-13bd-7470-9778\"]";
+    kv:dataPsmRoots "[\"https://czbiextension.com/profile/vocabulary/specimen-/class-1779194536554-13bd-7470-9778\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/specimen-/\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1779194536554-13bd-7470-9778 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://czbiextension.com/profile/vocabulary#Specimen\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[]";
+    kv:dataPsmTechnicalLabel "\"specimen_\"";
+    kv:iri "\"https://czbiextension.com/profile/vocabulary/specimen-/class-1779194536554-13bd-7470-9778\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".

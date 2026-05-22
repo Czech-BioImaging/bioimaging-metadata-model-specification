@@ -3606,13 +3606,6 @@
     sh:property <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#BiogenicEntity>.
 
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-4a4ce843> a sh:PropertyShape;
-    sh:name "label"@en;
-    sh:nodeKind sh:Literal;
-    sh:path rdfs:label.
-
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-4a4ce843>.
-
 <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/5ff25ec6> a sh:PropertyShape;
     sh:name "Is Part Of"@en;
     sh:nodeKind sh:BlankNodeOrIRI;
@@ -3629,24 +3622,25 @@
 
 <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-3f056966>.
 
+<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/19f9e95b> a sh:PropertyShape;
+    sh:name "type"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path rdf:type;
+    sh:class <http://www.w3.org/2004/02/skos/core#Concept>.
+
+<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/19f9e95b>.
+
 <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0100051Shape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#Specimen>;
     sh:closed false;
-    sh:targetClass <http://purl.obolibrary.org/obo/OBI_0100051>.
-
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0100051Shape/4d96e5a6> a sh:PropertyShape;
-    sh:name "name"@en;
-    sh:nodeKind sh:Literal;
-    sh:path <http://xmlns.com/foaf/0.1/name>.
-
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0100051Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0100051Shape/4d96e5a6>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-4a4ce843>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/5ff25ec6>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-3f056966>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
+    sh:targetClass <http://purl.obolibrary.org/obo/OBI_0100051>;
+    sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/5ff25ec6>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-3f056966>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/19f9e95b>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
 
 <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0000953Shape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#ProcessedSpecimen>;
     sh:closed false;
     sh:targetClass <http://purl.obolibrary.org/obo/OBI_0000953>;
-    sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0100051Shape/4d96e5a6>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-4a4ce843>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/5ff25ec6>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-3f056966>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>;
-    rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#ImagingSample>.
+    sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/5ff25ec6>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/-3f056966>, <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/BFO_0000040Shape/19f9e95b>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
 
 <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#ProcessingStep>;
@@ -3685,14 +3679,6 @@
 
 <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape> sh:property <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>.
 
-<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-7689489c> a sh:PropertyShape;
-    sh:name "used software"@en;
-    sh:nodeKind sh:BlankNodeOrIRI;
-    sh:path <http://www.w3.org/ns/prov#used>;
-    sh:class <http://purl.org/dc/dcmitype/Software>.
-
-<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape> sh:property <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-7689489c>.
-
 <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4> a sh:PropertyShape;
     sh:name "geschieht vor"@de, "precedes"@en;
     sh:nodeKind sh:BlankNodeOrIRI;
@@ -3730,21 +3716,21 @@
     sh:path <http://purl.obolibrary.org/obo/RO_0002234>;
     sh:class <http://purl.obolibrary.org/obo/IAO_0000030>.
 
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/COB_0000110Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/COB_0000110Shape/-39d38bf6>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-7689489c>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
+<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/COB_0000110Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/COB_0000110Shape/-39d38bf6>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
 
 <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#ImageAcquisition>;
     sh:closed false;
     sh:targetClass <http://purl.obolibrary.org/obo/OBI_0001007>.
 
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/53098315> a sh:PropertyShape;
+<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/-85d154c> a sh:PropertyShape;
     sh:name "has imaging sample input"@en, "hat Input"@de;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.obolibrary.org/obo/RO_0002233>;
     sh:minCount 1;
-    sh:class <http://purl.obolibrary.org/obo/OBI_0000953>.
+    sh:class <fwoji2ccppmnd3b9ij>.
 
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/53098315>.
+<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/-85d154c>.
 
 <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/40f81a53> a sh:PropertyShape;
     sh:name "has image output"@en, "hat Output"@de;
@@ -3753,7 +3739,7 @@
     sh:minCount 1;
     sh:class <http://purl.org/dc/dcmitype/Image>.
 
-<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/40f81a53>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-7689489c>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
+<https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://purl.obolibrary.org/obo/OBI_0001007Shape/40f81a53>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
 
 <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23MethodShape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#Method>;
@@ -3781,21 +3767,7 @@
     sh:nodeKind sh:Literal;
     sh:path <http://purl.org/dc/terms/description>.
 
-<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23MethodShape> sh:property <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>.
-
-<https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-163cd18c> a sh:PropertyShape;
-    sh:name "label"@en;
-    sh:nodeKind sh:Literal;
-    sh:path rdfs:label.
-
-<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23MethodShape> sh:property <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-163cd18c>.
-
-<https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-5e1c9586> a sh:PropertyShape;
-    sh:name "name"@en;
-    sh:nodeKind sh:Literal;
-    sh:path <http://xmlns.com/foaf/0.1/name>.
-
-<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23MethodShape> sh:property <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-5e1c9586>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
+<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23MethodShape> sh:property <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
 
 <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#Tool>;
@@ -3816,7 +3788,7 @@
     sh:path <http://w3id.org/nfdi4ing/metadata4ing#implementsMethod>;
     sh:class <http://w3id.org/nfdi4ing/metadata4ing#Method>.
 
-<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape> sh:property <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape/52bd60d5>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-163cd18c>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-5e1c9586>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
+<https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape> sh:property <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape/52bd60d5>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
 
 <https://czbiextension.com/profile/vocabulary#skos:ConceptShape> rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#MethodType>.
 
@@ -3839,13 +3811,13 @@
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#Software>;
     sh:closed false;
     sh:targetClass <http://purl.org/dc/dcmitype/Software>;
-    sh:property <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
+    sh:property <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape/-b26802>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ToolShape/52bd60d5>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
 
 <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#MethodsAndTools>;
     sh:closed false;
     sh:targetClass <https://czbiextensionvoc.com/vocabulary#MethodsAndTools>;
-    sh:property <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-163cd18c>, <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/-5e1c9586>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
+    sh:property <https://czbiextension.com/profile/vocabulary#vocabulary:MethodsAndToolsShape/4812f544>, <https://czbiextension.com/profile/vocabulary#rdfs:ResourceShape/-489b870a>.
 
 <https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Taxon-2023-09-18Shape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#Taxon-2023-09-18>;
@@ -3885,7 +3857,7 @@
     sh:path <http://purl.obolibrary.org/obo/RO_0002234>;
     sh:class <http://purl.obolibrary.org/obo/IAO_0000030>.
 
-<https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_3443Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_3443Shape/1e14aa00>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-7689489c>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
+<https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_3443Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_3443Shape/1e14aa00>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
 
 <https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_Image_processingShape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#ImageProcessing>;
@@ -3906,20 +3878,29 @@
     sh:path <http://purl.obolibrary.org/obo/RO_0002234>;
     sh:class <http://purl.org/dc/dcmitype/Image>.
 
-<https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_Image_processingShape> sh:property <https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_Image_processingShape/-4dc17e4b>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-7689489c>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
+<https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_Image_processingShape> sh:property <https://czbiextension.com/profile/vocabulary#http://edamontology.org/operation_Image_processingShape/-4dc17e4b>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-89add99>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/779b557>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-31afe3bb>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/-a3839b1>, <https://czbiextension.com/profile/vocabulary#http://w3id.org/nfdi4ing/metadata4ing%23ProcessingStepShape/5fbb22d4>.
 
 <https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape> a sh:NodeShape;
     rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#Organism>;
     sh:closed false;
     sh:targetClass <http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18>.
 
-<https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape/-12aea047> a sh:PropertyShape;
-    sh:name "Taxon ID"@en;
+<https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape/6645b1e1> a sh:PropertyShape;
+    sh:name "belongs to taxon"@en;
     sh:nodeKind sh:BlankNodeOrIRI;
-    sh:path <http://rs.tdwg.org/dwc/terms/version/TaxonID-2008-11-19>;
+    sh:path rdf:type;
     sh:maxCount 1;
     sh:minCount 1;
     sh:class <http://rs.tdwg.org/dwc/terms/version/Taxon-2023-09-18>.
 
-<https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape/-12aea047>.
+<https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape> sh:property <https://czbiextension.com/profile/vocabulary#http://rs.tdwg.org/dwc/terms/version/Organism-2023-09-18Shape/6645b1e1>.
+
+<https://czbiextension.com/profile/vocabulary#skos:ConceptShape> rdfs:seeAlso <https://czbiextension.com/profile/vocabulary#BiogenicEntityType>.
+
+<https://czbiextension.com/profile/vocabulary#skos:ConceptShape/-65bd09e9> a sh:PropertyShape;
+    sh:name "label"@en;
+    sh:nodeKind sh:Literal;
+    sh:path rdfs:label.
+
+<https://czbiextension.com/profile/vocabulary#skos:ConceptShape> sh:property <https://czbiextension.com/profile/vocabulary#skos:ConceptShape/-65bd09e9>.
 

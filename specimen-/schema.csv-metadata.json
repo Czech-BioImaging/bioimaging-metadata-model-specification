@@ -1,0 +1,22 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "@id": "41cd930a-52f0-4709-828a-56180ba39575/table.csv-metadata.json",
+    "@type": "Table",
+    "url": "table.csv",
+    "tableSchema": {
+        "@type": "Schema",
+        "columns": [
+            {
+                "@type": "Column",
+                "propertyUrl": "rdf:type",
+                "valueUrl": null,
+                "virtual": true
+            }
+        ]
+    }
+}

@@ -1,6 +1,6 @@
 undefined is not an object (evaluating '$RefParser2.bundle')
 
-Error
+TypeError: undefined is not an object (evaluating '$RefParser2.bundle')
     at <anonymous> (/usr/node_modules/json-schema-faker/dist/shared.js:6175:10)
     at <anonymous> (/usr/node_modules/json-schema-faker/dist/shared.js:6188:42)
     at generateJsonData (/usr/packages/json-example/lib/json-example-adapter.js:19:53)
@@ -11,8 +11,8 @@ Error
     at async generateToStream (/usr/packages/json-example/lib/json-example-generator.js:55:34)
     at async generateArtefact (/usr/packages/core/lib/generator/generator.js:35:25)
     at async writeArtifacts (/usr/packages/specification/lib/v1/default-artifact-builder.js:91:37)
-    at async build (unknown)
+    at async build (/usr/packages/specification/lib/v1/default-artifact-builder.js:59:20)
     at async generateArtifacts (/usr/src/app/src/routes/generate.ts:70:19)
-    at async <anonymous> (unknown)
+    at async <anonymous> (/usr/src/app/src/routes/generate.ts:88:9)
     at async <anonymous> (/usr/src/app/src/utils/async-handler.ts:13:11)
-    at processTicksAndRejections (unknown:7:39)
+    at processTicksAndRejections (native:7:39)
