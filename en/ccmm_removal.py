@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-Remove CCMM class profile sections AND their "Data structure specification for"
-sections from index.html, keeping only the bioimaging-specific (non-ccmm.cz) classes.
+Remove all CCMM (ccmm.cz) content from index.html in three steps:
+  1. Class profile sections
+  2. "Data structure specification for" sections
+  3. Attachments table rows
+Keeps only the bioimaging-specific (non-ccmm.cz) classes.
 """
 import re
 import shutil
@@ -150,4 +153,74 @@ with open(src, 'w', encoding='utf-8') as f:
     f.writelines(out2)
 
 print(f"Step 2 done: {removed} DS sections removed.")
-print(f"Final: {len(out2)} lines written (was {len(lines2)} lines).")
+print(f"  {len(out2)} lines (was {len(lines2)} lines).")
+
+# ── Step 3: remove ccmm rows from the Attachments table ─────────────────────
+
+ccmm_dirs = {
+    'application-profile', 'media-type', 'file', 'validation-result',
+    'subject-scheme', 'address', 'provenance-statement', 'subject',
+    'metadata-record', 'repository', 'agent', 'dataset', 'identifier',
+    'alternate-title', 'geometry', 'documentation', 'data-service',
+    'checksum', 'organization', 'license-document', 'date-type',
+    'distribution', 'resource-relation-type', 'resource-type',
+    'location-relation-type', 'format', 'alternate-title-type',
+    'access-rights', 'language-system', 'identifier-scheme',
+    'time-instant', 'time-interval', 'contact-details',
+    'checksum-algorithm', 'description-type', 'description',
+    'distribution-data-service', 'person',
+    'distribution-downloadable-file', 'time-representation',
+    'time-reference', 'related-resource', 'location',
+    'funding-reference', 'terms-of-use',
+    'resource-to-agent-relationship', 'resource-agent-role-type',
+}
+
+re_dir = re.compile(r'href="\.\./([^/]+)/')
+
+def is_ccmm_row(block):
+    m = re_dir.search(''.join(block))
+    return m and m.group(1) in ccmm_dirs
+
+with open(src, 'r', encoding='utf-8') as f:
+    lines3 = f.readlines()
+
+tbody_starts = [i for i, l in enumerate(lines3) if '<tbody>' in l]
+tbody_ends   = [i for i, l in enumerate(lines3) if '</tbody>' in l]
+tbody_start  = tbody_starts[1]   # second <tbody> = Attachments table
+tbody_end    = tbody_ends[1]
+
+out3 = list(lines3[:tbody_start + 1])
+i = tbody_start + 1
+removed = 0
+
+while i < tbody_end:
+    stripped = lines3[i].strip()
+    if stripped == '<tr>':
+        block = []
+        while i < tbody_end:
+            block.append(lines3[i])
+            if '</tr>' in lines3[i]:
+                i += 1
+                break
+            i += 1
+        if is_ccmm_row(block):
+            removed += 1
+        else:
+            out3.extend(block)
+    elif stripped.startswith('<tr>'):
+        if is_ccmm_row([lines3[i]]):
+            removed += 1
+        else:
+            out3.append(lines3[i])
+        i += 1
+    else:
+        out3.append(lines3[i])
+        i += 1
+
+out3.extend(lines3[tbody_end:])
+
+with open(src, 'w', encoding='utf-8') as f:
+    f.writelines(out3)
+
+print(f"Step 3 done: {removed} attachment rows removed.")
+print(f"Final: {len(out3)} lines written (was {len(lines3)} lines).")
